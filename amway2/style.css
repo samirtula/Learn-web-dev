@@ -5,6 +5,9 @@ body {
   font-family: Source Sans Pro;
   font-style: normal;
 }
+h1 {
+  margin-bottom: 20px;
+}
 .top-header {
   height: 80px;
   background: #034580;
@@ -135,7 +138,7 @@ li {
   margin-bottom: 30px;
 }
 .slogan__header {
-  margin-top: 109px;
+  margin-top: 70px;
   margin-left: 20%;
   display: flex;
   flex-direction: column;
@@ -182,18 +185,16 @@ li {
   background-image: url(images/Image3.png);
 }
 .slogan__header--platforms {
-  margin-top: 79px;
+  margin-top: 55px;
 }
 .access {
   background: #407ffe;
-  height: 587px;
   margin-bottom: 30px;
 }
 .access__container {
   width: 67%;
   margin: 0 auto;
   display: flex;
-  height: 587px;
 }
 .access__image {
   height: 587px;
@@ -205,7 +206,7 @@ li {
   margin-left: -5%;
 }
 .access__header {
-  margin-top: 215px;
+  margin-top: 200px;
   display: flex;
   flex-direction: column;
   width: 40%;
@@ -216,6 +217,7 @@ li {
   font-weight: bold;
   font-size: 36px;
   color: #ffffff;
+
 }
 .access__header-about {
   font-weight: normal;
@@ -223,6 +225,7 @@ li {
   width: 75%;
   color: #ffffff;
   margin-bottom: 30px;
+  margin-top: 0;
 }
 .access__link {
   width: 229px;
@@ -236,6 +239,10 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.access__link-text::after {
+  content: url(images/Arrow.svg);
+  margin-left: 10px;
 }
 .client {
   width: 67%;
@@ -313,7 +320,7 @@ li {
   margin-top: 30px;
 }
 .join {
-  width: 67%;
+  width: 60%;
   margin: 0 auto;
 }
 .join__header {
@@ -332,7 +339,7 @@ li {
   justify-content: space-between;
 }
 .join__statistic-info {
-  width: 24%;
+  width: 30%;
   height: 135px;
   display: flex;
   flex-direction: column;
@@ -391,7 +398,7 @@ li {
 }
 .questions__container {
   display: flex;
-  width: 55%;
+  width: 52%;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -413,9 +420,7 @@ li {
   background-image: url(images/image10.png);
 }
 .questions__answers-text {
-  width: 80%;
   display: flex;
-  flex-direction: column;
 }
 .questions__answers-text-header {
   font-family: Roboto Condensed;
@@ -423,15 +428,35 @@ li {
   font-weight: bold;
   font-size: 36px;
   color: #ffffff;
+  display: inline;
+  margin-top: 0;
 }
 .questions__answers-text-main {
   font-weight: normal;
   font-size: 16px;
   color: #ffffff;
-}
-.questions__answers-image--plus {
-  background-image: url(images/image11.png);
+  margin-top: 0;
 }
 .access__link--answers {
   margin-top: auto;
+}
+.questions__answers-text--for-image::before  {
+  content: url(images/image10.png);
+  width: 66px;
+  height: 66px;
+  background-size: cover;
+  margin-right: 30px;
+}
+.questions__answers-container{
+  display: flex;
+  flex-direction: column;
+  width: 325px;
+  height: 240px;
+}
+.questions__answers-text--for-image-plus::before {
+  content: url(images/image11.png);
+  width: 66px;
+  height: 66px;
+  background-size: cover;
+  margin-right: 30px;
 }
