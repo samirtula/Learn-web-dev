@@ -1,0 +1,154 @@
+@font-face {
+	font-family: 'Circe Bold';
+	src: url('fonts/circe_bold.eot'); /* IE 9 Compatibility Mode */
+	src: url('fonts/circe_bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('fonts/circe_bold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('fonts/circe_bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('fonts/circe_bold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('fonts/circe_bold.svg#circe_bold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Circe ExtraBold';
+	src: url('fonts/circe_extrabold.eot'); /* IE 9 Compatibility Mode */
+	src: url('fonts/circe_extrabold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('fonts/circe_extrabold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('fonts/circe_extrabold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('fonts/circe_extrabold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('fonts/circe_extrabold.svg#circe_extrabold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Circe ExtraLight';
+	src: url('fonts/circe_extralight.eot'); /* IE 9 Compatibility Mode */
+	src: url('fonts/circe_extralight.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('fonts/circe_extralight.woff2') format('woff2'), /* Super Modern Browsers */
+		url('fonts/circe_extralight.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('fonts/circe_extralight.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('fonts/circe_extralight.svg#circe_extralight') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Circe Light';
+	src: url('fonts/circe_light.eot'); /* IE 9 Compatibility Mode */
+	src: url('fonts/circe_light.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('fonts/circe_light.woff2') format('woff2'), /* Super Modern Browsers */
+		url('fonts/circe_light.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('fonts/circe_light.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('fonts/circe_light.svg#circe_light') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Circe';
+	src: url('fonts/circe.eot'); /* IE 9 Compatibility Mode */
+	src: url('fonts/circe.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('fonts/circe.woff2') format('woff2'), /* Super Modern Browsers */
+		url('fonts/circe.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('fonts/circe.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('fonts/circe.svg#circe') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Circe Thin';
+	src: url('fonts/circe_thin.eot'); /* IE 9 Compatibility Mode */
+	src: url('fonts/circe_thin.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('fonts/circe_thin.woff2') format('woff2'), /* Super Modern Browsers */
+		url('fonts/circe_thin.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('fonts/circe_thin.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('fonts/circe_thin.svg#circe_thin') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+@font-face {
+    font-family: 'TT Norms';
+    src:url('fonts/TTNorms-Bold.woff2') format('woff2'),
+        url('fonts/TTNorms-Bold.woff') format('woff'),
+        url('fonts/TTNorms-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+body {
+    padding: 0;
+    margin: 0;
+    padding-top: 9px;
+    width: 75%;
+    margin: 0 auto;
+    font-family: Circe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #333333;
+}
+.navigation {
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.navigation__logo {
+    width: 18%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navigation__logo-image {
+    width: 68px;
+    height: 52px;
+    background-image: url(images/i1.png);
+    background-size: cover;
+    margin-right: 23px;
+    display: inline-block;
+}
+.navigation__slogan-text {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.navigation__links {
+    display: inline-flex;
+    width: 25%;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation__links-list {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.navigation-links-list-row-link{
+    text-decoration: none;
+    color: #464243;
+}
+.navigation__contacts {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 22%;
+}
+.navigation__contacts-tel {
+font-weight: bold;
+font-size: 18px;
+}
+.navigation__contacts-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation__contacts-login-image {
+    width: 24px;
+    height: 24px;
+    background-image: url(images/i2.svg);
+    background-size: cover;
+    margin-right: 23px;
+}
