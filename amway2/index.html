@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>задание 12</title>
 </head>
@@ -10,18 +10,20 @@
 <body>
     <section class="top-header"> 
       <div class="top-header__contacts nav-contacts">
+      <a href="#" id="menu" class="top-header__icon icon"></a>
       <div class="top-header__logo-image"></div>
       <a class="top-header__search-image" href="#"></a>
+      <a class="top-header__profile-image" href="#"></a>
       <a class="top-header__basket-image" href="#"></a>
 </div>
     </section>
-    <section class="navigation-advertisement">
+    <section class="navigation-advertisement" id="menu_wrap">
         <div class="navigation-advertisement__content">
         <nav
           class="navigation-advertisement__links navigation-advertisement-header-menu"
         >
           <a class="navigation-advertisement-header-menu__logo" href="#"></a>
-          <ul class="navigation-advertisement-header-menu__links">
+          <ul class="navigation-advertisement-header-menu__links topnav" id="myTopnav">
             <li><a class="advertisement-header-menu__link" href="#">Каталог</a></li>
             <li><a class="advertisement-header-menu__link" href="#">Акции</a></li>
             <li><a class="advertisement-header-menu__link" href="#">Наши бренды</a></li>
@@ -30,15 +32,15 @@
           </ul>
         </nav>
       </div>
-        
+    
       </section>
       <section class="navigation-advertisement-container"></section>
         <div class="navigation-advertisement-container__link-container">
         <a class="navigation-advertisement-container__home-page-logo" href="#" ></a>
         <a class="navigation-advertisement-container__arrow" href="#"></a>
-        <a class="navigation-advertisement-container__link-text" href="#">Конструктор Личных страниц</a>
+        <a class="navigation-advertisement-container__link-text" href="#">Конструктор личных страниц</a>
       </div>
-
+ 
       </section>
       <section class="slogan">
         <div class="slogan__container">
@@ -72,7 +74,7 @@
           <a class="access__link" href="#"><span class="access__link-text" >Создать страницу</span></a>
         </div>
        </div>
-      </section>
+      </section>       
       <section class="client">
         <div class="slogan__header">
           <h1 class="slogan__header-text">Удобно <br> для клиента</h1>
@@ -97,6 +99,7 @@
         </div>
         <div class="stars__heart-image"></div>
       </section>
+
     <section class="join">
       <h1 class="join__header">Присоединяйтесь</h1>
       <div class="join__statistic">
@@ -140,11 +143,71 @@
             <div class="questions__answers-container">
               <h1 class="questions__answers-text-header">Готовы присоединиться?</h1>
               <p class="questions__answers-text-main">Создайте свою страницу. Расскажите о себе и о брендах Amway, с которыми вы работаете. Соберите команду и развивайте её.</p>
-              <a class="access__link access__link--answers" href="#"><span class="access__link-text" >Смотреть инструкцию</span> </a>
+              <a class="access__link access__link--answers access__link-plus" href="#"><span class="access__link-text" >Смотреть инструкцию</span> </a>
             </div>
           </div>
         </div>
       </div>
   </section>
+  <section class="mobile">
+    <div class="mobile__wrapper">
+      <form action="select1.php" method="post">
+        <p class="mobile__contacts">Выберите язык</p>
+        <select name="lang">
+          <option class="wwer" selected="Русский">Русский</option>
+          <option value="Английский">Английский</option>
+          <option value="Английский">Немецкий</option>
+        </select>
+      </form>
+      <p class="mobile__contacts">
+  Связаться с нами
+      </p>
+        <div class="mobile__social">
+          <a class="mobile__social-media fb" href="#"></a>
+          <a class="mobile__social-media vk" href="#"></a>
+          <a class="mobile__social-media inst" href="#"></a>
+          <a class="mobile__social-media ok" href="#"></a>
+          <a class="mobile__social-media youtube" href="#"></a>
+      </div>
+  </div>
+  </section>
+  <section class="links">
+    <ul class="links__cite" >
+      <li class="links__cite-link">
+        <a class="links__cite-subsection" href="#">БРЕНДЫ <span>+</span></a>
+      </li>
+      <li class="links__cite-link">
+        <a class="links__cite-subsection" href="#">КОМПАНИЯ AWAY<span>+</span></a>
+      </li>
+      <li class="links__cite-link">
+        <a class="links__cite-subsection" href="#">КУПИТЬ ПРОДУКЦИЮ<span>+</span></a>
+      </li>
+      <li class="links__cite-link">
+        <a class="links__cite-subsection" href="#">БЕЗОПАСНЫЕ ПОКУПКИ<span>+</span></a>
+      </li>
+      <li class="links__cite-link">
+        <a class="links__cite-subsection" href="#">DIGITAL ИНСТРУМЕНТЫ<span>+</span></a>
+      </li>
+  </ul>
+  <p class="links__help">НУЖНА ПОМОЩЬ?</p>
+  <div class="links_contacts">
+    <a href="mail:inforu@amway.ru" class="links__contact">inforu@amway.ru</a>
+    <a href="tel:88001009000" class="links__contact">8-800-100-9000</a>
+  </div>
+  <a class="access__link" href="#"><span class="access__link-text-footer" >Контакты</span></a>
+  <a href="#" class="links__connection"></a>
+  </section>
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__logo-image-container"> </div>
+    <p class="footer__copyright">	&copy; 2011-2020 Amway Europe. Все права защищены.</p>
+    <div class="footer__links">
+      <a href="http://alticor.com" class="footer__link">http://alticor.com</a> <span>|</span>
+      <a href="http://amwayglobal.com" class="footer__link">http://amwayglobal.com</a>
+    </div>
+</div>
+</footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
