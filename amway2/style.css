@@ -459,13 +459,19 @@ li {
   background-size: cover;
   margin-right: 30px;
 }
-.top-header__icon {
-  display: none;
-}
+.mobile,
+.links,
+.footer,
+.top-header__icon,
 .top-header__profile-image {
   display: none;
 }
-@media all and (max-width: 414px) {
+@media all and (max-width: 780px) {
+  .mobile,
+  .links,
+  .footer {
+    display: block;
+  }
   .top-header {
     height: 45px;
   }
@@ -666,7 +672,7 @@ li {
   }
   .stars__image {
     height: 180px;
-    width: 67%;
+    width: 57%;
     background-repeat: no-repeat;
     display: block;
     background-image: url(images/mobile5.png);
@@ -839,138 +845,161 @@ li {
   .youtube {
     background-image: url(images/youtube.svg);
   }
+  .links {
+    width: 89.5%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+  }
+  .links__cite {
+    margin: 20px 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .links__cite-link {
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    border-bottom: 1px solid #ededed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+  }
+  .links__cite-subsection {
+    color: #67676b;
+    text-decoration: none;
+    display: flex;
+  }
+  .links__cite-subsection span {
+    color: #ea2857;
+    font-weight: bold;
+    font-size: 32px;
+    margin-left: auto;
+  }
+  .links__help {
+    font-weight: bold;
+    color: #5d5d60;
+  }
+  .links__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+  .links__contact {
+    color: #67676b;
+    text-decoration: none;
+    display: flex;
+    align-self: center;
+    margin-bottom: 15px;
+  }
+  .links_contacts :nth-child(1)::before {
+    content: "";
+    width: 20px;
+    height: 16px;
+    background-image: url(images/mail.png);
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    margin-right: 15px;
+    align-self: center;
+  }
+  .links_contacts :nth-child(2)::before {
+    content: "";
+    width: 20px;
+    height: 18px;
+    background-image: url(images/phone.png);
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    margin-right: 15px;
+    align-self: center;
+  }
+  .links .access__link {
+    margin-left: 0;
+    width: 60%;
+  }
+  .access__link--stars,
+  .access__link--answers {
+    width: 100%;
+  }
+  .links__connection {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: #034580;
+    display: inline-block;
+    align-self: flex-end;
+    margin-top: -20px;
+    background-image: url(images/chat.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 2px 2px 4px #000000;
+  }
+  .footer {
+    background-color: #ededed;
+  }
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    width: 89.5%;
+  }
+  .footer__logo-image-container {
+    width: 124px;
+    height: 42px;
+    background-image: url(images/Logo1.svg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 10px;
+  }
+  .footer__copyright {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: bold;
+  }
+  .footer__link {
+    text-decoration: none;
+    color: #3f88ad;
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-size: 14px;
+  }
+  .footer__links span {
+    color: #3f88ad;
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-size: 18px;
+  }
 }
-.links {
-  width: 89.5%;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-}
-.links__cite {
-  margin: 20px 0 0 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-.links__cite-link {
-  height: 42px;
-  line-height: 42px;
-  font-size: 18px;
-  border-bottom: 1px solid #ededed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: center;
-}
-.links__cite-subsection {
-  color: #67676b;
-  text-decoration: none;
-  display: flex;
-}
-.links__cite-subsection span {
-  color: #ea2857;
-  font-weight: bold;
-  font-size: 32px;
-  margin-left: auto;
-}
-.links__help {
-  font-weight: bold;
-  color: #5d5d60;
-}
-.links__contacts {
-  display: flex;
-  flex-direction: column;
-}
-.links__contact {
-  color: #67676b;
-  text-decoration: none;
-  display: flex;
-  align-self: center;
-  margin-bottom: 15px;
-}
-.links_contacts :nth-child(1)::before {
-  content: "";
-  width: 20px;
-  height: 16px;
-  background-image: url(images/mail.png);
-  background-position: center;
-  background-size: cover;
-  display: inline-block;
-  margin-right: 15px;
-  align-self: center;
-}
-.links_contacts :nth-child(2)::before {
-  content: "";
-  width: 20px;
-  height: 18px;
-  background-image: url(images/phone.png);
-  background-position: center;
-  background-size: cover;
-  display: inline-block;
-  margin-right: 15px;
-  align-self: center;
-}
-.links .access__link {
-  margin-left: 0;
-  width: 60%;
-}
-.access__link--stars,
-.access__link--answers {
-  width: 100%;
-}
-.links__connection {
-  height: 60px;
-  width: 60px;
-  margin-bottom: 20px;
-  border-radius: 50%;
-  background: #034580;
-  display: inline-block;
-  align-self: flex-end;
-  margin-top: -20px;
-  background-image: url(images/chat.png);
-  background-size: 40px;
-  background-repeat: no-repeat;
-  background-position: center;
-  box-shadow: 2px 2px 4px #000000;
-}
-.footer {
-  background-color: #ededed;
-}
-.footer__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 0 auto;
-  padding-bottom: 20px;
-  width: 89.5%;
-}
-.footer__logo-image-container {
-  width: 124px;
-  height: 42px;
-  background-image: url(images/Logo1.svg);
-  background-position: center;
-  background-size: cover;
-  margin-top: 10px;
-}
-.footer__copyright {
-  font-family: Roboto Condensed;
-  font-style: normal;
-  font-size: 11px;
-  font-weight: bold;
-}
-.footer__link {
-  text-decoration: none;
-  color: #3f88ad;
-  font-family: Roboto Condensed;
-  font-style: normal;
-  font-size: 14px;
-}
-.footer__links span {
-  color: #3f88ad;
-  font-family: Roboto Condensed;
-  font-style: normal;
-  font-size: 18px;
+@media all and (min-width: 380px) and (max-width: 430px) {
+  .slogan__header::before {
+    width: 95%;
+    height: 230px;
+    margin-top: 15px;
+  }
+  .access__image {
+    width: 80%;
+    height: 230px;
+  }
+  .stars__image {
+    width: 50%;
+  }
+  .access__link {
+    width: 80.6%;
+  }
+  .access__link--stars {
+    width: 90%;
+  }
+  .access__link--answers {
+    width: 90%;
+  }
 }
