@@ -70,13 +70,16 @@ body {
     padding: 0;
     margin: 0;
     padding-top: 9px;
-    width: 75%;
     margin: 0 auto;
     font-family: Circe;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     color: #333333;
+    max-width: 1170px;
+}
+a {
+    text-decoration: none;
 }
 .navigation {
     height: 52px;
@@ -151,4 +154,122 @@ font-size: 18px;
     background-image: url(images/i2.svg);
     background-size: cover;
     margin-right: 23px;
+}
+.menu {
+    height: 500px;
+    width: 100%;
+    background-image: url(images/i3.png);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+  
+}
+.menu__arrow-link {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-color: #FFF;
+    border-radius: 50%;
+    background-image: url(images/i4.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.menu__arrow-start {
+    margin-left: -24px;
+}
+.menu__arrow-end{
+    margin-right: -24px;
+    transform: rotate(180deg);
+}
+.menu__main-block-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.menu__promo-container {
+    margin-top: 3.8%;
+
+    display: inline-flex;
+    justify-content: space-around;
+    width: 7%;
+    height: 6%;
+    background: #FF794F;
+    border-radius: 5px;
+    margin-bottom: 0;
+    font-family: Circe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+.menu__promo-container  .menu__promo {
+    font-family: Circe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.menu__dish-heading {
+    width: 45%;
+    margin-top: 6%;
+    font-family: TT Norms;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 57px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+.menu__delivery-info {
+    font-family: Circe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #F0F1EE;
+    margin-top: 2%;
+    margin-bottom: 2.9%;
+}
+.menu__shop-container {
+    display: inline-flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.7%;
+    text-align: center;
+}
+.menu__shop-buy {
+    width: 47.6%;
+    height: 3.3em ;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 134px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.menu__shop-buy-text {
+    font-family: Circe;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    color: #333333;
+    align-self: center;
+}
+.menu__shop-restaurant {
+    background: none;
+    border: 1px solid #FFFFFF;
+}
+.menu__shop-restaurant-text {
+    color:#FFFFFF;
 }
