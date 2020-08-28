@@ -1,62 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Задание 13</title>
-    <link href="style.css" rel="stylesheet">
-</head>
-<body>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
     <section class="navigation">
-        <div class="navigation__logo">
-            <div class="navigation__logo-image"></div>
-            <p class="navigation__slogan-text">Сервис доставки <br> отборных продуктов</p>
-          </div>
-        <div class="navigation__links">
-            <ul class="navigation__links-list">
-                <li class="navigation-links-list-row"> 
-                    <a class="navigation-links-list-row-link" href="#">Меню</a>
-                </li>
-                <li class="navigation-links-list-row"> 
-                    <a class="navigation-links-list-row-link" href="#">Как это работает</a>
-                </li>
-                <li class="navigation-links-list-row"> 
-                    <a class="navigation-links-list-row-link" href="#">О нас</a>
-                </li>
-            </ul>
+      <div class="navigation__logo">
+        <div class="navigation__logo-image"></div>
+        <p class="navigation__slogan-text">
+          Сервис доставки <br />
+          отборных продуктов
+        </p>
+      </div>
+      <div class="navigation__links">
+        <ul class="navigation__links-list">
+          <li class="navigation-links-list-row">
+            <a class="navigation-links-list-row-link" href="#">Меню</a>
+          </li>
+          <li class="navigation-links-list-row">
+            <a class="navigation-links-list-row-link" href="#"
+              >Как это работает</a
+            >
+          </li>
+          <li class="navigation-links-list-row">
+            <a class="navigation-links-list-row-link" href="#">О нас</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navigation__contacts">
+        <p class="navigation__contacts-tel">+7 (495) 374-65-58</p>
+        <div class="navigation__contacts-login">
+          <div class="navigation__contacts-login-image"></div>
+          <p class="navigation__contacts_login-text">Войти</p>
         </div>
-        <div class="navigation__contacts">
-            <p class="navigation__contacts-tel">+7 (495) 374-65-58</p>
-            <div class="navigation__contacts-login">
-                <div class="navigation__contacts-login-image"></div>
-                <p class="navigation__contacts_login-text">Войти</p>
-            </div>
-        </div>
+      </div>
     </section>
     <section class="menu">
-        <a class="menu__arrow-link menu__arrow-start" href="#"></a>
-        <div class="menu__main-block-container">
-            <div class="menu__promo-container"><h4 class="menu__promo">Акция</h4></div>
-            <h1 class= "menu__dish-heading">Шпинатные тальятелле с рыбой в соусе</h1>
-            <p class="menu__delivery-info">Доставка продуктов с готовыми рецептами</p>
-            <div class="menu__shop-container">
-                <a  class="menu__shop-buy" href="#"><span class="menu__shop-buy-text">Купить</span></a>
-                <a  class="menu__shop-buy menu__shop-restaurant" href="#"><span class="menu__shop-buy-text  menu__shop-restaurant-text">Меню</span></a>
-            </div>
-            <form class="menu__restaurant-carousel" action="#" method="#">
-                <ul class="menu__restaurant-images-list">
-                    <li class="menu__restaurant-images-item"><input type="radio" class="menu__restaurant-images"></li>
-                    <li class="menu__restaurant-images-item"><input type="radio" class="menu__restaurant-images"></li>
-                    <li class="menu__restaurant-images-item"><input type="radio" class="menu__restaurant-images"></li>
-                    <li class="menu__restaurant-images-item"><input type="radio" class="menu__restaurant-images"></li>
-                </ul>
-            </form>
+      <a class="menu__arrow-link menu__arrow-start" href="#"></a>
+      <div class="menu__main-block-container">
+        <div class="menu__promo-container">
+          <h4 class="menu__promo">Акция</h4>
         </div>
-        <a class="menu__arrow-link menu__arrow-end" href="#"></a>
-        
+        <h2 class="menu__dish-heading">Шпинатные тальятелле с рыбой в соусе</h2>
+        <p class="menu__delivery-info">
+          Доставка продуктов с готовыми рецептами
+        </p>
+        <div class="menu__shop-container">
+          <a class="menu__shop-buy" href="#"
+            ><span class="menu__shop-buy-text">Купить</span></a
+          >
+          <a class="menu__shop-buy menu__shop-restaurant" href="#"
+            ><span class="menu__shop-buy-text menu__shop-restaurant-text"
+              >Меню</span
+            ></a
+          >
+        </div>
 
+        <ul class="menu__restaurant-images-list-carousel">
+          <li class="menu__restaurant-images-item">
+            <div
+              class="menu__restaurant-images"
+              id="menu__restaurant-images_slide-a"
+            ></div>
+          </li>
+          <li class="menu__restaurant-images-item selected-image">
+            <div
+              class="menu__restaurant-images"
+              id="menu__restaurant-images_slide-b"
+            ></div>
+          </li>
+          <li class="menu__restaurant-images-item">
+            <div
+              class="menu__restaurant-images"
+              id="menu__restaurant-images_slide-c"
+            ></div>
+          </li>
+          <li class="menu__restaurant-images-item">
+            <div
+              class="menu__restaurant-images"
+              id="menu__restaurant-images_slide-d"
+            ></div>
+          </li>
+        </ul>
+      </div>
+
+      <a class="menu__arrow-link menu__arrow-end" href="#"></a>
     </section>
+    <section class="about">
+      <h1 class="about__heading">Как это работает</h1>
+      <div class="about__info-container">
+        <div class="about__info">
+          <div class="about__info-image menu-dishes"></div>
+          <h6 class="about__info-heading">Выбирайте меню и блюда</h6>
+          <p class="about__info-text">
+            Каждую неделю 60 новых рецептов от шеф-поваров и диетологов
+          </p>
+        </div>
+        <div class="about__info">
+          <div class="about__info-image fresh-products"></div>
+          <h6 class="about__info-heading">Получайте свежие продукты</h6>
+          <p class="about__info-text">
+            Ингредиенты расфасованы под рецепты, доставка бесплатна
+          </p>
+        </div>
+        <div class="about__info">
+          <div class="about__info-image cooking-time"></div>
+          <h6 class="about__info-heading">Готовьте за 15-40 минут</h6>
+          <p class="about__info-text">
+            С пошаговыми фоторецептами и подготовленными продуктами
+          </p>
+        </div>
+        <div class="about__info">
+          <div class="about__info-image subscribe"></div>
+          <h6 class="about__info-heading">Оформите подписку</h6>
+          <p class="about__info-text">
+            Настройте график доставок и получайте продукты со скидкой
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="dishes">
+      <div class="dishes__menu">
+        <a class="menu__arrow-link menu__arrow-start" href="#"></a>
+        <h1 class="dishes__heading">Меню на 28 мая - 3 июня</h1>
+        <a class="menu__arrow-link menu__arrow-end" href="#"></a>
+      </div>
+      <p class="dishes__info">
+        Доставка этого меню доступна только с 28 мая по 3 июня
+      </p>
+      <div class="dishes__categories-container">
+        <a class="dishes__categories" href="#"
+          ><span class="dishes__categories-name">Завтраки</span></a
+        >
+        <a class="dishes__categories" href="#"
+          ><span class="dishes__categories-name">Обеды (супы)</span></a
+        >
+        <a class="dishes__categories" href="#"
+          ><span class="dishes__categories-name">Ужин</span></a
+        >
+        <a class="dishes__categories" href="#"
+          ><span class="dishes__categories-name">ЗОЖ/ПП</span></a
+        >
+        <a class="dishes__categories" href="#"
+          ><span class="dishes__categories-name">Veggie</span></a
+        >
+      </div>
+      <!-- Здесь меню-->
+      <div class="dishes__items-wrapper">
+        <a class="menu__arrow-link menu__arrow-start" href="#"></a>
 
+        <div class="dishes__item-wrapper">
+          <div class="dishes__item-image">
+            <div class="dihes__term">
+              <span class="dihes__term-text">4-7</span>
+            </div>
+          </div>
+          <div class="dishes__hashtag">
+            <a class="dishes__hashtag-link" href="#">
+              <span class="dishes__hastag-name">#Обеды (супы)</span>
+            </a>
+            <a class="dishes__hashtag-link" href="#">
+              <span class="dishes__hastag-name">#ЗОЖ/ПП</span>
+            </a>
+            <a class="dishes__hashtag-link" href="#">
+              <span class="dishes__hastag-name">#Veggie</span>
+            </a>
+          </div>
+          <p class="dishes__item-name">
+            Шпинатные тальятелле с тигровыми креветками в соусе песто россо с
+            кремом из баклажана
+          </p>
+          <div class="dishes__cooking-info">
+            <div class="dishes__hat-image"></div>
+            <form action="select1.php" method="post">
+                <select name="lang">
+                <option class="wwer" value="Готовить легко">
+                    Готовить легко
+                </option>
+                <option value="Готовить легко">Готовить средне</option>
+                </select>
+            </form>
+            <span class="dishes__cooking-info-text">Готовить на <b> 1 - 2 день</b></span>
+        </div>
+        <div class="dishes__product-info"><div class="dishes__product-plate"></div><span class="dishes__product-weight">340 г</span><div class="dishes__product-clock"></div><span class="dishes__product-time">25 мин</span> <div class="switch-btn switch-on"><span class="switch-btn-text"id="notselected">Выбрано</span><span class="switch-btn-text "id="selected">Выбрать</span></div> </div>
+        </div>
+        <div class="dishes__item-wrapper">
+          <div class="dishes__item-image">
+            <div class="dihes__term">
+              <span class="dihes__term-text">4-7</span>
+            </div>
+          </div>
+          <div class="dishes__hashtag">
+            <a class="dishes__hashtag-link" href="#">
+              <span class="dishes__hastag-name">#Обеды (супы)</span>
+            </a>
+            <a class="dishes__hashtag-link" href="#">
+              <span class="dishes__hastag-name">#ЗОЖ/ПП</span>
+            </a>
+            <a class="dishes__hashtag-link" href="#">
+              <span class="dishes__hastag-name">#Veggie</span>
+            </a>
+          </div>
+          <p class="dishes__item-name">
+            Шпинатные тальятелле с тигровыми креветками в соусе песто россо с
+            кремом из баклажана
+          </p>
+          <div class="dishes__cooking-info">
+            <div class="dishes__hat-image"></div>
+            <form action="select1.php" method="post">
+                <select name="lang">
+                <option class="wwer" value="Готовить легко">
+                    Готовить легко
+                </option>
+                <option value="Готовить легко">Готовить средне</option>
+                </select>
+            </form>
+            <span class="dishes__cooking-info-text">Готовить на <b> 1 - 2 день</b></span>
+        </div>
+            <div class="dishes__product-info"><div class="dishes__product-plate"></div> <span class="dishes__product-weight">340 г</span><div class="dishes__product-clock"></div><span class="dishes__product-time">25 мин</span>  <div class="switch-btn switch-on"><span class="switch-btn-text"id="notselected">Выбрано</span><span class="switch-btn-text "id="selected">Выбрать</span></div> </div>
+        </div>
+        <div class="dishes__item-wrapper">
+          <div class="dishes__item-image">
+            <div class="dihes__term">
+              <span class="dihes__term-text">4-7</span>
+            </div>
+          </div>
+          <div class="dishes__hashtag">
+            <a class="dishes__hashtag-link" href="#">
+              <span class="dishes__hastag-name">#Обеды (супы)</span>
+            </a>
+            <a class="dishes__hashtag-link" href="#">
+              <span class="dishes__hastag-name">#ЗОЖ/ПП</span>
+            </a>
+            <a class="dishes__hashtag-link" href="#">
+              <span class="dishes__hastag-name">#Veggie</span>
+            </a>
+          </div>
+          <p class="dishes__item-name">
+            Шпинатные тальятелле с тигровыми креветками в соусе песто россо с
+            кремом из баклажана
+          </p>
+            <div class="dishes__cooking-info">
+                <div class="dishes__hat-image"></div>
+                <form action="select1.php" method="post">
+                    <select name="lang">
+                    <option class="wwer" value="Готовить легко">
+                        Готовить легко
+                    </option>
+                    <option value="Готовить легко">Готовить средне</option>
+                    </select>
+                </form>
+                <span class="dishes__cooking-info-text">Готовить на <b> 1 - 2 день</b></span>
+            
+            </div>
+            <div class="dishes__product-info"><div class="dishes__product-plate"></div><span class="dishes__product-weight">340 г</span><div class="dishes__product-clock"></div><span class="dishes__product-time">25 мин</span>
+            <div class="switch-btn switch-on"><span class="switch-btn-text"id="notselected">Выбрано</span><span class="switch-btn-text "id="selected">Выбрать</span></div>
+            </div>
+            </div>
+            <a class="menu__arrow-link menu__arrow-end" href="#"></a>
+        </div>
+      </div>
     
-</body>
+    </section>
+<script src="jquery.js"></script>
+<script src="script.js"></script>
+
+  </body>
 </html>
