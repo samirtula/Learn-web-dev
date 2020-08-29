@@ -459,17 +459,11 @@ li {
   background-size: cover;
   margin-right: 30px;
 }
-.mobile,
-.links,
-.footer,
-.top-header__icon,
-.top-header__profile-image {
+.mobile, .links, .footer ,.top-header__icon,.top-header__profile-image {
   display: none;
 }
 @media all and (max-width: 780px) {
-  .mobile,
-  .links,
-  .footer {
+  .mobile, .links, .footer{
     display: block;
   }
   .top-header {
@@ -980,7 +974,7 @@ li {
     font-size: 18px;
   }
 }
-@media all and (min-width: 380px) and (max-width: 430px) {
+@media all and (min-width: 380px) and (max-width: 430px){
   .slogan__header::before {
     width: 95%;
     height: 230px;
