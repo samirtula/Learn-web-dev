@@ -165,6 +165,9 @@ li {
   margin-right: 13%;
   color: #333;
 }
+.navigation__contacts_login-text{
+  color:  #333;
+}
 .navigation__contacts-login {
   display: inline-flex;
   align-items: center;
@@ -945,7 +948,7 @@ li {
 #nextbutton:hover {
   opacity: 1;
 }
-@media all and (max-width: 768px) {
+@media all and (min-width: 768px) and (max-width: 992px) {
   body {
     width: 98.8%;
     margin: o auto;
