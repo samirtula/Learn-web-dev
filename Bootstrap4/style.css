@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Open+Sans+Condensed:wght@700&display=swap');
+.production {
+    background-image: url(images/i1.png);
+    height: 100%;
+}
+
+.nav-links, a:hover {
+    font-family: Open Sans Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#tel {
+    text-align: right;
+}
+.production__row{
+ padding-top: 30px;
+}
+.production-info {
+    margin-top: 190px;
+}
+.production-heading {
+    font-family: Open Sans Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 87px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    
+    /* white */
+    
+    color: #FFFFFF;
+}
+.production-text {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    color: #FFFFFF;
+    
+}
+.production-poster {
+display: inline-block;
+width: 160px;
+height: 50px;
+background: #D1A954;
+text-transform: uppercase;
+font-family: Open Sans Condensed;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 25px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.1em;
+/* white */
+
+color: #FFFFFF;
+}
+.perfomance-image {
+background-image: url(images/i2.png);
+width: 370px;
+height: 510px;
+background-position: center;
+background-size: cover;
+}
