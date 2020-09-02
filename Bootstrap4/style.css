@@ -203,6 +203,7 @@ a:hover {
   width: 40px;
   height: 15px;
   background-image: url(images/i7.svg);
+  margin-right: 10px;
 }
 .slid :nth-child(2) ::after {
   content: " ";
@@ -210,6 +211,7 @@ a:hover {
   height: 15px;
   background-image: url(images/i7.svg);
   transform: rotate(180deg);
+  margin-left: 10px;
 }
 
 .about-heading {
@@ -433,6 +435,7 @@ a:hover {
 }
 #exampleFormControlTextarea1 {
   height: 94px;
+  width: 100%;
 }
 .personal-data {
   font-family: Open Sans;
@@ -441,14 +444,30 @@ a:hover {
   font-size: 12px;
   line-height: 150%;
   color: #989898;
-  padding-left: 30px;
 }
 .form-row > .col,
 .form-row > [class*="col-"] {
   padding-right: 0;
-  padding-left: 30px;
+  padding-left: 0;
 }
-
+.copyright {
+  display: inline-block;
+  font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 150%;
+text-align: right;
+color: #989898;
+margin-bottom: 0;
+  }
+  footer {
+    border: 1px solid #565656;
+height: 78px;
+    }
+    .copy {
+      height: 78px;
+    }
 @media all and (min-width: 576px) and (max-width: 768px) {
   #tel {
     flex: none;
@@ -470,7 +489,8 @@ a:hover {
     background-size: contain;
   }
   .form-control {
-    width: 100%;
+
+    max-width: 230px;
   }
   .reverse {
     -ms-flex-direction: row-reverse !important;
@@ -526,3 +546,18 @@ a:hover {
     justify-content: space-between;
     width: 66%;
 }
+#exampleFormControlTextarea1 {
+width: 100% !important;
+max-width: 509px;
+}
+.form-control {
+  max-width: none;
+}
+.personal-data {
+  padding-left: 0;
+  max-width: 435px;
+  margin: 0 auto;
+}
+}
+@media all and (min-width: 576px) and (max-width: 768px) {
+  #tel {
