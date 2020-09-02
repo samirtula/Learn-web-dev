@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+<div class="contacts d-sm-none">
+        <div class="banner__wrapper">
+            <div class="contacts-list ">
+                <a class="contact-link inst" href="#"></a>
+                <a class="contact-link fb" href="#"></a>
+                <a class="contact-link vk" href="#"></a>
+                <a class="contact-link youtube" href="#"></a>
+        </div>
+        <div class="contacts-line"></div>
+        <p class="contacts-info">контактная информация</p>
+    </div>
+</div>
 <section class="production">
     <div class="container production__row">
         <div class="row ">
-            <div class="col-9">
-                <div class="row">
+            <div class="col-9 cols-sm-12">
+                <div class="row d-sm-none">
                     <div class="col-2">
                         <a class="nav-links" href="#">Главная</a>  
                     </div>
@@ -30,61 +42,198 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3" id="tel">
+            <div class="col-md-3 f-16" id="tel">
                 <a class="nav-links" href="tel:74951234567">+7 495 123-45-67</a>
             </div>
             </div>
             <div class="row production-info">
-                <div class="col-6">
+                <div class="col-sm-12 col-md-6 ">
                     <div class="row">
-                        <div class="col-12">
-                            <h1 class="production-heading">Большой театр</h1>
+                        <div class="col-12 text-sm-center">
+                            <h1 class="production-heading f64">Большой театр</h1>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <p class="production-text">Большо́й теа́тр — петербургский театр, существовавший в 1784—1886 годах, с 1886 года — Петербургская консерватория. Первое постоянное в Санкт-Петербурге, крупнейшее в России и одно из крупнейших театральных зданий в Европе XVIII.</p>
+                            <p class="production-text f14">Большой театр — петербургский театр, существовавший в 1784—1886 годах, с 1886 года — Петербургская консерватория. Первое постоянное в Санкт-Петербурге, крупнейшее в России и одно из крупнейших театральных зданий в Европе XVIII.</p>
                         </div>
                     </div>
                  <div class="row">
-                        <div class="col-4"> 
-                            <a class="production-poster justify-content-center" href="#">афиша</a>
-                        </div>
+                     <div class="col-4 poster" > 
+                        <a class="production-poster justify-content-center" href="#">афиша</a>
+                    </div>
                 </div>
             </div>
-                <div class="col-6">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="perfomance-image"></div>
+                <div class="col-6 d-sm-none">
+                    <div class="row p-image-row">
+                        <div class="col-8 perfomance-image">
+                          
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-6"></div>
-                        <div class="col-6"></div>
+                    <div class="row slider-row">
+                        <div class="col-8">
+                            <div class="row slid">
+                                <div class="col-5 arrow-left"><a href="#" class="slider">Пред</a></div>
+                                <div class="col-5 arrow-right"><a href="#" class="slider slider-right">След</a></div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
+</section>
+ <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-sm-center ">
+                    <h1 class="about-heading f-48 "><span class="gold"> о </span>театре</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-5 ">
+                    <div class="row">
+                        <div class="col-12 text-sm-center text-md-left "><h2 class="theatr-heading">Самый лучший театр СПБ</h2></div>
+                        <div class="col-12 text-sm-center text-md-left"><p class="theatr-history">Как свидетельствуют архивные документы, первое каменное здание Большого театра начали возводить в 1775 году по проекту Антонио Ринальди. В дальнейшем, после того как Ринальди упал с лесов и не мог лично наблюдать за ходом работ, Екатерина II поручила немецкому театральному декоратору и архитектору Людвигу Филиппу Тишбейну создать новый проект театра, который и был воплощён архитекторами Ф. В. фон Бауром и М. А. Деденёвым. Открытие его состоялось в 1783 году, хотя, основываясь на других свидетельствах, годом открытия можно считать 1784 год.</p></div>
+                    </div>
+                </div>
+                <div class="cols-sm-12 col-md-3">
+                    <div class="row">
+                        <div class="col-12 d-flex flex-column align-items-sm-center align-items-md-start text-sm-center ">
+                            <h2 class="theatr-heading">немного о цифрах</h2>
+                            <div class="chair-warapper">
+                            <div class="chair">
+                                <div class="amchair-image"></div>
+                                <h4 class="premises-info"><span class="gold">1600 </span> посадочных мест</h4>
+                              </div>
+                             <div class="chair">
+                                <div class="scene-image"></div>
+                                <h4 class="premises-info"> <span class="gold"> 350</span> лет истории</h4>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 theatr-image d-sm-none"></div>
+            </div>
+            
+</section>
+<section class="staginis">
+    <div class="container">
+         <div class="row">
+            <div class="col-12">
+                 <h1 class="our-staginis about-heading"><span class="gold"> Наши </span>постановки</h1>    
+            </div>
+         </div>
+            <div class="row">
+                <div class="col-4 oscar-image d-sm-none"></div>
+                <div class="col-sm-12 col-md-4 spb-image ">
+                     <div class="col-12 search-container">
+                         <a class="search" href="#"></a>
+                    </div>
+                </div>
+                <div class="col-4 gramophone-image d-sm-none"></div>
+            </div>
+    </div>
+</section>        
+<section class="rating">
+    <div class="container">
+        <div class="row justify-content-around align-items-center raiting-row">
+            <div class="col-sm-5 col-md-2 align-items-centers">
+                <p class="year">2018</p>
+                <p class="year">2019</p>
+                <p class="year last-year">2020</p>
+            </div>
+            <div class="col-sm-7 col-md-5">
+                <div class="row">
+                    <div class="col-sm-12 col-md-8 stars"></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-col">
+                        <p class="rating-text">Лучший театр по мнению театральных критиков Парижа</p>
+                    </div>
+                </div>
+            </div>
 
-            <!--<div class="col-2">
-                <a class="nav-links" href="#">Главная</a>
+        </div>
+    </div>
+</section>
+<section class="partners">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                 <h1 class="our-staginis about-heading"><span class="gold">партнеры</span>театра</h1>    
             </div>
-            <div class="col-2">
-                <a class="nav-links" href="#">о театре</a>
-            </div>
-            <div class="col-2">
-                <a class="nav-links" href="#">Наши постановки</a>
-            </div>
-            <div class="col-2">
-                <a class="nav-links" href="#">партнеры театра</a>
-            </div>
-            <div class="col-2">
-                <a class="nav-links" href="#">контакты</a>
-            </div>
-            <div class="col-2">
-                <a class="nav-links" href="#">+7 495 123-45-67</a>
+         </div>
+         <div class="row justify-content-around sponsors">
+             <div class="col-sm-6 col-md-3">
+                 <div class="sponsor"></div>
+                 <div class="sponsor"></div>
+             </div>
+             <div class="col-sm-6 col-md-3">
+                 <div class="sponsor"></div>
+                 <div class="sponsor"></div>
+             </div>
+             <div class="d-sm-none col-3">
+                 <div class="sponsor"></div>
+                 <div class="sponsor"></div>
+             </div>
+             <div class="d-sm-none col-3">
+                 <div class="sponsor"></div>
+                 <div class="sponsor"></div>
+             </div>
+         </div>
+    </div>
+</section>
+<section class="charity">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="about-heading heading-charity"><span class="gold"> стать </span>меценатом</h1>
             </div>
         </div>
-    </div>-->
-    </section>
+        <div class="row">
+            <div class="col-4 d-flex flex-column d-sm-none">
+                <a class="charity-link" href="tel:+78121234555">+7 (812) 123-45-55</a>
+                <a class="charity-link" href="tel:+78121234566">+7 (812) 123-45-66</a>
+                <a class="charity-link" href="mailto:info@theater.ru">info@theater.ru</a>
+                <p class="charity-address">г. санкт-петербург, невский 140</p>
+
+            </div>
+            <div class="col-sm-12 col-md-8 ">
+                <form>
+                    <div class="form-row">
+                              <div class="col-sm-6 col-md-3 d-flex flex-column justify-content-between">
+                                <input type="text" class="form-control" placeholder="Имя">
+                                <input type="text" class="form-control" placeholder="Телефон">
+                              
+                              </div>
+                              <div class="col-sm-6 col-md-3 d-flex flex-column  justify-content-between">
+                                <input type="text" class="form-control" placeholder="Компания">
+                                <input type="text" class="form-control" placeholder="E-mail">
+                              
+                              </div>
+                            <div class="col-md-6 col-sm-12 d-flex justify-content-end justify-content-sm-between">
+                        <textarea class="form-control text" id="exampleFormControlTextarea1" rows="3" placeholder="Сообщение"></textarea>
+                      </div>
+                    </div>  
+                    <div class="row reverse">
+                        <div class="col-md-6 col-sm-12">
+                            <p class="personal-data text-sm-center text-md-left">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</p>                        </div>
+                        <div class="col-sm-12 col-md-6 d-flex justify-content-md-end text-sm-center justify-content-sm-center"> 
+                            <a class="production-poster justify-content-center formbutton" href="#">отправить</a>
+                        </div>
+                    </div>
+                  </form>
+                  <div class="row">
+                    <div class="col-sm-12 d-flex flex-column d-md-none footer-contacts flex-wrap">
+                        <a class="charity-link" href="tel:+78121234555">+7 (812) 123-45-55</a>
+                        <a class="charity-link" href="tel:+78121234566">+7 (812) 123-45-66</a>
+                        <a class="charity-link charity-address" href="mailto:info@theater.ru">info@theater.ru</a>
+                        <p class="charity-address">г. санкт-петербург, невский 140</p>
+        
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
 </body>
 </html>
