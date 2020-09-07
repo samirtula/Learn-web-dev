@@ -10,7 +10,6 @@
 body {
   background: #333333;
 }
-
 a:hover {
   text-decoration: none;
   color: #ffffff;
@@ -55,9 +54,6 @@ a:hover {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 0;
-
-  /* white */
-
   color: #ffffff;
   padding-top: 130px;
   padding-bottom: 40px;
@@ -87,9 +83,6 @@ a:hover {
   text-align: center;
   letter-spacing: 0.1em;
   text-decoration: none;
-
-  /* white */
-
   color: #ffffff;
 }
 .poster {
@@ -128,7 +121,6 @@ a:hover {
   align-items: center;
   justify-content: space-between;
 }
-
 .contacts-info {
   font-family: Open Sans Condensed;
   font-style: normal;
@@ -246,9 +238,6 @@ a:hover {
   line-height: 29px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
-  /* white */
-
   color: #ffffff;
   margin-bottom: 40px;
 }
@@ -258,11 +247,8 @@ a:hover {
   font-weight: normal;
   font-size: 14px;
   line-height: 150%;
-  /* or 21px */
-
   color: #ffffff;
 }
-
 .chair {
   display: flex;
   flex-direction: column;
@@ -378,9 +364,6 @@ a:hover {
   line-height: 98px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
-  /* gold */
-
   color: #d1a954;
 }
 .stars {
@@ -396,7 +379,6 @@ a:hover {
   font-weight: bold;
   font-size: 36px;
   line-height: 150%;
-
   color: #ffffff;
 }
 .text-col {
@@ -432,8 +414,6 @@ a:hover {
   text-transform: uppercase;
   margin-bottom: 25px;
   display: block;
-  /* white */
-
   color: #ffffff;
 }
 .heading-charity {
@@ -453,7 +433,6 @@ a:hover {
   align-items: center;
   margin-bottom: 30px;
   width: 100%;
-
   color: #989898;
 }
 .text {
@@ -511,7 +490,6 @@ br {
     padding-left: 150px;
   }
 }
-
 @media all and (min-width: 992px) and (max-width: 1200px) {
   .production {
     padding-bottom: 365px;
@@ -538,7 +516,6 @@ br {
   .staginis {
     padding-bottom: 170px;
   }
-
   section,
   footer {
     padding-left: 180px;
@@ -751,7 +728,6 @@ br {
   .charity-address {
     text-align: right;
   }
-
   #tel::before {
     content: " ";
     display: inline-block;
@@ -776,7 +752,6 @@ br {
     justify-content: space-between;
     width: 66%;
   }
-
   #exampleFormControlTextarea1 {
     width: 100% !important;
     max-width: 530px;
