@@ -746,6 +746,7 @@ br {
   .rating-text {
     font-size: 25px;
     line-height: 150%;
+    padding-left: 15px;
   }
   .chair-warapper {
     display: flex;
@@ -796,6 +797,7 @@ br {
   }
   .stars {
     margin-top: 30px;
+    margin-left: 15px;
   }
   .staginis {
     padding-bottom: 90px;
@@ -951,6 +953,7 @@ br {
   }
   .rating-text {
     font-size: 29px;
+    padding-left: 15px;
   }
   .year {
     margin-bottom: 0rem;
