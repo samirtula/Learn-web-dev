@@ -34,7 +34,6 @@ let profileName;
 
 верхний регистр
 для birthday - можно
-<<<<<<< HEAD
 для age - нет т.к это вычисляемая переменная*/
 function multiply(a, b) {
   let a = 11;
@@ -42,10 +41,7 @@ function multiply(a, b) {
   let c = a * b;
   console.log(c);
 }
-=======
-для age - нет т.к это вычисляемая переменная
-
-встроенные функции 
+строенные функции 
 Number
 Boolean
 String
@@ -83,7 +79,3 @@ d=1
 let a = 2;
 
 let x = 1 + (a *= 2);// a=4 x=5
-
-
-
->>>>>>> 76a90d5d7b2db06f31024664452d42a52d16cc80
