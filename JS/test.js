@@ -2,12 +2,49 @@
 //alert ('Вас зовут ' + name);
 
 5 > 4 true
-"ананас" > "яблоко" false
-"2" > "12" true
-undefined == null true
-undefined === null false
-null == "\n0\n" false
-null === +"\n0\n" false
+"ананас" > "яблоко" false // я по юникод идет позже буквы а
+"2" > "12" true //не преобразуются в числа когда оба значения строки сравниваются как строки 2 позже чила 1
+undefined == null true //только эти значения равны друг другу с другими нет
+undefined === null false //строгое сравнение .учитывается тип данных
+null == "\n0\n" false // равен только undefined
+null === +"\n0\n" false//равен только undefined
+
+
+
+
+"" + 1 + 0 // 10 конкатенация за счет знака +
+"" - 1 + 0// -1 "" пустая строка это 0
+true + false// 1
+6 / "3"// 2 преобразование типа
+"2" * "3"// 6
+4 + 5 + "px"//9px
+"$" + 4 + 5//$45 слева направо исполняется
+"4" - 2//2
+"4px" - 2//Nan из строки вычитается число оператор- пытается привести их к числу и выдает NAN
+7 / 0// infinity
+"  -9  " + 5// "-9 5"
+"  -9  " - 5// -14
+null + 1//1 Null=0
+undefined + 1// undefined при приведении к числу выдает Nan
+" \t \n" - 2//-2 не учитываются символы обозначающие перенос строки
+
+
+let a = 1, b = 1;
+
+let c = ++a; // 2 инкремент ++срабатывает до присвоения значения переменной с 
+let d = b++; // 1 декримент ++ срабатывает после присвоения значения переменной d
+a=2
+b=2
+c=2
+d=1
+
++а//унарный плюс перед значением преобразует его в число все равно что функция Number
+
+
+let a = 2;
+
+let x = 1 + (a *= 2);// a=4 x=5 короткая запись a=a*2
+
 
 
 
@@ -22,7 +59,7 @@ if ("0") {
 
   if (value == 'ECMAScript') {
     alert('Верно!');
-  } else {
+  } else {                               // так не делать
     alert('Не знаете? ECMAScript!');
   }
 
@@ -86,7 +123,7 @@ if (login == 'Сотрудник') {
   message = '';
 }
 
-let login = 'qweew'
+let login = 'value'
 
 let message = (login == 'Сотрудник') ? 'Привет':
 (login == 'Директор') ? 'Здравствуйте':
@@ -95,4 +132,117 @@ let message = (login == 'Сотрудник') ? 'Привет':
 
 alert(message)
 
+
+
+
+
+let name
+let name
+let name
+let name 
+let name
+let name
+let name
+let name
+let name
+объявление переменной 
+
+
+const stone 
+const stone
+const stone
+const stone
+const stone
+const stone
+
+объявление незменяемой переменной
+
+
+
+if () {
+
+}
+else {
+
+}
+
+
+
+if () {
+
+}
+else {
+
+}
+
+
+
+if () {
+
+}
+
+
+else {
+  
+}
+
+
+
+if () {
+
+}
+else if {
+
+}
+
+
+console.log()
+console.log()
+console.log()
+console.log()
+
+
+
+
+alert()
+alert()
+alert()
+alert()
+alert()
+
+
+
+prompt()
+prompt()
+prompt()
+prompt()
+prompt()
+
+
+
+
+confirm()
+confirm()
+
+
+
+
+Number(true)//1
+Number(false)//0
+Number('nenum')//NAN
+
+
+
+
+Boolean(1)//true
+Boolean(0)//false
+Boolean('a')//true
+Boolean(undefined)//false
+Boolean(NaN)//false
+
+
+String()
+String()
+String()
+String()
 
