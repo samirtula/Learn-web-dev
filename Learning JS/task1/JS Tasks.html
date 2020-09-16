@@ -23,7 +23,16 @@
 
       let value = prompt("Введите объем памяти Вашего флэш накопителя в ГБ");
       let message = "Ваш флеш накопитель может разместить ";
-      alert(message + Math.floor((value * 1024) / 820) + " файлов"); */
+      alert(message + Math.floor((value * 1024) / 820) + " файлов"); 
+
+      Второй вариант решения
+    
+      let value = prompt("Введите объем памяти Вашего флэш накопителя в ГБ");
+      let message = "Ваш флеш накопитель может разместить ";
+      let size = value * 1024;
+      let commonvalue = size % 820;
+      let result = (size - commonvalue) / 820;
+      alert(message + result + " файлов по 820 мб.");*/
 
       /* Задача №3
       Реализовать обмен валют.
@@ -42,12 +51,12 @@
 
       // Курсы Валют на 16.09.20
 
-      const dollarRub = 74.83;
-      const dollarEuro = 0.85;
-      const rublDollar = 0.013;
-      const rubEuro = 0.011;
-      const euroDollar = 1.18;
-      const euroRubl = 88.66;
+      const dollarRub = 74.83,
+        dollarEuro = 0.85,
+        rublDollar = 0.013,
+        rubEuro = 0.011,
+        euroDollar = 1.18,
+        euroRubl = 88.66;
 
       let money = prompt("Введите наименование валюты которую хотите обменять");
 
