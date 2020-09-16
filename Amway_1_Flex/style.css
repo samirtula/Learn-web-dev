@@ -1,0 +1,617 @@
+body,
+html {
+  margin: 0 auto;
+}
+/* ---------Блок старт-------------*/
+.introduction {
+  width: 100%;
+  height: 600px;
+  background: url(images/image1.jpg);
+  background-size: cover;
+}
+.main {
+  margin: 0 auto;
+  width: 75%;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+.content {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.content__item {
+  display: flex;
+  margin-top: 7%;
+  width: 50%;
+}
+.roboto_font_text {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: bold;
+}
+#start {
+  font-size: 80px;
+  line-height: 94px;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin: 0;
+  display: inline-block;
+}
+.logo__image {
+  width: 82px;
+  height: 82px;
+  background: url(images/Group33.png);
+  margin-left: 7%;
+  display: inline-block;
+}
+.sans_pro_font_text {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: 600;
+}
+.advantages {
+  font-size: 24px;
+  line-height: 116.7%;
+  color: #ffffff;
+  margin-top: 3%;
+}
+.mobile__apps {
+  display: flex;
+  align-items: center;
+  margin-top: 12%;
+}
+.download {
+  width: 73px;
+  height: 25px;
+  margin: 0;
+  font-size: 20px;
+  line-height: 25px;
+  color: #ffffff;
+  margin-right: 3%;
+}
+.appstore {
+  background: url(images/AppStorewhite.png);
+  width: 119px;
+  height: 40px;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 2%;
+}
+.google__play {
+  background: url(images/Google\Playwhite.png);
+  width: 135px;
+  height: 40px;
+  display: inline-block;
+  cursor: pointer;
+}
+#iphone__image {
+  width: 50%;
+  height: 550px;
+  background: url(images/iphone.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  margin-top: 76px;
+  justify-content: center;
+  display: flex;
+}
+#play__button {
+  width: 97px;
+  height: 97px;
+  background: url(images/play.png);
+  cursor: pointer;
+  margin-top: 230px;
+}
+/*-------------Блок "Три шага"------------*/
+
+.three__steps {
+  margin: 0 auto;
+  width: 75%;
+  height: 720px;
+  display: flex;
+  justify-content: space-between;
+}
+.three__steps__info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+#success {
+  font-size: 56px;
+  line-height: 66px;
+  color: #333333;
+  margin-top: 28%;
+  margin-bottom: 5%;
+}
+.experience {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #333333;
+  margin-bottom: 15%;
+}
+.download__black {
+  font-size: 20px;
+  line-height: 25px;
+  color: #333333;
+  margin-right: 3%;
+}
+.mobile__apps__black {
+  display: flex;
+  align-items: center;
+}
+.appstore__black {
+  background: url(images/AppStoreblack.png);
+  width: 119.66px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 2%;
+}
+.google__play__black {
+  background: url(images/GooglePlayblack.png);
+  width: 135px;
+  height: 40px;
+  cursor: pointer;
+}
+.three__steps__examples {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.steps_example {
+  background-position: center center !important;
+  width: 239px;
+  height: 225px;
+}
+
+#first__step {
+  background: url(images/step1.png);
+  margin-top: 5%;
+}
+#second__step {
+  background: url(images/step2.png);
+  align-self: flex-end;
+}
+#third__step {
+  background: url(images/step3.png);
+  margin-bottom: 5%;
+}
+.steps_example > h3 {
+  width: 147px;
+  height: 61px;
+  font-size: 24px;
+  line-height: 30px;
+}
+.metodology {
+  color: #d13855;
+  margin-top: 30%;
+  margin-left: 108%;
+}
+.interactive {
+  color: #91be48;
+  margin-top: 30%;
+  margin-left: -67%;
+}
+.command {
+  color: #2c5074;
+  margin-top: 30%;
+  margin-left: 108%;
+}
+/*-------------Блок Новый Амвэй старт---------------------*/
+
+.new__start {
+  width: 100%;
+  height: 800px;
+  background: linear-gradient(
+    244.05deg,
+    #b8b042 -0.27%,
+    #b8b042 -0.26%,
+    #559f54 100%
+  );
+}
+.amway__start {
+  margin: 0 auto;
+  width: 75%;
+  height: 634px;
+  display: flex;
+  justify-content: space-between;
+}
+#header__amway {
+  margin: 0 auto;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-size: 56px;
+  line-height: 66px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.new__user {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120.7%;
+  margin: 0px;
+  margin-bottom: 15%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.young__user {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 560px;
+  width: 36%;
+}
+.cloud {
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 85px;
+  display: flex;
+}
+.cloud::before {
+  content: "";
+  border: 55px solid transparent; /* Прозрачные границы */
+  border-left: 60px solid #fff;
+  margin-left: 15%;
+}
+.amworld {
+  width: 203px;
+}
+.principes {
+  width: 348px;
+}
+.levels {
+  width: 212px;
+}
+.message_in_cloud {
+  font-size: 20px;
+  line-height: 25px;
+  margin: auto;
+  color: #333333;
+  margin-left: -139px;
+}
+.message {
+  width: 165px;
+  height: 51px;
+}
+.message_right{
+  margin-left: -118px;
+}
+.pricipe_message {
+  width: 301px;
+  height: 51px;
+}
+.levels__message {
+  width: 176px;
+  height: 51px;
+}
+#iphone__image__amway {
+  width: 27%;
+  height: 596px;
+  background: url(images/iphone2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.experienced__lider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 560px;
+  width: 37%;
+  align-items: flex-end;
+}
+.old__user {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120.7%;
+  text-transform: uppercase;
+  margin: 0;
+  margin-right: 25%;
+  color: #ffffff;
+}
+.data {
+  width: 372px;
+}
+.comm {
+  width: 227px;
+}
+.cours {
+  width: 372px;
+}
+
+.young__user :nth-child(3) {
+  margin-left: 15%;
+}
+.experienced__lider :nth-child(3) {
+  align-self: center;
+  margin-left: 15%;
+}
+/*---------------------Блок Как Пользоваться---------------------*/
+.information {
+  width: 75%;
+  height: 625px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.information__use {
+  width: 50%;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+#girl__image {
+  width: 50%;
+  height: 420px;
+  background: url(images/Girl.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+}
+
+#how__to__use {
+  font-size: 56px;
+  line-height: 66px;
+  color: #333333;
+  margin-top: 0;
+  margin-bottom: 15%;
+}
+.success__way {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #333333;
+}
+.buisness__start {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #333333;
+  margin-bottom: 15%;
+}
+.pdf__image {
+  width: 19.5px;
+  height: 26.01px;
+  background: url(images/pdf.png);
+  cursor: pointer;
+  display: inline-block;
+}
+.download__pdf {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+  cursor: pointer;
+  margin: 0;
+  margin-left: 3%;
+  display: inline-block;
+}
+.information__pdf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*-----------------Блок обновления------------------*/
+.updates {
+  width: 100%;
+  height: 658px;
+  background: linear-gradient(180deg, #5b63d9 0%, #3baee4 100%);
+}
+.wait__updates {
+  width: 75%;
+  height: 658px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.wait__updates__info {
+  display: flex;
+  flex-direction: column;
+  width: 37%;
+  height: 658px;
+  justify-content: center;
+}
+#updates__info {
+  font-size: 56px;
+  line-height: 66px;
+  color: #ffffff;
+}
+.functional {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 130%;
+  color: #ffffff;
+}
+#iphone__update__image {
+  width: 31%;
+  height: 538px;
+  background: url(images/iphone3.png);
+  background-position: center center;
+}
+.updates__examples {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32%;
+  height: 440px;
+  margin-left: 4%;
+}
+.updates__examples > div {
+  height: 70px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.updates__examples > div:nth-child(1) {
+  width: 236px;
+}
+.updates__examples > div:nth-child(2) {
+  width: 236px;
+}
+.updates__examples > div:nth-child(3) {
+  width: 195px;
+}
+.updates__examples > div:nth-child(4) {
+  width: 254px;
+}
+.updates__examples > div:nth-child(5) {
+  width: 293px;
+}
+.updates__examples > div > div {
+  height: 70px;
+  width: 48px;
+  border-radius: 10px 0px 0px 10px;
+  display: flex;
+  align-self: start;
+}
+#search {
+  background: #94d9bb;
+}
+#new {
+  background: #3baee4;
+}
+#calc {
+  background: #df488b;
+}
+#calendar {
+  background: #5b63d9;
+}
+#chek__list {
+  background: #fdd130;
+}
+.example_image {
+  margin: auto;
+  height: 23px;
+}
+#image__search {
+  width: 26px;
+  background: url(images/search.png);
+}
+#image__new {
+  width: 33px;
+  height: 16px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin: auto;
+  color: #ffffff;
+  position: static;
+}
+#image__calc {
+  width: 20px;
+  background: url(images/calc.png);
+}
+#image__calendar {
+  width: 18.58px;
+  background: url(images/calendar.png);
+}
+#image__list {
+  width: 19.55px;
+  background: url(images/chek-list.png);
+}
+.text {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: #333333;
+  margin: auto;
+  margin-left: 15px;
+}
+/*---------------Блок "Начните свой Путь"ь-----------------*/
+.advertising {
+  width: 75%;
+  height: 675px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+#image__phone__man {
+  width: 100%;
+  height: 680px;
+  background: url(images/manphone.png);
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: left;
+  flex-direction: row-reverse;
+}
+.advertising__way {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  margin-right: 23%;
+}
+.colum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.way {
+  width: 354px;
+  height: 30px;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #333333;
+  margin-top: 0;
+}
+.buisness {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #333333;
+}
+.download__app {
+  font-size: 20px;
+  line-height: 25px;
+  margin-right: 3%;
+  color: #333333;
+  cursor: pointer;
+}
+.image_appstore {
+  width: 127px;
+  height: 40px;
+  background: url(images/AppStoreblack.png);
+  cursor: pointer;
+  margin-right: 2%;
+}
+.image_android {
+  width: 144px;
+  height: 40px;
+  background: url(images/GooglePlayblack.png);
+  cursor: pointer;
+}
