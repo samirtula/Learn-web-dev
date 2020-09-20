@@ -122,7 +122,7 @@ exchanger.currency == USA && exchanger.moneysum % 10 == 1
   ? (exchanger.currency = "рублей")
   : (exchanger.currency = "евро");
 // ВЫЧИСЛЕНИЕ КОНЕЧНОЙ СУММЫ
-let changedSum = Math.round(exchanger.moneysum * result * rate);
+let changedSum = (exchanger.moneysum * result * rate).toFixed(2);
 // БЛОК КОДА ДЛЯ КОРРЕКТИРОВКИ ОКОНЧАНИЯ ФРАЗЫ В ЗАВИСИМОСТИ ОТ СУММЫ
 exchanger.toChangeMoney == USA && changedSum % 10 == 1
   ? (exchanger.toChangeMoney = "доллар")
