@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="Log"></p>
+    <script>
+      /*     function show() {
+                                for (let i = 1; i <= 5; i++) {
+                                  document.write("<h2> Header " + i + "</h2>");
+                                }
+                              }
+
+                              show();
+                              document.write("<p>Kiss</p>");
+                              show(); */
+
+      /*       function incAndLog(x) {
+                                x = x + 1;
+                                alert("inc x =x" + x);
+                                Log.innerHTML += "<br> inc x = " + x;
+                              } */
+      /* incAndLog(51); */
+
+      /*       let x = 2;
+                              Log.innerHTML += "<br> inc x = " + x;
+                              incAndLog(x);
+                              Log.innerHTML += "<br> inc x = " + x;
+
+                              function cube(z) {
+                                return z * z * z;
+                              }
+
+                              let result = cube(10);
+                              alert(result); */
+
+      /*  function less(a, b) {
+                          if (a < b) {
+                            return a;
+                          } else if (b < a) {
+                            return b;
+                          }
+                        }
+
+                        alert(less(5, 3));
+
+                        function min(a, b) {
+                          return a > b ? b : a;
+                        }
+                        alert(min(a, b)); */
+
+      /*      function power(x, y) {
+                          let result = 1;
+                          while (y >= 1) {
+                            result = result * x;
+                            y--;
+                          }
+                          return result;
+                        }
+                        alert(power(2, 54)); */
+
+      /*  function calc(a, b, operator) {
+                    switch (operator) {
+                      case "+":
+                        return a + b;
+                      case "-":
+                        return a - b;
+                      case "*":
+                        return a * b;
+                      case "/":
+                        return a / b;
+                    }
+                  }
+                  alert(calc(10, 15, "+"));
+                  alert(calc(10, 15, "*"));
+                  alert(calc(10, 15, "/"));
+                  alert(calc(10, 15, "-")); */
+
+      /*  function isSimple(z) {
+                   for (let i = z - 1; i > 1; i--) {
+                     if (z % i == 0) {
+                       return "Число не простое";
+                     }
+                   }
+                   return "Число простое";
+                 }
+                 alert(isSimple(7)); */
+      /*       function calcTable(o) {
+                  for (let i = 1; i <= 10; i++) {
+                    document.write(o + " * " + i + " = " + o * i + "<br>");
+                  }
+                  document.write("<hr>");
+                }
+                for (let i = 2; i <= 9; i++) {
+                  calcTable(i);
+                }
+
+                calcTable(5); */
+      /*
+                function rest(a, b) {
+                  let div = parseInt(a / b);
+                  return a - b * div;
+                }
+                alert(rest(5, 2));
+                alert(rest(9, 2));
+                alert(rest(37, 8)); */
+
+      /*       function rest(a, b) {
+                  let div = a / b;
+                  return (div - Math.floor(div)) * b;
+                }
+                alert(rest(5, 2));
+                alert(rest(9, 2));
+                alert(rest(37, 8)); */
+
+      /*       function summ() {
+                  let result = 0;
+                   {
+                    if (i > 4) {
+                      break;
+                    }
+                    result += arguments[i];
+                  }
+                  return result;
+                }
+                alert(summ(10, 7, 11, 90, 1, 234)); */
+
+      /*     function max() {
+                  let max = arguments[0];
+                  for (let i = 0; i < arguments.length; i++) {
+                    if (arguments[i] > max && i < 4) {
+                      max = arguments[i];
+                    }
+                  }
+                  return max;
+                }
+                alert(max(70, 30, 45, 65, 89)); */
+
+      /*       function showNumbers(a, b, even) {
+              for (let i = a; i <= b; i++) {
+                if (even) {
+                  if (i % 2 == 0) document.write(i + "<br>");
+                } else {
+                  if (i % 2 != 0) {
+                    document.write(i + "<br>");
+                  }
+                }
+              }
+            }
+            showNumbers(5, 50, false); */
+      function getNextDate(day, month, year) {
+        let maxDay = 30;
+        if ((month = 2)) {
+          maxDay = isLeapYear(year) ? 29 : 28;
+        } else if (
+          month == 1 ||
+          month == 3 ||
+          month == 5 ||
+          month == 7 ||
+          month == 8 ||
+          month == 10 ||
+          month == 12
+        ) {
+          maxDay = 31;
+        }
+        if (day == maxDay) {
+          day = 1;
+          if (month == 12) {
+            month = 1;
+            year++;
+          } else {
+            day++;
+          }
+        }
+        if (day < 10) {
+          day = "0" + day;
+        }
+        if (month < 10) {
+          month = "0" + day;
+        }
+        return day + "." + month + "." + year;
+      }
+
+      function isLeapYear(year) {
+        return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
+      }
+      alert(getNextDate(23, 09, 2020));
+      alert(getNextDate(28, 02, 2020));
+      alert(getNextDate(29, 02, 2020));
+    </script>
+  </body>
+</html>
