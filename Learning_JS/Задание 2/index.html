@@ -1,89 +1,186 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      /*   let month = prompt("Введите число текущего месяца");
-                             switch (month) {
-                               case "1":
-                                 alert("Январь");
-                                 break;
-                               case "2":
-                                 alert("Февраль");
-                                 break;
-                               case "3":
-                                 alert("Март");
-                                 break;
-                               default:
-                                 alert("Некорректная информация");
-                             } */
-      /*     let X = parseInt(prompt("Введите число", "5"));
-                             while (x > 0) {
-                               document.write("#<br>");
-                               x--;
-                             } */
-      /*
-                             let x = parseInt(prompt("Введите число", "5"));
-                             while (x >= 0) {
-                               document.write(x + "<br>");
-                               x--;
-                             } */
-      /*
-                       let x = parseInt(prompt("Введите число", "5"));
-                       let y = parseInt(prompt("Введите число", "2"));
-                       let z = y;
-                       let result = 1;
+<script>
+  let arr = [];
+  for (let i = 0; i < 10; i++) {
+    arr.push(parseInt(Math.random() * 100));
+  }
 
-                       while (y > 0) {
-                         result = result * x;
-                         y--;
-                       }
-                       document.write("Число " + x + " в степени" + z + " = " + result); */
-      /*    let x = parseInt(prompt("Введите число", "5"));
-                       let y = parseInt(prompt("Введите число", "2"));
+  function showArray(array) {
+    for (let item of array) {
+      document.write(item + "<br>");
+    }
+  }
+  /*  showArray(arr); */
+  function showEvenArrayElements(array) {
+    for (let element of array) {
+      if (element % 2 == 0) {
+        document.write(element + "<br>");
+      }
+    }
+  }
+  /*
+         showEvenArrayElements(arr); */
+  function sumArray(array) {
+    let sum = 0;
+    for (let item of array) {
+      sum += item;
+    }
+    return sum;
+  }
 
-                       let min = x > y ? y : x;
-                       while (min > 1) {
-                         if (x % min == 0 && y % min == 0) {
-                           document.write("Делитель: " + min + "<br>");
-                         }
-                         min--;
-                       }
-                  */ /*
-                       let x = parseInt(prompt("Введите число", "5"));
-                       let number = x;
-                       let result = 1;
+  /*   alert("Massive summ " + sumArray(arr)); */
 
-                       while (x > 0) {
-                         result = result * x;
-                         x--;
-                       }
-                       document.write("Факториал числа: " + number + " равен " + result); */
+  function maxArray(array) {
+    let max = array[0];
+    for (let item of array) {
+      if (item > max) {
+        max = item;
+      }
+    }
+    return max;
+  }
 
-      /* }
-                             parseInt(x1) - преобразование к целому числу;
-                             parseFloat(x1) - преобразование к числу с плавающей точкой; */
-      /*  let x = 0;
-                  do {
-                    x = prompt("Решите пример 2 + 2 * 2 =");
-                  } while (x != 6);
-                  alert("Ваши данные отправлены в Oxford"); */
+  /*   showArray(arr);
+         alert("Максимум " + maxArray(arr));
+        */
 
-      /*     let x = 1000;
-            let y = 2;
-            let count = 0;
-            do {
-              x = x / 2;
-              count++;
-            } while (x >= 50);
-            document.write("Число: " + x + ", делений: " + count); */
+  function addElement(array, element, index) {
+    return array.splice(index, 0, element);
+  }
 
-            
+  /*   showArray(arr);
+         document.write("<hr>");
+         addElement(arr, 77, 2);
 
-    </script>
-  </body>
-</html>
+         showArray(arr); */
+
+  function deleteElement(array, index) {
+    return array.splice(index, 1);
+  }
+
+  /* showArray(arr);
+         document.write("<hr>");
+         deleteElement(arr, 2);
+
+         showArray(arr);
+        */
+
+  let arr2 = [];
+  for (let i = 0; i < 5; i++) {
+    arr2.push(parseInt(Math.random() * 100));
+  }
+
+  function getUniqueArray(array1, array2) {
+    let result = [];
+    for (let item of array1) {
+      if (!result.includes(item)) {
+        result.push(item);
+      }
+    }
+    for (let item of array2) {
+      if (!result.includes(item)) {
+        result.push(item);
+      }
+    }
+    return result;
+  }
+  /*   showArray(arr);
+      document.write("<hr>");
+      showArray(arr2);
+      document.write("<hr>");
+
+      showArray(getUniqueArray(arr, arr2)); */
+
+  function getCommonElements(array1, array2) {
+    let result = [];
+    for (let item of array2) {
+      if (array1.includes(item) && !result.includes(item)) {
+        result.push(item);
+      }
+    }
+
+    return result;
+  }
+
+  /*   showArray(arr);
+    document.write("<hr>");
+    showArray(arr2);
+    document.write("<hr>");
+
+    showArray(getCommonElements(arr, arr2)); */
+
+  let fruits = ["lemon", "banana", "apple"];
+
+  fruits.sort();
+  /* showArray(fruits); */
+  function showFruits(array) {
+    document.write("<ul>");
+    for (let item of array) {
+      document.write("<li>" + item + "</li>");
+    }
+    document.write("</li>");
+  }
+
+  /*   showFruits(fruits); */
+
+  function getIndex(array, name) {
+    let result = -1;
+    for (let key in array) {
+      // in это ключи . ищет по ключам
+      if (array[key] == name) {
+        return key;
+      }
+    }
+    return -1;
+  }
+
+  /* alert(getIndex(fruits, "banana")); */
+
+  //Рекурсия
+
+  function power(x, y) {
+    // степень числа
+    if (y == 1) {
+      return x;
+    }
+    return power(x, y - 1) * x;
+  }
+
+  function getMaxDivider(x, y) {
+    // наибольший общий делитель
+    if (y == 0) {
+      return x;
+    }
+    return getMaxDivider(y, x % y);
+  }
+  /* alert(getMaxDivider(6, 12)); */
+
+  function getMaxNumber(number, max) {
+    let lastNumber = number % 10;
+
+    if (!max || lastNumber > max) {
+      max = lastNumber;
+    }
+    if (number > 9) {
+      getMaxNumber((number - lastNumber) / 10, max);
+    } else {
+      return max > number ? max : number;
+    }
+  }
+
+  alert(getMaxNumber(7654));
+
+  function isSimple(x, i) {
+    if (i == 1) {
+      return "simple Number";
+    }
+    i = i || x - 1;
+    if (x % i == 0) {
+      return "notsimple number ";
+    } else {
+      return isSimple(x, i - 1);
+    }
+  }
+
+  /*   alert(isSimple(8));
+  alert(isSimple(7)); */
+</script>
