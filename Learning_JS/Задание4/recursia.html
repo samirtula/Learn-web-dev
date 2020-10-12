@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recursia</title>
+  </head>
+  <body>
+    <script>
+      /* 1. Написать функцию возведения числа в степень. */
+
+      function rec(n, p) {
+        if (p == 1) {
+          return n;
+        } else {
+          return n * rec(n, p - 1);
+        }
+      }
+      /*       alert(rec(2, 3)); */
+
+      /* 
+      Написать функцию поиска наибольшего общего делителя */
+
+      function com(n, p, i) {
+        n % i;
+        p % i;
+
+        if (n % i == 0 && p) {
+          com(p);
+        }
+      }
+    </script>
+  </body>
+</html>

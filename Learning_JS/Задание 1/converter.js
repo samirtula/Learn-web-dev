@@ -42,6 +42,159 @@
 
 // Курсы Валют на 18.09.20
 
+// // ОБЪЯВЛЕНИЕ ПЕРЕМЕННЫХ И СОЗДАНИЕ ОБЪЕКТА
+// let USA = "Доллар",
+//   EUR = "Евро",
+//   RUB = "Рубль",
+//   result,
+//   change,
+//   byeMessage;
+
+// let exchanger = {
+//   accept: "Подтверждаете обмен?",
+//   message: "Ваша сумма составит ",
+//   currency: prompt("Валюта которую неоходимо обменять (Доллар, Евро, Рубль)"),
+// };
+// // ОГРАНИЧЕНИЕ ПО ВВОДИМОЙ ИНФОРМАЦИИ
+// function errorMessage(currencyName) {
+//   if (currencyName != USA && currencyName != EUR && currencyName != RUB) {
+//     alert("Ошибка. Данная валюта не поддерживается");
+//     throw new Error("Ошибка. Данная валюта не поддерживается");
+//   }
+// }
+// errorMessage(exchanger.currency);
+// /* if (
+//   exchanger.currency != USA &&
+//   exchanger.currency != EUR &&
+//   exchanger.currency != RUB
+// ) {
+//   alert("Ошибка. Данная валюта не поддерживается");
+//   throw new Error("Ошибка. Данная валюта не поддерживается");
+// } */
+// // ВВЕДЕНИЕ ЕЩЕ ОДНОГО КЛЮЧА/СВОЙСТВА В ОБЪЕКТ С ОДНОВРЕМЕННЫМ ВЫЗОВОМ ФУНКЦИИ
+// exchanger.moneysum = prompt("Введите сумму валюты");
+// // ОГРАНИЧЕНИЕ ПО ВВОДИМОЙ ИНФОРМАЦИИ
+// if (exchanger.moneysum < 1) {
+//   alert("Ошибка. Сумма не может быть равна 0 или отрицательной");
+//   throw new Error("Ошибка. Сумма не может быть равна 0 или отрицательной");
+// }
+// // ВВЕДЕНИЕ ЕЩЕ ОДНОГО КЛЮЧА/СВОЙСТВА В ОБЪЕКТ С ОДНОВРЕМЕННЫМ ВЫЗОВОМ ФУНКЦИИ
+// exchanger.toChangeMoney = prompt(
+//   "Валюта на которую необходимо обменять (Доллар, Евро, Рубль)"
+// );
+// // ОГРАНИЧЕНИЕ ПО ВВОДИМОЙ ИНФОРМАЦИИ
+// /* if (
+//   exchanger.toChangeMoney != USA &&
+//   exchanger.toChangeMoney != EUR &&
+//   exchanger.toChangeMoney != RUB
+// ) {
+//   alert("Ошибка.Данная валюта не поддерживается");
+//   throw new Error("Ошибка. Данная валюта не поддерживается");
+
+// } else  */
+// errorMessage(exchanger.toChangeMoney);
+// if (exchanger.currency == exchanger.toChangeMoney) {
+//   alert("Ошибка.Валюта обмена совпадпет с меняемой валютой");
+//   throw new Error("Ошибка.Валюта обмена совпадпет с меняемой валютой");
+// }
+// // КОНВЕРТАЦИЯ ВСЕХ ВИДОВ ВАЛЮТЫ К РУБЛЕВОМУ ЗНАЧЕНИЮ/
+// exchanger.currency == USA
+//   ? (result = 75.0319)
+//   : exchanger.currency == EUR
+//   ? (result = 88.9578)
+//   : (result = 1);
+
+// exchanger.toChangeMoney == USA
+//   ? (change = 75.0319)
+//   : exchanger.toChangeMoney == EUR
+//   ? (change = 88.9578)
+//   : (change = 1);
+// //  КОЭФИЦЕНТ НА КОТОРЫЙ УМНОЖАЕТСЯ ВНОСИМАЯ ВАЛЮТА КОВЕРТИРОВАННАЯ В РУБЛИ
+// let rate = 1 / change;
+// // БЛОК КОДА ДЛЯ КОРРЕКТИРОВКИ ОКОНЧАНИЯ ФРАЗЫ В ЗАВИСИМОСТИ ОТ СУММЫ
+// function moneyName(currency, moneysum) {
+//   currency == USA && moneysum % 10 == 1
+//     ? (currency = "доллар")
+//     : currency == USA && moneysum % 10 >= 2 && moneysum % 10 < 5
+//     ? (currency = "доллара")
+//     : currency == USA && (moneysum % 10 > 4 || moneysum % 10 == 0)
+//     ? (currency = "долларов")
+//     : currency == RUB && moneysum % 10 == 1
+//     ? (currency = "рубль")
+//     : currency == RUB && moneysum % 10 >= 2 && moneysum % 10 < 5
+//     ? (currency = "рубля")
+//     : currency == RUB && (moneysum % 10 > 4 || moneysum % 10 == 0)
+//     ? (currency = "рублей")
+//     : (currency = "евро");
+//   return currency;
+// }
+
+// exchanger.currency = moneyName(exchanger.currency, exchanger.moneysum);
+
+// /* exchanger.currency == USA && exchanger.moneysum % 10 == 1
+//   ? (exchanger.currency = "доллар")
+//   : exchanger.currency == USA &&
+//     exchanger.moneysum % 10 >= 2 &&
+//     exchanger.moneysum % 10 < 5
+//   ? (exchanger.currency = "доллара")
+//   : exchanger.currency == USA &&
+//     (exchanger.moneysum % 10 > 4 || exchanger.moneysum % 10 == 0)
+//   ? (exchanger.currency = "долларов")
+//   : exchanger.currency == RUB && exchanger.moneysum % 10 == 1
+//   ? (exchanger.currency = "рубль")
+//   : exchanger.currency == RUB &&
+//     exchanger.moneysum % 10 >= 2 &&
+//     exchanger.moneysum % 10 < 5
+//   ? (exchanger.currency = "рубля")
+//   : exchanger.currency == RUB &&
+//     (exchanger.moneysum % 10 > 4 || exchanger.moneysum % 10 == 0)
+//   ? (exchanger.currency = "рублей")
+//   : (exchanger.currency = "евро"); */
+// // ВЫЧИСЛЕНИЕ КОНЕЧНОЙ СУММЫ
+// let changedSum = (exchanger.moneysum * result * rate).toFixed(2);
+// // БЛОК КОДА ДЛЯ КОРРЕКТИРОВКИ ОКОНЧАНИЯ ФРАЗЫ В ЗАВИСИМОСТИ ОТ СУММЫ
+// exchanger.toChangeMoney = moneyName(exchanger.toChangeMoney, changedSum);
+// /* exchanger.toChangeMoney == USA && changedSum % 10 == 1
+//   ? (exchanger.toChangeMoney = "доллар")
+//   : exchanger.toChangeMoney == USA &&
+//     changedSum % 10 >= 2 &&
+//     changedSum % 10 < 5
+//   ? (exchanger.toChangeMoney = "доллара")
+//   : exchanger.toChangeMoney == USA &&
+//     (changedSum % 10 > 4 || changedSum % 10 == 0)
+//   ? (exchanger.toChangeMoney = "долларов")
+//   : exchanger.toChangeMoney == RUB && changedSum % 10 == 1
+//   ? (exchanger.toChangeMoney = "рубль")
+//   : exchanger.toChangeMoney == RUB &&
+//     changedSum % 10 >= 2 &&
+//     changedSum % 10 < 5
+//   ? (exchanger.toChangeMoney = "рубля")
+//   : exchanger.toChangeMoney == RUB &&
+//     (changedSum % 10 > 4 || changedSum % 10 == 0)
+//   ? (exchanger.toChangeMoney = "рублей")
+//   : (exchanger.toChangeMoney = "евро"); */
+// //ПРЕДВАРИТЕЛЬНОЕ СООБЩЕНИЕ С СУММОЙ В РУБЛЯХ
+// let final = exchanger.message + changedSum + " " + exchanger.toChangeMoney;
+// alert(final);
+// // ИЗМЕНЕНИЕ ОКАОНЧАНИЯ ФРАЗЫ ИСПОЛЬЗОВАННОЙ НА 312 СТРОКЕ
+// exchanger.message = "Ваша сумма составила ";
+// final = exchanger.message + changedSum + " " + exchanger.toChangeMoney;
+// //ПОДТВЕРЖДЕНИЕ ОПЕРАЦИИ И ЗАКЛЮЧИТЕЛЬНОЕ СООБЩЕНИЕ
+// confirm(exchanger.accept)
+//   ? (byeMessage =
+//       "Мы обменяли " +
+//       exchanger.moneysum +
+//       " " +
+//       exchanger.currency +
+//       " и " +
+//       final)
+//   : (byeMessage = "Увидимся в следующий раз");
+// alert(byeMessage);
+
+// Задание 3 Конечный вариант
+
+// Курсы Валют на 18.09.20
+
 // ОБЪЯВЛЕНИЕ ПЕРЕМЕННЫХ И СОЗДАНИЕ ОБЪЕКТА
 let USA = "Доллар",
   EUR = "Евро",
@@ -53,19 +206,37 @@ let USA = "Доллар",
 let exchanger = {
   accept: "Подтверждаете обмен?",
   message: "Ваша сумма составит ",
-  currency: prompt("Валюта которую неоходимо обменять (Доллар, Евро, Рубль)"),
+  currency: prompt(
+    "Валюта которую неоходимо обменять (Доллар, Евро, Рубль)",
+    "Евро"
+  ),
 };
 // ОГРАНИЧЕНИЕ ПО ВВОДИМОЙ ИНФОРМАЦИИ
-if (
-  exchanger.currency != USA &&
-  exchanger.currency != EUR &&
-  exchanger.currency != RUB
-) {
-  alert("Ошибка. Данная валюта не поддерживается");
-  throw new Error("Ошибка. Данная валюта не поддерживается");
+function errorMessage(currencyName) {
+  if (
+    currencyName != USA &&
+    currencyName != EUR &&
+    currencyName != RUB &&
+    currencyName != null
+  ) {
+    alert("Ошибка. Данная валюта не поддерживается");
+    throw new Error("Ошибка. Данная валюта не поддерживается");
+  } else if (currencyName == null) {
+    alert("Спасибо. Увидимся в следующий раз");
+    throw new Error("Не подтверждено клиентом");
+  }
 }
+
+errorMessage(exchanger.currency);
+
 // ВВЕДЕНИЕ ЕЩЕ ОДНОГО КЛЮЧА/СВОЙСТВА В ОБЪЕКТ С ОДНОВРЕМЕННЫМ ВЫЗОВОМ ФУНКЦИИ
-exchanger.moneysum = prompt("Введите сумму валюты");
+exchanger.moneysum = prompt("Введите сумму валюты", "100");
+
+if (typeof exchanger.moneysum !== "number") {
+  alert("Ошибка. Введите число");
+  throw new Error("Ошибка. Тип данных не число");
+}
+
 // ОГРАНИЧЕНИЕ ПО ВВОДИМОЙ ИНФОРМАЦИИ
 if (exchanger.moneysum < 1) {
   alert("Ошибка. Сумма не может быть равна 0 или отрицательной");
@@ -75,74 +246,51 @@ if (exchanger.moneysum < 1) {
 exchanger.toChangeMoney = prompt(
   "Валюта на которую необходимо обменять (Доллар, Евро, Рубль)"
 );
-// ОГРАНИЧЕНИЕ ПО ВВОДИМОЙ ИНФОРМАЦИИ
-if (
-  exchanger.toChangeMoney != USA &&
-  exchanger.toChangeMoney != EUR &&
-  exchanger.toChangeMoney != RUB
-) {
-  alert("Ошибка.Данная валюта не поддерживается");
-  throw new Error("Ошибка. Данная валюта не поддерживается");
-} else if (exchanger.currency == exchanger.toChangeMoney) {
+
+errorMessage(exchanger.toChangeMoney);
+if (exchanger.currency == exchanger.toChangeMoney) {
   alert("Ошибка.Валюта обмена совпадпет с меняемой валютой");
   throw new Error("Ошибка.Валюта обмена совпадпет с меняемой валютой");
 }
 // КОНВЕРТАЦИЯ ВСЕХ ВИДОВ ВАЛЮТЫ К РУБЛЕВОМУ ЗНАЧЕНИЮ/
-exchanger.currency == USA
-  ? (result = 75.0319)
-  : exchanger.currency == EUR
-  ? (result = 88.9578)
-  : (result = 1);
+function calc(currency, res) {
+  currency == USA
+    ? (res = 75.0319)
+    : currency == EUR
+    ? (res = 88.9578)
+    : (res = 1);
+  return res;
+}
 
-exchanger.toChangeMoney == USA
-  ? (change = 75.0319)
-  : exchanger.toChangeMoney == EUR
-  ? (change = 88.9578)
-  : (change = 1);
+result = calc(exchanger.currency, result);
+change = calc(exchanger.toChangeMoney, change);
+
 //  КОЭФИЦЕНТ НА КОТОРЫЙ УМНОЖАЕТСЯ ВНОСИМАЯ ВАЛЮТА КОВЕРТИРОВАННАЯ В РУБЛИ
 let rate = 1 / change;
 // БЛОК КОДА ДЛЯ КОРРЕКТИРОВКИ ОКОНЧАНИЯ ФРАЗЫ В ЗАВИСИМОСТИ ОТ СУММЫ
-exchanger.currency == USA && exchanger.moneysum % 10 == 1
-  ? (exchanger.currency = "доллар")
-  : exchanger.currency == USA &&
-    exchanger.moneysum % 10 >= 2 &&
-    exchanger.moneysum % 10 < 5
-  ? (exchanger.currency = "доллара")
-  : exchanger.currency == USA &&
-    (exchanger.moneysum % 10 > 4 || exchanger.moneysum % 10 == 0)
-  ? (exchanger.currency = "долларов")
-  : exchanger.currency == RUB && exchanger.moneysum % 10 == 1
-  ? (exchanger.currency = "рубль")
-  : exchanger.currency == RUB &&
-    exchanger.moneysum % 10 >= 2 &&
-    exchanger.moneysum % 10 < 5
-  ? (exchanger.currency = "рубля")
-  : exchanger.currency == RUB &&
-    (exchanger.moneysum % 10 > 4 || exchanger.moneysum % 10 == 0)
-  ? (exchanger.currency = "рублей")
-  : (exchanger.currency = "евро");
+function moneyName(currency, moneysum) {
+  currency == USA && moneysum % 10 == 1
+    ? (currency = "доллар")
+    : currency == USA && moneysum % 10 >= 2 && moneysum % 10 < 5
+    ? (currency = "доллара")
+    : currency == USA && (moneysum % 10 > 4 || moneysum % 10 == 0)
+    ? (currency = "долларов")
+    : currency == RUB && moneysum % 10 == 1
+    ? (currency = "рубль")
+    : currency == RUB && moneysum % 10 >= 2 && moneysum % 10 < 5
+    ? (currency = "рубля")
+    : currency == RUB && (moneysum % 10 > 4 || moneysum % 10 == 0)
+    ? (currency = "рублей")
+    : (currency = "евро");
+  return currency;
+}
+
+exchanger.currency = moneyName(exchanger.currency, exchanger.moneysum);
+
 // ВЫЧИСЛЕНИЕ КОНЕЧНОЙ СУММЫ
 let changedSum = (exchanger.moneysum * result * rate).toFixed(2);
 // БЛОК КОДА ДЛЯ КОРРЕКТИРОВКИ ОКОНЧАНИЯ ФРАЗЫ В ЗАВИСИМОСТИ ОТ СУММЫ
-exchanger.toChangeMoney == USA && changedSum % 10 == 1
-  ? (exchanger.toChangeMoney = "доллар")
-  : exchanger.toChangeMoney == USA &&
-    changedSum % 10 >= 2 &&
-    changedSum % 10 < 5
-  ? (exchanger.toChangeMoney = "доллара")
-  : exchanger.toChangeMoney == USA &&
-    (changedSum % 10 > 4 || changedSum % 10 == 0)
-  ? (exchanger.toChangeMoney = "долларов")
-  : exchanger.toChangeMoney == RUB && changedSum % 10 == 1
-  ? (exchanger.toChangeMoney = "рубль")
-  : exchanger.toChangeMoney == RUB &&
-    changedSum % 10 >= 2 &&
-    changedSum % 10 < 5
-  ? (exchanger.toChangeMoney = "рубля")
-  : exchanger.toChangeMoney == RUB &&
-    (changedSum % 10 > 4 || changedSum % 10 == 0)
-  ? (exchanger.toChangeMoney = "рублей")
-  : (exchanger.toChangeMoney = "евро");
+exchanger.toChangeMoney = moneyName(exchanger.toChangeMoney, changedSum);
 //ПРЕДВАРИТЕЛЬНОЕ СООБЩЕНИЕ С СУММОЙ В РУБЛЯХ
 let final = exchanger.message + changedSum + " " + exchanger.toChangeMoney;
 alert(final);
