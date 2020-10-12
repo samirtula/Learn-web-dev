@@ -1,0 +1,72 @@
+<script>
+  /*   let x = 10;
+    function func(x) {
+      // если создать функцию с аргументом или создать переменную в функции глобальная переменная не будет изменена. Если с пустым параметром будет измнена
+      x += 100;
+    }
+    func();
+    alert(x); */
+
+  function factorial(x) {
+    console.log(`вывано с параметром ${x}`);
+    if (x == 2) {
+      return x;
+    }
+    return factorial(x - 1) * x;
+  }
+
+  /*   alert(factorial(5)); */
+
+  /*   let x = parseInt(prompt(`Введите число 1`, `10`));
+    let y = parseInt(prompt(`Введите число 2`, `20`)); */
+
+  function showNumbers(x, y) {
+    if (x <= y) {
+      document.write(x + `<br>`);
+      showNumbers(x + 1, y);
+    }
+  }
+
+  function showNumbers2(x, y) {
+    if (y >= x) {
+      document.write(y + `<br>`);
+      showNumbers2(x, y - 1);
+    }
+  }
+
+  /*   showNumbers2(x, y); */
+
+  function reverse(x) {
+    let rest = x % 10;
+    document.write(rest);
+    let newnumber = (x - rest) / 10;
+    if (newnumber > 9) {
+      reverse(newnumber);
+    } else {
+      document.write(newnumber);
+    }
+  }
+
+  /*   reverse(prompt(`число`)); */
+
+  function summ(x) {
+    let rest = x % 10; // = 4
+    let newnumber = (x - rest) / 10;
+    if (newnumber > 9) {
+      return rest + summ(newnumber);
+    } else {
+      return rest + newnumber;
+    }
+  }
+
+  /*   alert(summ(1234)); */
+
+  function showHooks(x) {
+    if (x == 1) {
+      return `()`;
+    } else {
+      return `(` + showHooks(x - 1) + `)`;
+    }
+  }
+  document.write(showHooks(10));
+</script>
