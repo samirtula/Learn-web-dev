@@ -1,0 +1,80 @@
+<script>
+  /*   class Myclass {
+              age = 10;
+              color = 'black';
+              constructor(arg) {
+                this.name = arg;
+              }
+              method1(arg) {
+                alert("My name" + thsi.name);
+              }
+
+              method2(arg) {}
+            }
+
+            let obj = new Myclass(111);
+            console.log(obj);
+            let obj2 = new Myclass("bob");
+            console.log(obj2); */
+
+  /*   class User {
+            constructor(name) {
+              this.name = name;
+            }
+            set name(val) {
+              if (val.length < 2) {
+                alert("more symbols");
+              } else {
+                this._name = val;
+              }
+            }
+            get name() {
+              return this._name;
+            }
+          }
+
+
+
+
+
+
+
+
+
+         */
+
+  class MyAccount {
+    constructor(name, secondName, account) {
+      this.firstName = name;
+      this.secondName = secondName;
+      this.accounter = account;
+    }
+    set firstName(x) {
+      if (x.length < 2) {
+        alert("more symbols please");
+      } else {
+        this._firstName = x;
+      }
+    }
+
+    get firstName() {
+      return this._firstName;
+    }
+
+    set accounter(y) {
+      if (y <= -1 || typeof y !== "number") {
+        alert("Error");
+      } else {
+        this._accounter = y;
+      }
+    }
+    get account() {
+      return this._accounter;
+    }
+  }
+
+  let obj = new MyAccount("John", "Smith", 456465456);
+  console.log(obj);
+
+  // set срабатывает при передаче свойства. а get при обращении к свойству
+</script>
