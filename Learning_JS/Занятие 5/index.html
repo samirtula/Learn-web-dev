@@ -77,17 +77,85 @@
   console.log(obj);
 
   let arClients = [
-    { name: "Ivan", lastName: "Ivan2", bill: 3000 },
-    { name: "Ivan", lastName: "Ivan2", bill: 0.04 },
-    { name: "Ivan", lastName: "Ivan2", bill: -4 },
-    { name: "Ivan", lastName: "Ivan2", bill: 3000 },
-    { name: "I", lastName: "Ivan2", bill: "asdasd" },
-    { name: "Ivan", lastName: "Ivan2", bill: 3000 },
-    { name: 0, lastName: "Ivan2", bill: 3000 },
-    { name: "n", lastName: "Ivan2", bill: 3000 },
-    { name: "Ivan", lastName: "Ivan2", bill: "\t" },
-    { name: "Ivan", lastName: "Ivan2", bill: 3000 },
+    { name: "Ivan", secondName: "Ivan2", account: 3000 },
+    { name: "Ivan", secondName: "Ivan2", account: 0.04 },
+    { name: "Ivan", secondName: "Ivan2", account: -4 },
+    { name: "Ivan", secondName: "Ivan2", account: 3000 },
+    { name: "I", secondName: "Ivan2", account: "asdasd" },
+    { name: "Ivan", secondName: "Ivan2", account: 3000 },
+    { name: 0, secondName: "Ivan2", account: 3000 },
+    { name: "n", secondName: "Ivan2", account: 3000 },
+    { name: "Ivan", secondName: "Ivan2", account: "\t" },
+    { name: "Ivan", secondName: "Ivan2", account: 3000 },
   ];
 
+  class MyAccount2 {
+    constructor(arr) {
+      let i = prompt("Введите номер клиента");
+      this.firstName = arr[i].name;
+      this.secondName = arr[i].secondName;
+      this.accounter = arr[i].account;
+    }
+    set firstName(x) {
+      if (x.length < 2) {
+        alert("more symbols please");
+      } else {
+        this._firstName = x;
+      }
+    }
+
+    get firstName() {
+      return this._firstName;
+    }
+
+    set accounter(y) {
+      if (y <= -1 || typeof y !== "number") {
+        alert("Error");
+      } else {
+        this._accounter = y;
+      }
+    }
+    get account() {
+      return this._accounter;
+    }
+  }
+
+  let obj4 = new MyAccount2(arClients);
+  console.log(obj4);
   // set срабатывает при передаче свойства. а get при обращении к свойству
+
+  /*  class MyAccount2 {
+    constructor(arr) {
+      for (let i = 0; i <= arr.length; i++) {
+        this.firstName = arr[i].name;
+        this.secondName = arr[i].secondName;
+        this.accounter = arr[i].account;
+      }
+    }
+    set firstName(x) {
+      if (x.length < 2) {
+        alert("more symbols please");
+      } else {
+        this._firstName = x;
+      }
+    }
+
+    get firstName() {
+      return this._firstName;
+    }
+
+    set accounter(y) {
+      if (y <= -1 || typeof y !== "number") {
+        alert("Error");
+      } else {
+        this._accounter = y;
+      }
+    }
+    get account() {
+      return this._accounter;
+    }
+  }
+
+  let obj3 = new MyAccount2(arClients); */
+  /*   console.log(obj3); */
 </script>

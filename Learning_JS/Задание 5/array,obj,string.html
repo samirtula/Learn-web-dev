@@ -1,0 +1,203 @@
+<script>
+  /* Задание 1
+           Создать объект, описывающий автомобиль (производитель,
+           модель, год выпуска, средняя скорость), и следующие функции
+           для работы с этим объектом.
+           1. Функция для вывода на экран информации об автомобиле.
+           2. Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью.
+           Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час
+            */
+  let car = {
+    manufacturer: "Chevy",
+    model: "Camaro",
+    year: 1967,
+    averageSpeed: 95,
+  };
+
+  function displayInfo(car) {
+    document.write(
+      "manufacturer: " +
+        car.manufacturer +
+        "<br>" +
+        "model: " +
+        car.model +
+        "<br>" +
+        "year: " +
+        car.year +
+        "<br>" +
+        "average speed: " +
+        car.averageSpeed +
+        " km/h" +
+        "<hr>"
+    );
+  }
+
+  displayInfo(car);
+
+  function disMidSpeed(car, distance) {
+    let finMidTime = distance / car.averageSpeed;
+    let i = finMidTime;
+    while (i >= 4) {
+      finMidTime = finMidTime + 1;
+      i = i - 4;
+    }
+
+    document.write("Время в пути составит " + finMidTime.toFixed(2) + " час.");
+  }
+
+  /*   disMidSpeed(car, 1024); */
+
+  /*      Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, и следующие функции для работы с этим объектом.
+        1. Функция сложения 2-х объектов-дробей.
+        2. Функция вычитания 2-х объектов-дробей.
+        3. Функция умножения 2-х объектов-дробей.
+        4. Функция деления 2-х объектов-дробей.
+        5. Функция сокращения объекта-дроби. */
+
+  let fraction = {
+    numerator: 15,
+    denominator: 30,
+  };
+
+  let fraction1 = {
+    numerator: 10,
+    denominator: 20,
+  };
+
+  function sum(fract, fract1) {
+    let fractionCalc = fract.numerator / fract.denominator;
+    let fractionCalc2 = fract1.numerator / fract1.denominator;
+    let result = fractionCalc + fractionCalc2;
+    return "Результат суммирования дробей = " + result + "<br>";
+  }
+
+  document.write(sum(fraction, fraction1));
+
+  function subtraction(fract, fract1) {
+    let fractionCalc = fract.numerator / fract.denominator;
+    let fractionCalc2 = fract1.numerator / fract1.denominator;
+    let result = fractionCalc - fractionCalc2;
+    return "Результат вычитания дробей = " + result + "<br>";
+  }
+
+  document.write(subtraction(fraction, fraction1));
+
+  function multiplication(fract, fract1) {
+    let fractionCalc = fract.numerator / fract.denominator;
+    let fractionCalc2 = fract1.numerator / fract1.denominator;
+    let result = fractionCalc * fractionCalc2;
+    return "Результат умножения дробей = " + result + "<br>";
+  }
+
+  document.write(multiplication(fraction, fraction1));
+
+  function division(fract, fract1) {
+    let fractionCalc = fract.numerator / fract.denominator;
+    let fractionCalc2 = fract1.numerator / fract1.denominator;
+    let result = fractionCalc / fractionCalc2;
+    return "Результат деления дробей = " + result + "<br>";
+  }
+
+  document.write(division(fraction, fraction1));
+
+  function div(fract, fract1) {
+    let fractionCalc = fract.numerator / fract.denominator;
+    let fractionCalc2 = fract1.numerator / fract1.denominator;
+    let m = fractionCalc;
+    let n = fractionCalc2;
+
+    for (var i = 2; i <= fractionCalc; i++) {
+      if (fractionCalc % i === 0 && fractionCalc2 % i === 0)
+        (m = fractionCalc / i), (n = fractionCalc2 / i);
+    }
+    alert([m, n]);
+  }
+
+  /*   div(fraction, fraction1); */
+
+  /*   Создать объект, описывающий время (часы, минуты, секунды), и следующие функции для работы с этим объектом.
+  1. Функция вывода времени на экран.
+  2. Функция изменения времени на переданное количество
+  секунд.
+  3. Функция изменения времени на переданное количество
+  минут.
+  4. Функция изменения времени на переданное количество
+  часов.
+  Учтите, что в последних 3-х функциях, при изменении одной
+  части времени, может измениться и другая. Например: если ко
+  времени «20:30:45» добавить 30 секунд, то должно получиться
+  «20:31:15», а не «20:30:75» */
+
+  let time = {
+    hours: 20,
+    minutes: 30,
+    seconds: 45,
+  };
+
+  function displaytime(obj) {
+    document.write(
+      "Moscow time is " +
+        obj.hours +
+        ":" +
+        obj.minutes +
+        ":" +
+        obj.seconds +
+        "<br>"
+    );
+  }
+
+  displaytime(time);
+
+  function changeTimeSeconds(obj, seconds) {
+    obj.seconds = obj.seconds + seconds;
+    for (i = obj.seconds; obj.seconds >= 60; ) {
+      obj.seconds = obj.seconds - 60;
+      obj.minutes++;
+    }
+    document.write(
+      "Moscow time is " +
+        obj.hours +
+        ":" +
+        obj.minutes +
+        ":" +
+        obj.seconds +
+        "<br>"
+    );
+  }
+  changeTimeSeconds(time, 61);
+
+  function changeTimeMinute(obj, minutes) {
+    obj.minutes = obj.minutes + minutes;
+    for (i = obj.minutes; obj.minutes >= 60; ) {
+      obj.minutes = obj.minutes - 60;
+      obj.hours++;
+    }
+    document.write(
+      "Moscow time is " +
+        obj.hours +
+        ":" +
+        obj.minutes +
+        ":" +
+        obj.seconds +
+        "<br>"
+    );
+  }
+  changeTimeMinute(time, 61);
+
+  function changeTimeHours(obj, hours) {
+    obj.hours = obj.hours + hours;
+    for (i = obj.hours; obj.hours >= 24; ) {
+      obj.hours = obj.hours - 24;
+    }
+    document.write(
+      "Moscow time is " +
+        obj.hours +
+        ":" +
+        obj.minutes +
+        ":" +
+        obj.seconds +
+        "<br>"
+    );
+  }
+  changeTimeHours(time, 25);
+</script>
