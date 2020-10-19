@@ -1,0 +1,61 @@
+<script>
+  /*    Дан пустой массив let a = [];
+        Дан массив let b = [‘item1’, ‘item2’, ‘item3’, ‘item4’];
+        Необходимо перенести элементы из массива b в массив a так, чтобы в массиве a элементы были в обратном порядке. Использовать метод reverse() запрещено */
+
+  let a = [];
+  let b = ["item1", "item2", "item3", "item4"];
+
+  for (i = b.length; i > 0; i--) {
+    index = b.length - i;
+    a[i] = b[index];
+  }
+
+  /*   console.log(a); */
+  /*  нужно создать копию этого массива, в котором элементы будут отсортированы по sum от большего к меньшему */
+
+  let items = [
+    { id: 1, sum: 12 },
+    { id: 2, sum: 18 },
+    { id: 3, sum: 1 },
+    { id: 5, sum: 12 },
+    { id: 6, sum: 6 },
+    { id: 7, sum: 8 },
+    { id: 8, sum: 104 },
+    { id: 9, sum: 13 },
+    { id: 10, sum: 23 },
+    { id: 11, sum: 2 },
+  ];
+  /*     let moditems = [];
+
+      let high = 0;
+      let j = items.length - 1;
+      for (i = items.length - 1; i > 0; i--) {
+        if (items[i].sum > high) {
+          high = items[i].sum;
+          moditems[j] = items[i].sum;
+        }
+
+      }
+      console.log(moditems); */
+
+  items.sort(function (a, b) {
+    if (a.sum > b.sum) {
+      return 1;
+    }
+    if (a.sum < b.sum) {
+      return -1;
+    }
+    // a должно быть равным b
+    return 0;
+  });
+
+  /*   console.log(items);
+   */
+  let sum = 0;
+  for (i = items.length - 1; i >= 0; i--) {
+    sum = sum + items[i].sum;
+  }
+
+  console.log(s);
+</script>
