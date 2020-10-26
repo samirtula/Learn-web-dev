@@ -1,7 +1,7 @@
 <script>
   /*    Дан пустой массив let a = [];
-        Дан массив let b = [‘item1’, ‘item2’, ‘item3’, ‘item4’];
-        Необходимо перенести элементы из массива b в массив a так, чтобы в массиве a элементы были в обратном порядке. Использовать метод reverse() запрещено */
+                  Дан массив let b = [‘item1’, ‘item2’, ‘item3’, ‘item4’];
+                  Необходимо перенести элементы из массива b в массив a так, чтобы в массиве a элементы были в обратном порядке. Использовать метод reverse() запрещено */
 
   let a = [];
   let b = ["item1", "item2", "item3", "item4"];
@@ -11,7 +11,7 @@
     a[i] = b[index];
   }
 
-  /*   console.log(a); */
+  console.log(a);
   /*  нужно создать копию этого массива, в котором элементы будут отсортированы по sum от большего к меньшему */
 
   let items = [
@@ -28,16 +28,16 @@
   ];
   /*     let moditems = [];
 
-      let high = 0;
-      let j = items.length - 1;
-      for (i = items.length - 1; i > 0; i--) {
-        if (items[i].sum > high) {
-          high = items[i].sum;
-          moditems[j] = items[i].sum;
-        }
+                let high = 0;
+                let j = items.length - 1;
+                for (i = items.length - 1; i > 0; i--) {
+                  if (items[i].sum > high) {
+                    high = items[i].sum;
+                    moditems[j] = items[i].sum;
+                  }
 
-      }
-      console.log(moditems); */
+                }
+                console.log(moditems); */
 
   items.sort(function (a, b) {
     if (a.sum > b.sum) {
@@ -57,5 +57,146 @@
     sum = sum + items[i].sum;
   }
 
-  console.log(s);
+  /*   console.log(s); */
+
+  /*
+          Реализуйте класс Worker (Работник), который будет иметь следующие свойства: name (имя), surname (фамилия), rate (ставка за день работы), days (количество отработанных дней). Также класс должен иметь метод getSalary(), который будет выводить зарплату работника. Зарплата - это произведение (умножение) ставки rate на количество отработанных дней days.
+         */
+  /*
+        class Worker {
+          name = "Samir";
+          surname = "Gakhramanov";
+          rate = 15;
+          getSalary = function (days) {
+            return this.rate * days;
+          };
+
+
+        } */
+
+  class Worker {
+    constructor(name, surname, rate, days) {
+      this.name = name;
+      this.surname = surname;
+      this.rate = rate;
+      this.days = days;
+      this.salary = this.pay();
+    }
+
+    set name(x) {
+      if (x.length < 2) {
+        alert("more symbols please");
+      } else {
+        this._name = x;
+      }
+    }
+    get name() {
+      return this._name;
+    }
+
+    set rate(y) {
+      if (y <= 0 || typeof y !== "number") {
+        alert("Error");
+      } else {
+        this._rate = y;
+      }
+    }
+    get rate() {
+      return this._rate;
+    }
+    set days(y) {
+      if (y <= 0 || typeof y !== "number") {
+        alert("Error");
+      } else {
+        this._days = y;
+      }
+    }
+    get days() {
+      return this._days;
+    }
+    pay() {
+      return this.rate * this.days;
+    }
+  }
+
+  let obj = new Worker("John", "Smith", 30, 22);
+  /*   console.log(obj); */
+
+  /*
+    Реализуйте класс MyString, который будет иметь следующие методы: метод reverse(), который параметром принимает строку, а возвращает ее в перевернутом виде, метод ucFirst(), который параметром принимает строку, а возвращает эту же строку, сделав ее первую букву заглавной и метод ucWords, который принимает строку и делает заглавной первую букву каждого слова этой строки. */
+
+  /*   class MyString {
+      constructor(str) {
+        this.reverse = this.reverse(str);
+        /*  this.ucFirst = this.ucFirst(str);
+          this.ucWords = this.ucWords(str); */
+  /*    }
+      reverse(x) {
+        return this.reverse.split("");
+      }
+    }
+
+    let = new MyString("more symbols please");
+    console.log(s); */
+
+  class Figure {
+    constructor(params) {
+      name = "";
+      this.params = params;
+    }
+
+    getArea() {}
+
+    get() {
+      return this.name;
+    }
+  }
+
+  class Square extends Figure {
+    constructor(params) {
+      super(params);
+      this.name = "Квадрат";
+    }
+    getArea() {
+      return this.params[0] ** 2;
+    }
+  }
+
+  let objSquare = new Square("Square", [2, 2, 2, 2]);
+  /*   console.log(objSquare); */
+
+  class Triangle extends Figure {
+    constructor(params) {
+      super(params);
+      this.name = "Треугольник";
+    }
+    getArea() {
+      let height = this.getHeight(this.params[0], this.params[2]);
+      return (height * this.params[0]) / 2;
+    }
+    getHeight(a, b) {
+      return (a * b) / Math.sqrt(a ** 2 + b ** 2);
+    }
+  }
+
+  let objTriangle = new Triangle("Triangle"[(1, 2, 3)]);
+  /*   console.log(objTriangle); */
+
+  class Rectangle extends Figure {
+    constructor(params) {
+      super(params);
+      this.name = "Прямоугольник";
+    }
+    getArea() {
+      //super.getArea();
+      return this.params[0] * this.params[1];
+    }
+    getPerimetr() {
+      return this.params[0] * 2 + this.params[1] * 2;
+    }
+  }
+  let obj3Rectangle = new Rectangle([2, 4]);
+  console.log(obj3Rectangle);
+  console.log(obj3Rectangle.getArea());
+  console.log(obj3Rectangle.getPerimetr());
 </script>
