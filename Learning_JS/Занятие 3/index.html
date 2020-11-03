@@ -1,132 +1,132 @@
 <script>
-    function sameString(firstString, seconString) {
-      let result = 0;
-      if (firstString.length > seconString.length) {
-        result = 1;
-      } else if (firstString.length < seconString.length) {
-        result = -1;
-      }
-      return result;
+  function sameString(firstString, seconString) {
+    let result = 0;
+    if (firstString.length > seconString.length) {
+      result = 1;
+    } else if (firstString.length < seconString.length) {
+      result = -1;
     }
-    let str = " i am oexxxxxxxxxxxxxx";
-    let str2 = " i am onexczzczxc";
-    let res = sameString(str, str2);
-    /*   alert(res); */
+    return result;
+  }
+  let str = " i am oexxxxxxxxxxxxxx";
+  let str2 = " i am onexczzczxc";
+  let res = sameString(str, str2);
+  /*   alert(res); */
 
-    let str3 = "perspiciatis, unde omnis iste natus error sit voluptatem";
+  let str3 = "perspiciatis, unde omnis iste natus error sit voluptatem";
 
-    function firstLetterToUpperCase() {
-      let fisrstL = str3[0];
-      fisrstL = fisrstL.toUpperCase();
-      console.log(fisrstL + str3.slice(1));
-    }
+  function firstLetterToUpperCase() {
+    let fisrstL = str3[0];
+    fisrstL = fisrstL.toUpperCase();
+    console.log(fisrstL + str3.slice(1));
+  }
 
-    /* firstLetterToUpperCase(str3); */
+  /* firstLetterToUpperCase(str3); */
 
-    /* Написать функцию, которая считает количество гласных
+  /* Написать функцию, которая считает количество гласных
                   букв в переданной строке.  */
-    let str4 = "поиска по вашему запросу.";
-    let vowels = ["а", "и", "е", "е", "о", "у", "ы", "э", "ю", "я"];
+  let str4 = "поиска по вашему запросу.";
+  let vowels = ["а", "и", "е", "е", "о", "у", "ы", "э", "ю", "я"];
 
-    function vowelsNumbers() {
-      let i = 0;
-      let num = 0;
-      while (i <= str4.length) {
-        if (vowels.includes(str4[i])) {
-          num += 1;
-        }
-        i++;
+  function vowelsNumbers() {
+    let i = 0;
+    let num = 0;
+    while (i <= str4.length) {
+      if (vowels.includes(str4[i])) {
+        num += 1;
       }
-      return num;
+      i++;
     }
+    return num;
+  }
 
-    /*   console.log(vowelsNumbers()); */
+  /*   console.log(vowelsNumbers()); */
 
-    /*   Написать функцию для проверки спама в переданной
+  /*   Написать функцию для проверки спама в переданной
         строке. Функция возвращает true, если строка содержит
         спам. Спамом считать следующие слова: 100% бесплатно,
         увеличение продаж, только сегодня, не удаляйте, ххх.
         Функция должна быть нечувствительна к регистру */
 
-    let str6 = "поиска по вашему 100% бесплатно и ххх.";
-    let spam = [
-      "ххх",
-      "не удаляйте",
-      "только сегодня",
-      "увеличение продаж",
-      "100% бесплатно",
-    ];
+  let str6 = "поиска по вашему 100% бесплатно и ххх.";
+  let spam = [
+    "ххх",
+    "не удаляйте",
+    "только сегодня",
+    "увеличение продаж",
+    "100% бесплатно",
+  ];
 
-    function spamCatcher(str, sp) {
-      let i = 0;
-      let num = 0;
-      str = str.toUpperCase;
-      sp = sp.toUpperCase;
-      while (i <= spam.length) {
-        if (str6.includes(spam[i])) {
-          num += 1;
-        }
-        i++;
+  function spamCatcher(str, sp) {
+    let i = 0;
+    let num = 0;
+    str = str.toUpperCase;
+    sp = sp.toUpperCase;
+    while (i <= spam.length) {
+      if (str6.includes(spam[i])) {
+        num += 1;
       }
-      return num;
+      i++;
     }
+    return num;
+  }
 
-    /*   console.log(spamCatcher(str6, spam)); */
+  /*   console.log(spamCatcher(str6, spam)); */
 
-    /*   Написать функцию сокращения строки. Функция принимает строку и ее максимальную длину. Если длина строки
+  /*   Написать функцию сокращения строки. Функция принимает строку и ее максимальную длину. Если длина строки
               больше, чем максимальная, то необходимо отбросить
               лишние символы, добавив вместо них троеточие.
               Например: truncate(“Hello, world!”, 8) должна вернуть
               “Hello...”. */
 
-    let strNum = 9;
-    let str5 = "поиска по вашему запросу.";
-    function reduction(x, y) {
-      if (x.length > y) {
-        x = x.substring(0, y) + "...";
-      }
-      return x;
+  let strNum = 9;
+  let str5 = "поиска по вашему запросу.";
+  function reduction(x, y) {
+    if (x.length > y) {
+      x = x.substring(0, y) + "...";
     }
+    return x;
+  }
 
-    /*   console.log(reduction(str5, strNum)); */
+  /*   console.log(reduction(str5, strNum)); */
 
-    /*     Написать функцию, которая проверяет, является ли переданная строка палиндромом. */
+  /*     Написать функцию, которая проверяет, является ли переданная строка палиндромом. */
 
-    let str7 = "шалаш";
-    function palindrom(word) {
-      let str7Revers = word.split("").reverse().join("");
-      if (word == str7Revers) {
-        alert("палиндром");
-      } else {
-        alert("не палиндром");
-      }
+  let str7 = "шалаш";
+  function palindrom(word) {
+    let str7Revers = word.split("").reverse().join("");
+    if (word == str7Revers) {
+      alert("палиндром");
+    } else {
+      alert("не палиндром");
     }
+  }
 
-    /*  palindrom(str7); */
+  /*  palindrom(str7); */
 
-    /*  Написать функцию, которая считает количество слов в
+  /*  Написать функцию, которая считает количество слов в
   предложении. */
-    let str8 = "поиска по вашему запросу";
-    function wordSearch(x) {
-      let wordNumber = str8.split(" ");
-      let numWords = wordNumber.length;
-      return wordNumber;
-    }
+  let str8 = "поиска по вашему запросу";
+  function wordSearch(x) {
+    let wordNumber = str8.split(" ");
+    let numWords = wordNumber.length;
+    return wordNumber;
+  }
 
-    /*   console.log(wordSearch(str8)); */
+  /*   console.log(wordSearch(str8)); */
 
-    /* Написать функцию, которая возвращает самое длинное
+  /* Написать функцию, которая возвращает самое длинное
   слово из предложения. */
 
-    let str9 = "поиска по вашему запросу";
+  let str9 = "поиска по вашему запросу";
 
-    function maxLetter(maxStr) {
-      let maxLength = 0
-      let wordNumber = maxStr.split(" ");
-      for (let i = 0; i < wordNumber.length; i++) {
-          if (maxStr[i].length)
+  function maxLetter(maxStr) {
+    let maxLength = 0;
+    let wordNumber = maxStr.split(" ");
+    for (let i = 0; i < wordNumber.length; i++) {
+      if (maxStr[i].length) {
       }
-
     }
-    alert(maxLetter(str9));
+  }
+  alert(maxLetter(str9));
 </script>

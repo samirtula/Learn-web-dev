@@ -1,20 +1,3 @@
-/* let wordSection = ["lor", "ips", "sec"];
-
-function wordChangeStyle(wordSection) {
-  let word = document.querySelector(".text");
-  let word2 = word.innerHTML.split(" ");
-  let word3 = [];
-
-  for (let i = 0; i <= word2.length; i++) {
-    for (let j = 0; j <= wordSection.length; j++) {
-      if (word2[i].includes(wordSection[j])) {
-      }
-    }
-  }
-}
-
-wordChangeStyle(wordSection); */
-
 /* let x = document.querySelector(".button1");
 let y = document.querySelector(".block");
 x.onclick = function () {
