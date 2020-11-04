@@ -18,20 +18,32 @@
         <button class="block_blockin"><span>Кнопка</span></button>
       </div> -->
 
-      <form onsubmit="myFunc()">
-        <input type="text" onkeyup="let yratext=/['0-9',':']/; if(yratext.test(this.value)) alert('Введены запрещенные символы')" class="text_name" />
+      <form class="form">
+        <input type="text"  class="text_name" />
 
-
-        <input type="tel" onkeyup="let noNum = /['A-z','A-я',''\s']/; if (noNum.test(this.value)) alert ('Введены запрещенные символы')" class="tel" />
-
+        <input type="tel"  class="tel" />
 
         <input type="submit"  id = "button"></input>
       </form>
 
       <div class="info"><span>Введите имя</span></div>
       <div class="info_tel"><span>Введите номер телефона</span></div>
+<div class="message">
+  <p class="message__text"></p>
+</div>
+
+
+
     </section>
     <style>
+   .message{
+     background-color: grey;
+     width: 400px;
+     height: 200px;
+     color: white;
+     display: none;
+
+   }
       .text_name {
         width: 150px;
         height: 20px;
@@ -61,6 +73,9 @@
         opacity: 0;
         display: inline-block;
         margin-top: 10px;
+      }
+      .none {
+        display: none;
       }
       /* .block {
         position: relative;
