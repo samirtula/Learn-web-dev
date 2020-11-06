@@ -1,3 +1,63 @@
+let x = document.querySelector(".text_name");
+let y = document.querySelector(".info");
+let z = document.querySelector(".tel");
+let e = document.querySelector(".info_tel");
+
+let form = document.querySelector(".form");
+let button1 = document.querySelector(".button1");
+
+let messBlock = document.querySelector(".message");
+
+let noNum = /['A-z','A-я',''\s']/;
+let yratext = /['0-9',':']/;
+let arr = [];
+let messInner = document.querySelector(".message__text");
+
+x.addEventListener("focus", function () {
+  y.style.display = "flex";
+  e.style.display = "none";
+  if ((messBlock.style.display = "block")) messBlock.style.display = "none";
+});
+z.addEventListener("focus", function () {
+  e.style.display = "flex";
+  y.style.display = "none";
+  if ((messBlock.style.display = "block")) messBlock.style.display = "none";
+});
+
+button1.addEventListener("click", function () {
+  button1.style.display = "none";
+  form.style.display = "flex";
+  y.style.display = "none";
+  e.style.display = "none";
+});
+
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  let p = document.querySelector(".text_name");
+  let tel = document.querySelector(".tel");
+  let nameInX = p.value;
+  let numInTel = tel.value;
+  let i = 0;
+
+  if (noNum.test(numInTel) || numInTel.length < 10 || numInTel == undefined) {
+    arr[i] =
+      "Необходимо ввести в поле телефон  не менее 10 чисел. Буквы не допускаются";
+    messBlock.style.display = "flex";
+  }
+  if (yratext.test(nameInX) || nameInX.length < 2 || nameInX == undefined) {
+    arr[++i] =
+      "Необходимо ввести в поле имя не менее 2х букв. Цифры вводить не допускается";
+    messBlock.style.display = "flex";
+  }
+  if (arr.length == 1) {
+    messInner.innerHTML = arr[0];
+  } else if (arr.length > 1) {
+    messInner.innerHTML = arr[i] + "<br>" + "<br>" + arr[--i];
+  }
+});
+
+
 /* let x = document.querySelector(".button1");
 let y = document.querySelector(".block");
 x.onclick = function () {
@@ -36,9 +96,8 @@ function myFunc() {
   if (z.value.length < 10) alert("Номер должен состоять из 10 чисел");
 } */
 
-let x = document.querySelector(".text_name");
-let y = document.querySelector(".info");
-x.onclick = function () {
+
+/* x.onclick = function () {
   let op = 0;
   while (op <= 1) {
     (function (_op) {
@@ -48,11 +107,9 @@ x.onclick = function () {
     })(op);
     op += 0.1;
   }
-};
+}; */
 
-let z = document.querySelector(".tel");
-let e = document.querySelector(".info_tel");
-z.onclick = function () {
+/* z.onclick = function () {
   let op = 0;
   while (op <= 1) {
     (function (_op) {
@@ -62,18 +119,7 @@ z.onclick = function () {
     })(op);
     op += 0.1;
   }
-};
-z.addEventListener("focus", function () {
-  y.classList.add("none");
-  e.classList.remove("none");
-  if ((messBlock.style.display = "block")) messBlock.style.display = "none";
-});
-
-x.addEventListener("focus", function () {
-  e.classList.add("none");
-  y.classList.remove("none");
-  if ((messBlock.style.display = "block")) messBlock.style.display = "none";
-});
+}; */
 
 /* form.addEventListener("submit", function (event) {
   event.preventDefault(); */
@@ -98,27 +144,5 @@ x.addEventListener("focus", function () {
      messBlock.style.display = "block"; 
    }
  });*/
-let messBlock = document.querySelector(".message");
-let form = document.querySelector(".form");
-let noNum = /['A-z','A-я',''\s']/;
-let yratext = /['0-9',':']/;
-let arr = [];
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  let p = document.querySelector(".text_name");
-  let tel = document.querySelector(".tel");
-  let nameInX = p.value;
-  let numInTel = tel.value;
-  let messInner = document.querySelector(".message__text");
-  let i = 0;
-  if (noNum.test(numInTel) || numInTel.length < 10 || numInTel == undefined) {
-    arr[i] =
-      "Необходимо ввести в поле телефон  не менее 10 чисел. Буквы не допускаются";
-    messBlock.style.display = "block";
-  }
-  if (yratext.test(nameInX) || nameInX.length < 2 || nameInX == undefined) {
-    arr[++i] =
-      "Необходимо ввести в поле имя не менее 2х букв.Цифры вводить не допускается";
-    messBlock.style.display = "block";
-  }
-});
+ 
+
