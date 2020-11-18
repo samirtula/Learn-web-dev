@@ -81,7 +81,7 @@
         }
         
     })
-    table.addEventListener('keydown', function (enter) {
+    document.addEventListener('keydown', function (enter) {
         if (enter.key === "Enter") {
             numArr[i] = result.value
             console.log(numArr);

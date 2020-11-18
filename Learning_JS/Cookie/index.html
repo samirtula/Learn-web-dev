@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="main">
-      <div class="arrow_up"></div>
-      <p class="value"></p>
-      <div class="arrow_down"></div>
-    </div>
-    <style>
-      .main {
-        display: flex;
-      }
 
-      .arrow_up {
-        background-image: url(up.jpg);
-        width: 30px;
-        height: 30px;
-        background-position: center;
-        background-size: cover;
-      }
-      .arrow_down {
-        background-image: url(down.jpg);
-        width: 30px;
-        height: 30px;
-        background-position: center;
-        background-size: cover;
-      }
-    </style>
-    <script src="app.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="main">
+    <div class="arrow_up"></div>
+    <p class="value"></p>
+    <div class="arrow_down"></div>
+    <div class="arrow_up2"></div>
+    <p class="value2"></p>
+    <div class="arrow_down2"></div>
+    <div class="arrow_up3"></div>
+    <p class="value3"></p>
+    <div class="arrow_down3"></div>
+  </div>
+  <style>
+    .main {
+      display: flex;
+    }
+
+    .arrow_up,
+    .arrow_up2 {
+      background-image: url(up.jpg);
+      width: 30px;
+      height: 30px;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .arrow_down,
+    .arrow_down2 {
+      background-image: url(down.jpg);
+      width: 30px;
+      height: 30px;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+  <script src="app.js"></script>
+</body>
+
 </html>
