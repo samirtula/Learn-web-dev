@@ -1,19 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body style="background-color: bisque">
-    <div class="selector" style="margin: 0 auto; display: inline">
-      <span class="color_types">Город</span>
-      <select class="sel" name="color_selector">
-        <option class="color_code_types" value="MSK">Москва</option>
-      </select>
-      <button class="save">Запрос</button>
-    </div>
 
-    <script src="api.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+    background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  select,
+  option,
+  button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+  }
+
+  h2 {
+    color: white;
+    position: absolute;
+    top: 110px;
+    left: 200px;
+    display: inline-block;
+    font-family: 'Noto Serif', serif;
+  }
+
+  .color_types {
+    font-family: 'Noto Serif', serif;
+    color: white;
+    font-size: 18px;
+  }
+
+  .selector {
+    position: absolute;
+    top: 180px;
+    left: 200px;
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    display: inline-block;
+  }
+
+  .wheather {
+    position: absolute;
+    width: 350px;
+    height: 225px;
+    background-image: url(https://photopedia.in/wp-content/uploads/2017/12/wide-angle.jpg);
+    border-radius: 5px;
+    top: 228px;
+    left: 490px;
+    display: inline-block;
+
+  }
+
+  .temp {
+    color: white;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+</style>
+
+<body>
+  <h2>Погода в Вашем городе</h2>
+  <div class="selector">
+    <span class="color_types">Город</span>
+    <select class="sel" name="color_selector">
+    </select>
+    <button class="save">Запрос</button>
+  </div>
+  <div class="wheather">
+    <p class="temp"></p>
+
+  </div>
+
+
+  <script src="api.js"></script>
+</body>
+
 </html>
