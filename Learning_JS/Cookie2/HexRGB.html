@@ -17,7 +17,7 @@
 
         .color_adder_wrapper {
             width: 250px;
-            height: 300px;
+            height: 380px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -65,6 +65,41 @@
         button {
             margin-top: 7px;
         }
+
+        .alert_message,
+        .alert_name_message {
+            color: red;
+            font-size: 14px;
+        }
+
+        .color_examples {
+            display: flex;
+            flex-wrap: wrap;
+            width: 800px;
+            margin: 0 auto;
+            justify-content: space-between;
+            padding: 20px 20px;
+            margin-top: 20px;
+
+        }
+
+        .color_example {
+            width: 30%;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info_block {
+            background-color: white;
+            width: 70%;
+            height: 70%;
+            opacity: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -79,7 +114,7 @@
                 </div>
                 <div class="selector">
                     <span class="color_types">Тип</span>
-                    <select name="color_selector">
+                    <select class="color_selector">
                         <option class="color_code_types" value="RGB">
                             RGB
                         </option>
@@ -93,7 +128,7 @@
                 </div>
                 <div class="color_code">
                     <span class="color_code_text">Код</span>
-                    <input class="color_input" type="text">
+                    <input class="color_input_code" value="" type="text">
                 </div>
                 <button class="save">Сохранить</button>
             </form>
@@ -101,6 +136,17 @@
         </div>
         <div class="examples">
             <h3 class="header_all_color">Все цвета</h3>
+            <div class="color_examples">
+                <div class="color_example">
+                    <div class="info_block"></div>
+                </div>
+                <div class="color_example">
+                    <div class="info_block"></div>
+                </div>
+                <div class="color_example">
+                    <div class="info_block"></div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="HexRGB.js"></script>
