@@ -4,8 +4,15 @@ const RGBAI = /^[0-9]{1,3}[,]{1}[0-9]{1,3}[,]{1}[0-9]{1,3}[,]{1}[1]{1}$/
 const RGBAIO = /^[0-9]{1,3}[,]{1}[0-9]{1,3}[,]{1}[0-9]{1,3}[,]{1}[0]{1}$/
 const HEX = /^#[A-Fa-f0-9]{6}$/
 const LETTERS = /^[a-zA-Zа-яА-Я]+$/
+
+let selectedType = $(".color_selector")
+let inputInner = $(".color_input_code")
+let colorName = $(".color_input")
 let z;
 let j;
+let k;
+let arrNames = [];
+let objKeyNum;
 let colors = {
   0: {
     name: "YELLOWGREEN",
@@ -26,6 +33,7 @@ let colors = {
     typeName: "HEX"
   },
 };
+
 
 function getCookie(name) {
     let matches = document.cookie.match(
@@ -67,14 +75,13 @@ function setCookie(name, value, options = {}) {
 function createElements(obj) {
     let n = 1
     for (let key in obj) {
-        $(`.color_examples .color_example:nth-child(${n})`).css("background-color",`${colors[key].type}${colors[key].code}`)
-        $(`.color_example:nth-child(${n}) .info_block`).append($(`<span>${colors[key].name} <br> ${colors[key].typeName} <br> ${colors[key].code}</span>`))
-        n++
+      $(`.color_examples .color_example:nth-child(${n})`).css("background-color", `${colors[key].type}${colors[key].code}`);
+      $(`.color_example:nth-child(${n}) .info_block`).append($(`<span>${colors[key].name} <br> ${colors[key].typeName} <br> ${colors[key].code}</span>`));
+      objKeyNum = n;
+      n++
+   
   } 
 }
-
-createElements(colors)
-
 
 function lastCookieNum() {
   z = 1;
@@ -87,23 +94,44 @@ function lastCookieNum() {
     } 
   }   
 }
-    
 
+createElements(colors)
 lastCookieNum()
 
  z > 1 ? j = z : j = 1;
 
+ class ColorBlock {
+  constructor(vals) {
+    this.name = vals[0];
+    this.typeName = vals[1];
+    this.type = "rgb";
+    this.code = `(${vals[2]})`;
+  
+
+    if (this.typeName == "HEX") {
+      this.type = ""
+      this.code = vals[2]
+    }
+    else if (this.typeName == "RGBA" ) {
+      this.type = "rgba"
+      }
+
+  }
+  createDivs() {
+    $(".color_examples").append($(`<div class="color_example">`).css("background-color",`${this.type}${this.code}`).append($(`<div class="info_block"> <span>${this.name} <br> ${this.typeName} <br> ${this.code}</span> </div></div>`)))
+   }
+ 
+};
 
 $(".save").on("click", function (event) {
     event.preventDefault()
-    let selectedType = $(".color_selector")
-    let inputInner = $(".color_input_code")
-    let colorName = $(".color_input")
+   
     $('.alert_name_message').remove()
     $('.alert_message').remove()
 
-    if (!LETTERS.test(colorName[0].value)) {
-        $(".color").append($('<span class = "alert_name_message">Для имени допускаются только буквы</span>'))
+  
+  if (!LETTERS.test(colorName[0].value) || arrNames.indexOf(colorName[0].value) >= 0 ) {
+        $(".color").append($('<span class = "alert_name_message">Для имени допускаются только буквы или введено занятое имя</span>'))
     };
 
     if (selectedType.val() == "RGB") {
@@ -122,11 +150,30 @@ $(".save").on("click", function (event) {
         }
   };
 
-   
-  setCookie(`name${j}`, `${colorName[0].value};${selectedType.val()};${inputInner[0].value}`)
+  if ($(".alert_name_message")[0] == undefined && $(".alert_message")[0] == undefined) {
+    setCookie(`name${j}`, `${colorName[0].value};${selectedType.val()};${inputInner[0].value}`, { 'max-age': 10800 });
+    let arrcount = arrNames.length
+    arrNames[arrcount] = colorName[0].value 
+  }
+    let vals = getCookie(`name${j}`).split([";"])
+    let newColorBlock = new ColorBlock(vals);
+    newColorBlock.createDivs()
   j++
-  
+ 
 });
-    
+
+$(document).ready(function() {
+  k = j - 1
+  for (let b = 1 ; b <= k; b++){
+    let vals = getCookie(`name${b}`).split([";"])
+    let newColorBlock = new ColorBlock(vals);
+    newColorBlock.createDivs()
+    let arrcount = arrNames.length
+    arrNames[arrcount] = newColorBlock.name 
+  }
+  
+}) 
+ 
+
 
 
