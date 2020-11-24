@@ -2,7 +2,7 @@ const RGB = /^[0-9]{1,3}[,]{1}[0-9]{1,3}[,]{1}[0-9]{1,3}$/
 const RGBA = /^[0-9]{1,3}[,]{1}[0-9]{1,3}[,]{1}[0-9]{1,3}[,]{1}[0]{1}[.]{1,5}[0-9]$/
 const RGBAI = /^[0-9]{1,3}[,]{1}[0-9]{1,3}[,]{1}[0-9]{1,3}[,]{1}[1]{1}$/
 const RGBAIO = /^[0-9]{1,3}[,]{1}[0-9]{1,3}[,]{1}[0-9]{1,3}[,]{1}[0]{1}$/
-const HEX = /^#[A-Fa-f0-9]{6}$/
+const HEX = /^#[A-Fa-f0-9]{1,6}$/
 const LETTERS = /^[a-zA-Zа-яА-Я]+$/
 
 let selectedType = $(".color_selector")
@@ -76,7 +76,7 @@ function createElements(obj) {
     let n = 1
     for (let key in obj) {
       $(`.color_examples .color_example:nth-child(${n})`).css("background-color", `${colors[key].type}${colors[key].code}`);
-      $(`.color_example:nth-child(${n}) .info_block`).append($(`<span>${colors[key].name} <br> ${colors[key].typeName} <br> ${colors[key].code}</span>`));
+      $(`.color_example:nth-child(${n}) .info_block`).append($(`<span>${colors[key].name} <br> ${colors[key].typeName} <br> ${colors[key].code.replace(")","").replace("(","")}</span>`));
       objKeyNum = n;
       n++
    
@@ -106,8 +106,6 @@ lastCookieNum()
     this.typeName = vals[1];
     this.type = "rgb";
     this.code = `(${vals[2]})`;
-  
-
     if (this.typeName == "HEX") {
       this.type = ""
       this.code = vals[2]
@@ -115,10 +113,9 @@ lastCookieNum()
     else if (this.typeName == "RGBA" ) {
       this.type = "rgba"
       }
-
   }
   createDivs() {
-    $(".color_examples").append($(`<div class="color_example">`).css("background-color",`${this.type}${this.code}`).append($(`<div class="info_block"> <span>${this.name} <br> ${this.typeName} <br> ${this.code}</span> </div></div>`)))
+    $(".color_examples").append($(`<div class="color_example">`).css("background-color",`${this.type}${this.code}`).append($(`<div class="info_block"> <span>${this.name} <br> ${this.typeName} <br> ${this.code.replace(")","").replace("(","")}</span> </div></div>`)))
    }
  
 };
@@ -130,34 +127,35 @@ $(".save").on("click", function (event) {
     $('.alert_message').remove()
 
   
-  if (!LETTERS.test(colorName[0].value) || arrNames.indexOf(colorName[0].value) >= 0 ) {
+  if (!LETTERS.test(colorName.val() ) || arrNames.indexOf(colorName.val()) >= 0 ) {
         $(".color").append($('<span class = "alert_name_message">Для имени допускаются только буквы или введено занятое имя</span>'))
     };
 
     if (selectedType.val() == "RGB") {
-        if (!RGB.test(inputInner[0].value)) {
+        if (!RGB.test(inputInner.val())) {
         $(".color_code_text").append($('<span class = "alert_message"> RGB код должен следовать маске [0-255],[0-255],[0-255]</span>'))
         }
     };
    if (selectedType.val() == "RGBA") {
-       if (!RGBA.test(inputInner[0].value) && !RGBAI.test(inputInner[0].value) && !RGBAIO.test(inputInner[0].value)) {
+       if (!RGBA.test(inputInner.val()) && !RGBAI.test(inputInner.val()) && !RGBAIO.test(inputInner.val())) {
         $(".color_code_text").append($('<span class = "alert_message"> RGBA код должен следовать маске [0-255],[0-255],[0-255],[0-1]</span>'))
         }
     };
     if (selectedType.val() == "HEX") {
-        if (!HEX.test(inputInner[0].value)) {
+        if (!HEX.test(inputInner.val())) {
         $(".color_code_text").append($('<span class = "alert_message"> HEX код должен следовать маске #1-6[A-F]</span>'))
         }
   };
 
   if ($(".alert_name_message")[0] == undefined && $(".alert_message")[0] == undefined) {
-    setCookie(`name${j}`, `${colorName[0].value};${selectedType.val()};${inputInner[0].value}`, { 'max-age': 10800 });
+    setCookie(`name${j}`, `${colorName.val() };${selectedType.val()};${inputInner.val()}`, { 'max-age': 10800 });
     let arrcount = arrNames.length
-    arrNames[arrcount] = colorName[0].value 
+    arrNames[arrcount] = colorName.val() 
+    
   }
     let vals = getCookie(`name${j}`).split([";"])
     let newColorBlock = new ColorBlock(vals);
-    newColorBlock.createDivs()
+  newColorBlock.createDivs()
   j++
  
 });
