@@ -1,0 +1,88 @@
+#starway {
+    .cart__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 227px;
+    max-height: 12px;
+    
+        &__link {
+           box-sizing: border-box;
+           max-height: 12px;           
+           display: flex;
+           align-items: center;
+
+           .active {
+            color: rgba(49, 49, 49, 0.6)
+           }
+
+
+            a{
+                text-decoration: none;
+                font-family: Rubik;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 90%;
+                letter-spacing: 0.2em;
+                color: #313131;
+                text-align: center;
+                
+            }
+            &__arrow {
+                background: url("/images/icons/arrow.svg");
+                width: 5px;
+                height: 12px;
+                background-size: cover;
+                background-position: center;
+                margin-left: 2px;
+                margin-right: 2px;
+
+            }
+        }
+    }
+
+  
+    .cart__content {
+        height:624px ;
+        width: 380px;
+        display: flex;
+
+        .cart__header{
+            width: 380px;
+            height: 84px;
+            h3 {
+                font-family: Cormorant Unicase;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 40px;
+                line-height: 70%;
+                text-align: start;
+                letter-spacing: -0.02em;
+                color: #313131;
+                display: flex;
+                width: 344px ;
+                height: 84px;
+                display: inline-flex;
+                
+            }
+            &__heart-image {
+                background: url("/images/icons/heart.svg");
+                width: 24px;
+                height: 22px;
+                background-size: cover;
+                background-position: center;
+                display: inline-flex;
+            }
+        }
+        .cart__delivery {
+            width: 370px;
+            height: 60px;
+            background: #FFE2E2;  
+            border: 2px solid #FFB0B0;
+            box-sizing: border-box;
+        }
+    }
+  
+       
+}

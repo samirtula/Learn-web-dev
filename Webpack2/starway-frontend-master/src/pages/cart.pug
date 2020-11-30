@@ -1,0 +1,26 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Карточка';
+    - const bodyAdditionClass = '';
+    - const pageAdditionClass = 'cart';
+block content
+   section.cart
+        nav.cart__links
+            div.cart__links__link
+                a(href="#") коллекция
+                div.cart__links__link__arrow
+            div.cart__links__link
+                a(href="#") бамбук
+                div.cart__links__link__arrow
+            div.cart__links__link
+                a(href="#" class = "active") брюки
+                div.cart__links__link__arrow
+        div.cart__content
+            div.cart__header
+                h3 Бамбуковые брюки 2000₽
+                div.cart__header__heart-image
+            div.cart__delivery
+                
+        div.cart__content-images    
+
