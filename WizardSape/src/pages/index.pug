@@ -5,16 +5,33 @@ append sharedVars
     - const bodyAdditionClass = '';
     - const pageAdditionClass = 'main-page';
 block content
-    secttion.about
+    section.about
         .about__header
-            h1.about__title
-                <span class ="about__header-name">Seowizard</span> — платформа интеллектуального поискового продвижения
+            h1.about__title #[span.about__header-name Seowizard] - платформа интеллектуального #[br] поискового продвижения
             h3.about__subtitle Профессиональное SEO для каждого
-            a.about__start-link(href="#")    
+            a.about__start-link(href="#") Начать продвижение
+                img(src=require("../images/icons/play.svg"))   
         .about__image
-    secttion.info
-    secttion.presents
-    secttion.start
-    secttion.peice
-    secttion.reviews
-    secttion.call-back
+    section.info
+        .info__wrapper.wrap-info
+            .wrap-info__block
+                .wrap-info__inner.page-num #[span.active-page 1] / 2
+                .wrap-info__inner.info__header SEO профессионального уровня
+                .wrap-info__inner.info__subtitle Мы вложили экспертизу SEO-платформы N1 #[br] в технологии и отдали их людям!
+                a.wrap-info__inner.info__analys Проанализировать сайт и получить рекомендации
+                    img(src=require("../images/icons/playwhite.svg"))  
+            .wrap-info__block
+                ol.info__list
+                    li 
+                        span.li-decorator 13 лет на рынке, более 100 тысяч успешных проектов
+                    li 
+                        span.li-decorator Продвижение только по эффективным запросам за счет уникальной обновляемой bigdata
+                    li 
+                        span.li-decorator Рабочие ссылки — используются алгоритмы машинного обучнеия Light GBM для подбора релевантных площадок
+                    li 
+                        span.li-decorator Персональные рекомендации с учетом конкурентного коружения
+    section.presents
+    section.start
+    section.peice
+    section.reviews
+    section.call-back
