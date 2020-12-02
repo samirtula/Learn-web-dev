@@ -1,0 +1,20 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Главная';
+    - const bodyAdditionClass = '';
+    - const pageAdditionClass = 'main-page';
+block content
+    secttion.about
+        .about__header
+            h1.about__title
+                <span class ="about__header-name">Seowizard</span> — платформа интеллектуального поискового продвижения
+            h3.about__subtitle Профессиональное SEO для каждого
+            a.about__start-link(href="#")    
+        .about__image
+    secttion.info
+    secttion.presents
+    secttion.start
+    secttion.peice
+    secttion.reviews
+    secttion.call-back

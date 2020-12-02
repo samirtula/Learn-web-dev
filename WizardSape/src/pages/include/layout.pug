@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+html(lang="en")
+    block sharedVars
+    head
+        title #{pageTitle}
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        meta(charset='utf-8')
+    body#Wizard-Sape(class=`${bodyAdditionClass}`)
+        .header__above
+            .header__above-inner.inner 
+                p.inner-text Вы находитесь на новой версии сайта seowizard.ru. Если вы хотите вернуться на прежний сайт, перейдите по 
+                    a.inner-link(href='#') ссылке
+                .inner__close-button
+        header.header
+            a.header__icon
+                .header__icon-contaier
+                    .header__icon-item
+                    .header__icon-item
+                    .header__icon-item.blue
+                .header__icon-contaier
+                    .header__icon-item
+                    .header__icon-item
+                    .header__icon-item
+                .header__icon-contaier
+                    .header__icon-item
+                    .header__icon-item
+                    .header__icon-item
+            .header__control
+                a.header__control-logo(href='#')
+                    img(src=require("../images/common/main--logo.svg"))
+                a.header__control-private(href='#') 
+                    img(src=require("../images/icons/user.svg")) 
+                    span.user Войти
+                a.header__control-request-call(href='#') Заказать звонок
+                a.header__control-burger.header-burger
+                    .header-burger__item
+                    .header-burger__item.middle-item
+                    .header-burger__item        
+        block content                       
+        .footer-decoration
+            footer.footer
+                .footer__categories.categories
+                    .categories__wrap
+                        h3.categories__header Wizard.Sape
+                        a.categories__link(href="#") Тур по системе
+                        a.categories__link(href="#") Самостоятельное продвижение
+                        a.categories__link(href="#") Технологии
+                        a.categories__link(href="#") Стоимость продвижения
+                        a.categories__link(href="#") Крауд-маркетинг
+                    .categories__wrap
+                        h3.categories__header Услуги
+                        a.categories__link(href="#") Персональный менеджер
+                        a.categories__link(href="#") Персональный менеджер Lite
+                        a.categories__link(href="#") Написание текстов
+                        a.categories__link(href="#") Аудиты
+                        a.categories__link(href="#") Создание проекта с помощником
+                    .categories__wrap
+                        h3.categories__header Помощь
+                        a.categories__link(href="#") Справка
+                        a.categories__link(href="#") Обучение
+                        a.categories__link(href="#") География и отрасли
+                    .categories__wrap
+                        h3.categories__header Сотрудничество
+                        a.categories__link(href="#") API 
+                        a.categories__link(href="#") Агентствам
+                        a.categories__link(href="#") Рейтинг агентств
+                    .categories__wrap
+                        h3.categories__header Другие сервисы Sape
+                        a.categories__link(href="#") Биржа ссылок 
+                        a.categories__link(href="#") Биржа статей
+                        a.categories__link(href="#") Вечные ссылки
+                        a.categories__link(href="#") Форум
+                        a.categories__link(href="#") Блог
+                .footer__pay.pay
+                    .pay__inner
+                        a.pay__inner-block.pay-logo(href='#')
+                            img(src=require("../images/common/main--logo.svg"))
+                        .pay__inner-block.pay-text — cистема автоматической раскрутки сайтов
+                    .pay__inner.payment
+                        .pay__inner-block.pay-header Принимаем к опалате:
+                        .pay__inner-block.payment-systems
+                            .payment-systems__world
+                            .payment-systems__webmoney
+                            .payment-systems__kiwi
+                            .payment-systems__visa
+                            .payment-systems__mastercard
+                            .payment-systems__yandex-money
+                    .pay__inner-block.pay-ask
+                        .pay-ask__help Нужна помощь?
+                        a.pay-ask__question(href='#') Задать вопрос
+                            img(src=require("../images/icons/ask.svg")) 
+                            
+                            
+                            
+                    
+                    
+
+
+
+            
