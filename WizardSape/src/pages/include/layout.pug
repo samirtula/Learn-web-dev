@@ -5,11 +5,42 @@ html(lang="en")
         title #{pageTitle}
         meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
         meta(charset='utf-8')
+        <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+
     body#Wizard-Sape(class=`${bodyAdditionClass}`)
+        .menu
+            .menu__wrapper
+                
+                .menu__nav-block.nav
+                    
+                    .nav__link-block
+                        .nav__langs #[span.nav__lang-rus.active-lang RUS]   /   #[span.nav__lang-en ENG]
+                        .nav__links
+                            a.nav__link(href="#") Тур по системе
+                            a.nav__link(href="#") Самостоятельное продвижение
+                            a.nav__link(href="#") Услуги
+                            a.nav__link(href="#") SEO-tools
+                            a.nav__link(href="#") Агентствам
+                            a.nav__link(href="#") Обучение
+                            a.nav__link(href="#") Справка
+                    
+                    .nav__social-block
+                        a.nav__logo(href='#') 
+                            img(src=require("../images/common/main--logo.svg"))
+                        span.nav__text самостоятельное продвиждение сайтов
+                        .nav__social-icons
+                            a.nav__icons.fb(href="#")  
+                            a.nav__icons.vk(href="#")
+                            a.nav__icons.youtube(href="#")
+                            a.nav__icons.telegram(href="#")
+                    a.header__control-request-call.nav__call(href='#') Заказать звонок
+                .menu__close-button
+                
         .header__above
             .header__above-inner.inner 
-                p.inner-text Вы находитесь на новой версии сайта seowizard.ru. Если вы хотите вернуться на прежний сайт, перейдите по 
-                    a.inner-link(href='#') ссылке
+                p.inner__text Вы находитесь на новой версии сайта seowizard.ru. Если вы хотите вернуться на прежний сайт, перейдите по 
+                    a.inner__link(href='#') ссылке
                 .inner__close-button
         header.header
             a.header__icon
@@ -35,7 +66,7 @@ html(lang="en")
                 a.header__control-burger.header-burger
                     .header-burger__item
                     .header-burger__item.middle-item
-                    .header-burger__item        
+                    .header-burger__item                      
         block content                       
         .footer-decoration
             footer.footer
@@ -54,23 +85,27 @@ html(lang="en")
                         a.categories__link(href="#") Написание текстов
                         a.categories__link(href="#") Аудиты
                         a.categories__link(href="#") Создание проекта с помощником
-                    .categories__wrap
+                    .categories__wrap.categories__wrap-adaptive
                         h3.categories__header Помощь
                         a.categories__link(href="#") Справка
                         a.categories__link(href="#") Обучение
                         a.categories__link(href="#") География и отрасли
-                    .categories__wrap
+                    .categories__wrap.categories__wrap-adaptive-prelast
                         h3.categories__header Сотрудничество
                         a.categories__link(href="#") API 
                         a.categories__link(href="#") Агентствам
                         a.categories__link(href="#") Рейтинг агентств
                     .categories__wrap
-                        h3.categories__header Другие сервисы Sape
+                        h3.categories__header Другие сервисы #[span.categories__header-adaptive Sape]
                         a.categories__link(href="#") Биржа ссылок 
                         a.categories__link(href="#") Биржа статей
                         a.categories__link(href="#") Вечные ссылки
                         a.categories__link(href="#") Форум
                         a.categories__link(href="#") Блог
+                    .categories__wrap.categories__wrap-adaptive-last
+                        .pay-ask__help Нужна помощь?
+                        a.pay-ask__question(href='#').blue-button-to-white Задать вопрос
+                            img.img-ask-white-to-blue(src=require("../images/icons/ask.svg"))
                 .footer__pay.pay
                     .pay__inner
                         a.pay__inner-block.pay-logo(href='#')
@@ -87,14 +122,29 @@ html(lang="en")
                             .payment-systems__yandex-money
                     .pay__inner-block.pay-ask
                         .pay-ask__help Нужна помощь?
-                        a.pay-ask__question(href='#') Задать вопрос
-                            img(src=require("../images/icons/ask.svg")) 
-                            
-                            
-                            
-                    
-                    
+                        a.pay-ask__question(href='#').blue-button-to-white Задать вопрос
+                            img.img-ask-white-to-blue(src=require("../images/icons/ask.svg"))
+            .footer-adaptive
+                a.footer-adaptive__logo(href='#')
+                    img(src=require("../images/common/main--logo.svg"))
+                .footer-adaptive__text — cистема автоматической раскрутки сайтов
+                .footer-adaptive__help Нужна помощь?
+                a.footer-adaptive__question(href='#').blue-button-to-white Задать вопрос
+                    img.img-ask-white-to-blue(src=require("../images/icons/ask.svg"))
+
+        .footer-decoration-bottom
+            .bottom-wrapper.contacts
+                span.contacts__copyright © 2020, ООО «СеоВизард»
+                span.contacts__technical-support #[span.technical-support-adaptive Техническая поддержка:] #[a.contacts__technical-support-link(href="mailto:support@seowizard.ru") support@seowizard.ru]
+                a.contacts__conf(href="#") Политика конфиденциальности
 
 
 
-            
+
+
+
+
+
+
+
+

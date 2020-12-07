@@ -5,33 +5,158 @@ append sharedVars
     - const bodyAdditionClass = '';
     - const pageAdditionClass = 'main-page';
 block content
-    section.about
-        .about__header
-            h1.about__title #[span.about__header-name Seowizard] - платформа интеллектуального #[br] поискового продвижения
-            h3.about__subtitle Профессиональное SEO для каждого
-            a.about__start-link(href="#") Начать продвижение
-                img(src=require("../images/icons/play.svg"))   
-        .about__image
-    section.info
-        .info__wrapper.wrap-info
-            .wrap-info__block
-                .wrap-info__inner.page-num #[span.active-page 1] / 2
-                .wrap-info__inner.info__header SEO профессионального уровня
-                .wrap-info__inner.info__subtitle Мы вложили экспертизу SEO-платформы N1 #[br] в технологии и отдали их людям!
-                a.wrap-info__inner.info__analys Проанализировать сайт и получить рекомендации
-                    img(src=require("../images/icons/playwhite.svg"))  
-            .wrap-info__block
-                ol.info__list
-                    li 
-                        span.li-decorator 13 лет на рынке, более 100 тысяч успешных проектов
-                    li 
-                        span.li-decorator Продвижение только по эффективным запросам за счет уникальной обновляемой bigdata
-                    li 
-                        span.li-decorator Рабочие ссылки — используются алгоритмы машинного обучнеия Light GBM для подбора релевантных площадок
-                    li 
-                        span.li-decorator Персональные рекомендации с учетом конкурентного коружения
-    section.presents
-    section.start
-    section.peice
-    section.reviews
-    section.call-back
+    .container
+        section.about
+            .about__header
+                h2.about__title #[span.about__header-name Seowizard] - платформа интеллектуального #[br] поискового продвижения
+                h3.about__subtitle Профессиональное SEO для каждого
+                a.about__start-link.white-link-to-blue(href="#") Начать продвижение
+                    img.img-play-blue-to-white(src=require("../images/icons/play.svg"))   
+            .about__image
+        section.info.owl-carousel.upper-slider
+            .info__wrapper.wrap-info
+                .wrap-info__block
+                    .wrap-info__inner.page-num #[span.active-page 1] / 3
+                    .wrap-info__inner.info__title SEO профессионального уровня
+                    .wrap-info__inner.info__subtitle Мы вложили экспертизу SEO-платформы N1 #[br] в технологии и отдали их людям!
+                .wrap-info__block-list
+                    ol.info__list
+                        li
+                            .info__list-decorator 1  
+                            span.li-text 13 лет на рынке, более 100 тысяч успешных проектов
+                        li
+                            .info__list-decorator 2 
+                            span.li-text Продвижение только по эффективным запросам за счет уникальной обновляемой bigdata
+                        li
+                            .info__list-decorator 3 
+                            span.li-text Рабочие ссылки — используются алгоритмы машинного обучнеия Light GBM для подбора релевантных площадок
+                        li
+                            .info__list-decorator 4 
+                            span.li-text Персональные рекомендации с учетом конкурентного коружения
+                a.wrap-info__inner.info__analys.blue-button-to-white(href="#") #[span.info-analys-adaptive Проанализировать сайт и получить рекомендации] #[span.info-analys-nonadaptive Начать продвижение]
+                    img.img-play-white-to-blue(src=require("../images/icons/playwhite.svg"))
+            .info__wrapper.wrap-info.second
+                .wrap-info__block
+                    .wrap-info__inner.page-num #[span.active-page 2] / 3
+                    .wrap-info__inner.info__title Простота использования
+                    .wrap-info__inner.info__subtitle Не нужно обладать специальными знаниями, платформа технологична и легка в использовании
+                .wrap-info__block-list
+                    ol.info__list
+                        li
+                            .info__list-decorator 1  
+                            span.li-text.info-second-slide Автоматически подборет поисковые фразы
+                        li
+                            .info__list-decorator 2 
+                            span.li-text.info-second-slide Проверит сайт по 50 параметрам и поможет исправить ключевые ошибки	
+                        li
+                            .info__list-decorator 3 
+                            span.li-text.info-second-slide Сформирует безопасную ссылочную массу сайта
+                        li
+                            .info__list-decorator 4 
+                            span.li-text.info-second-slide Проанализирует целевые страницы и конкурентное окружение, даст рекомендации по оптимизации
+                a.wrap-info__inner.info__analys.info__analys-second-slide.blue-button-to-white(href="#") #[span.info-analys-adaptive Начать создание проекта] #[span.info-analys-nonadaptive Начать продвижение]
+                    img.img-play-white-to-blue(src=require("../images/icons/playwhite.svg"))
+            .info__wrapper.wrap-info.third
+                .wrap-info__block
+                    .wrap-info__inner.page-num #[span.active-page 3] / 3
+                    .wrap-info__inner.info__title Честная стоимость
+                    .wrap-info__inner.info__subtitle Автоматизация всех процессов продвижения делает SEO максимально доступным. Мы сделали максимум:
+                .wrap-info__block-list
+                    ol.info__list
+                        li
+                            .info__list-decorator 1  
+                            span.li-text Автоматизировали все рутинные процессы в SEO-продвижении
+                        li
+                            .info__list-decorator 2 
+                            span.li-text Установили лучшие цены на ссылки, без скрытых наценок и комиссий
+                        li
+                            .info__list-decorator 3 
+                            span.li-text Дали вам возможность экономить бюджет на лишних работах
+                        li
+                            .info__list-decorator 4 
+                            span.li-text Еще один замечательный тезис из этого блока тыц-тыц-тыц
+                a.wrap-info__inner.info__analys.info__analys-second-slide.blue-button-to-white(href="#") #[span.info-analys-adaptive Запустить продвижение] #[span.info-analys-nonadaptive Начать продвижение]
+                    img.img-play-white-to-blue(src=require("../images/icons/playwhite.svg"))  
+        section.presents
+            .presents__wrapper.wrap-presents
+                .wrap-presents-block.book-image
+                    .wrap-presents-image
+                .wrap-presents-block.book
+                    h2.book__title Дарим книгу!
+                    h4.book__subtitle Оставьте свой email и получте книгу «Как самостоятельно продвинуть сайт в поисковых системах». 
+                    form.book__email
+                        input.book__input#email(type="email" placeholder="email")
+                        input.book__input#tel(type="tel" placeholder="телефон")
+                        button.book__button.white-link-to-blue#book-button Хочу книгу в подарок
+                            .book__image
+                            img.img-book-blue-to-white(src=require("../images/icons/present.svg"))
+                        span.book__request Отправляя заявку, вы соглашаетесь с  #[a.book__request-link(href="#") Политикой конфиденциальности]
+        section.start
+            .start__wrapper
+                .wrap-start-block
+                    h2.start__title Как начать продвижение
+                    h4.start__subtitle Сделайте 3 простых шага и следуйте указаням системы.
+                .cards__gradient
+                .wrap-start-block.cards.owl-carousel.midlle-slider
+                    a.cards__sample(href="#")
+                        span.cards__title Пройдите регистрацию
+                        span.cards__subtitle Создайте учетную запись Seowizard 
+                        .cards__start
+                            .cards__button Начать сейчас
+                                img(src=require("../images/icons/playwhite.svg"))
+                            .cards__profile
+                    a.cards__sample(href="#")
+                        span.cards__title Создайте свой проект
+                        span.cards__subtitle Укажите сайт для продвижения
+                        .cards__start
+                            .cards__button Начать сейчас
+                                img(src=require("../images/icons/playwhite.svg"))
+                            .cards__project
+                    a.cards__sample(href="#")
+                        span.cards__title Пополните баланс
+                        span.cards__subtitle Определить бюджет своей кампании
+                        .cards__start
+                            .cards__button Начать сейчас
+                                img(src=require("../images/icons/playwhite.svg"))
+                            .cards__balance
+
+        section.price
+            .price__wrapper
+                h2.price__title Сколько стоит продвижение в топ? 
+                h4.price__subtitle Укажите адрес сайта и получите прогноз бюджета 
+                form.price__form.promotion
+                    input.promotion__input#promotion-url(type="url" placeholder="URL")
+                    input.promotion__input#promotion-region(type="text" placeholder="Регион продвижения")
+                    button.promotion__button.blue-button-to-white#promotion-button Рассчитать бюджет
+                        img.img-play-white-to-blue(src=require("../images/icons/playwhite.svg"))
+                    span.promotion__note Все поля обязательны для заполнения
+        section.reviews
+
+            .reviews__block
+                h2.reviews__title Отзывы клиентов
+                h4.reviews__subtitle 125 576 пользователей уже доверили нам продвижение своего сайта. #[a.reviews__join-link(href="#") Присоединяйтесь] и вы!
+            .reviews__block
+                .reviews__cards.clients-review
+                    .clients-review__gradient
+                    .bottom-slider.owl-carousel
+                        .clients-review__card-one.item
+                            span.clients-review__title Компания «Электровеник»
+                            span.clients-review__text Wizard.Sape начали использовать несколько месяцев назад. Уже оценили его плюсы. Он помогает решить сложные задачи, экономит бюджет. Удобно отслеживать позиции в Яндексе. Автоматическая «заморозка» закупки ссылок при достижении установленных в сервисе необходимых позиций сразу же сказалась на эффективности расходования бюджета и позволила существенно экономить.#[br] #[br]Очень полезный для нас функционал — недавно появившаяся автоматическая закупка вечных ссылок в публикуемых новостях.
+                        .clients-review__card-two
+                            span.clients-review__title Александр Шокуров,  Kokoc.com
+                            span.clients-review__text Главное, что стоит сказать - сервис технологичный. Я сразу же оценил функциональные возможности Wizard.Sape. Весь спектр работ по продвижению сайтов проходит на удивление быстро и эффективно. Техническая реализация хорошо продумана, интерфейс понятен и удобен.
+                .reviews__clients.clients
+                    a(href="#").clients__icon.ev
+                    a(href="#").clients__icon.garin-studio
+                    a(href="#").clients__icon.kokonaut
+                    a(href="#").clients__icon.optimism
+                    a(href="#").clients__icon.smartmedia
+        section.call-back
+            .call-back__wrapper
+                h2.call-back__title Нужна помощь?
+                h4.call-back__subtitle SEO-аналитик даст рабочие рекомендации или возьмет продвижение на себя
+                form.call-back__form.call
+                    input.call__input#tel(type="tel" placeholder="телефон")
+                    button.call__button.blue-button-to-white#call-back-button Заказать звонок
+                        img.img-play-white-to-blue(src=require("../images/icons/playwhite.svg"))
+                span.call__confidential Отправляя заявку, вы соглашаетесь с #[a.call__confidential-link(href="#") Политикой конфиденциальности]
