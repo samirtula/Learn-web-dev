@@ -1828,9 +1828,7 @@ ul {
   }
 }
 
-.on.select__gap,
-.select__gap:hover {
-}
+
 
 .select__list {
   background: transparent;
@@ -1862,32 +1860,4 @@ ul {
   color: #0069ff;
 }
 
-.select__gap:after {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  margin-top: -7px;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 14px solid #000;
 
-  -webkit-transition: all 0.27s ease-in-out;
-  -o-transition: all 0.27s ease-in-out;
-  transition: all 0.27s ease-in-out;
-
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-}
-
-.on.select__gap:after {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
