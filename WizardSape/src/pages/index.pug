@@ -126,7 +126,10 @@ block content
                 h4.price__subtitle Укажите адрес сайта и получите прогноз бюджета 
                 form.price__form.promotion
                     input.promotion__input#promotion-url(type="url" placeholder="URL")
-                    input.promotion__input#promotion-region(type="text" placeholder="Регион продвижения")
+                    select(name="regions").promotion__input#promotion-region(type="text")
+                        option.promotion__option(value = "Москва") Москва</option>
+                        option.promotion__option(value = "Тула") Тула</option>
+                        option.promotion__option(value = "Тула") Баку</option>
                     button.promotion__button.blue-button-to-white#promotion-button Рассчитать бюджет
                         img.img-play-white-to-blue(src=require("../images/icons/playwhite.svg"))
                     span.promotion__note Все поля обязательны для заполнения
@@ -156,7 +159,7 @@ block content
                 h2.call-back__title Нужна помощь?
                 h4.call-back__subtitle SEO-аналитик даст рабочие рекомендации или возьмет продвижение на себя
                 form.call-back__form.call
-                    input.call__input#tel(type="tel" placeholder="телефон")
+                    input.call__input#call-back(type="tel" placeholder="телефон")
                     button.call__button.blue-button-to-white#call-back-button Заказать звонок
                         img.img-play-white-to-blue(src=require("../images/icons/playwhite.svg"))
                 span.call__confidential Отправляя заявку, вы соглашаетесь с #[a.call__confidential-link(href="#") Политикой конфиденциальности]

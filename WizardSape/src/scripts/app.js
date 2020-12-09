@@ -1,3 +1,4 @@
+import { valHooks } from 'jquery';
 import 'owl.carousel'
 
 $(document).ready(function () {
@@ -25,8 +26,6 @@ $(document).ready(function () {
                 margin: 50,
             },
         }
-
-
     }
     );
     $('.midlle-slider').owlCarousel({
@@ -54,9 +53,6 @@ $(document).ready(function () {
             }
         }
     });
-
-
-
 });
 
 $(window).on('load resize', function () {
@@ -77,7 +73,6 @@ $(window).on('load resize', function () {
         let dots = document.querySelector(".owl-dots");
         dots.style.top = "110px";
     }
-
 })
 
 
@@ -89,7 +84,6 @@ $(".header-burger").hover(function (e) {
     e.preventDefault();
     $(".header-burger__item").css({ 'backgroundColor': '#333333' })
 })
-
 
 
 $(".white-link-to-blue").hover(function (e) {
@@ -118,10 +112,14 @@ $(".blue-button-to-white").hover(function (e) {
     $(this).children(".img-ask-white-to-blue").attr('src', '../images/icons/ask.svg')
 
 })
+
+
 $(".inner__close-button").on("click", function (e) {
     e.preventDefault();
     $(".header__above").slideUp()
-})
+});
+
+
 $(".header-burger").on("click", function (e) {
 
     $('.menu__wrapper').toggle("slow")
@@ -132,10 +130,111 @@ $(".header-burger").on("click", function (e) {
     } else {
         $('.menu__wrapper').css("top", "0");
     }
+});
 
-})
 
 $(".menu__close-button").on("click", function (e) {
     e.preventDefault();
     $('.menu__wrapper').toggle("slow")
-})
+});
+
+
+
+$(".book__email").submit(function (e) {
+
+    e.preventDefault()
+    const regEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    const regTel = /^([+]?[0-9]{1,25})*$/;
+    let emailInput = $("#email");
+    let email = emailInput.val();
+    let telInput = $("#tel");
+    let tel = telInput.val();
+    emailInput.css("background", "#EBF3FF");
+    telInput.css("background", "#EBF3FF");
+
+    if (!tel.match(regTel) || (tel.length == 0))
+        telInput.css("background", "#FCE6E6");
+    if (!email.match(regEmail) || (email.length == 0)) {
+        emailInput.css("background", "#FCE6E6")
+    };
+
+});
+
+$(".promotion").submit(function (e) {
+    e.preventDefault()
+    const regURL = /^(https?:\/\/)?([\w\.]+)\.([a-z]{2,6}\.?)(\/[\w\.]*)*\/?$/
+    let url = $("#promotion-url")
+    let urlAddres = url.val()
+    url.css("background", "#FFFFFF")
+    if (!urlAddres.match(regURL))
+        url.css("background", "#FCE6E6");
+});
+
+$(".call").submit(function (e) {
+    e.preventDefault()
+    const regTel = /^([+]?[0-9]{1,25})*$/;
+    let telInput = $("#call-back")
+    let tel = telInput.val()
+    telInput.css("background", "#EBF3FF")
+    if (!tel.match(regTel) || tel.length == 0)
+        telInput.css("background", "#FCE6E6");
+});
+
+$("#promotion-region").each(function () {
+    let $this = $(this),
+        selectOption = $this.find('option'),
+        selectOptionLength = selectOption.length,
+        selectedOption = selectOption.filter(':selected'),
+        dur = 500;
+    $this.hide();
+    $this.wrap('<div class="select"></div>');
+    $('<div>', {
+        class: 'select__gap',
+        text: 'Регион продвижения'
+    }).insertAfter($this);
+
+    let selectGap = $this.next('.select__gap'),
+        caret = selectGap.find('.caret');
+    $('<ul>', {
+        class: 'select__list'
+    }).insertAfter(selectGap);
+
+    let selectList = selectGap.next('.select__list');
+    for (var i = 0; i < selectOptionLength; i++) {
+        $('<li>', {
+            class: 'select__item',
+            html: $('<span>', {
+                text: selectOption.eq(i).text()
+            })
+        })
+            .attr('data-value', selectOption.eq(i).val())
+            .appendTo(selectList);
+
+    }
+    var selectItem = selectList.find('li');
+
+    selectList.slideUp(0);
+    selectGap.on('click', function () {
+        if (!$(this).hasClass('on')) {
+            $(this).addClass('on');
+            selectList.slideDown(dur);
+
+            selectItem.on('click', function () {
+                var chooseItem = $(this).data('value');
+
+                $('select').val(chooseItem).attr('selected', 'selected');
+                selectGap.text($(this).find('span').text());
+
+                selectList.slideUp(dur);
+                selectGap.removeClass('on');
+            });
+
+        } else {
+            $(this).removeClass('on');
+            selectList.slideUp(dur);
+        }
+    });
+
+});
+
+
