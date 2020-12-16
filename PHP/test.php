@@ -86,8 +86,7 @@ $percent = 0.2;
 $sum = 300;
 $years = 20;
 $arr = [];
-$percentSum = $sum * $percent;
-$sumWidthPercentSum = $sum + $percentSum;
+
 
 for ($i = 0; $i < $years; $i++) {
 
@@ -116,3 +115,5 @@ for ($i = 0; $i < $years; $i++) {
     </tbody>
 
 </table>
+
+

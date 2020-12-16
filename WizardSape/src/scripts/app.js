@@ -200,7 +200,7 @@ $("#promotion-region").each(function () {
     }).insertAfter(selectGap);
 
     let selectList = selectGap.next('.select__list');
-    for (var i = 0; i < selectOptionLength; i++) {
+    for (let i = 0; i < selectOptionLength; i++) {
         $('<li>', {
             class: 'select__item',
             html: $('<span>', {
@@ -211,7 +211,7 @@ $("#promotion-region").each(function () {
             .appendTo(selectList);
 
     }
-    var selectItem = selectList.find('li');
+    let selectItem = selectList.find('li');
 
     selectList.slideUp(0);
     selectGap.on('click', function () {
@@ -220,7 +220,7 @@ $("#promotion-region").each(function () {
             selectList.slideDown(dur);
 
             selectItem.on('click', function () {
-                var chooseItem = $(this).data('value');
+                let chooseItem = $(this).data('value');
 
                 $('select').val(chooseItem).attr('selected', 'selected');
                 selectGap.text($(this).find('span').text());
