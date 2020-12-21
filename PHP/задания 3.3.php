@@ -9,11 +9,6 @@ foreach($request as $k => $item) {
 }
 
 
-if (empty($errors)) {
-    $saveResult = saveResult($request);
-}
-
-
 
 function getPasswordHash($userPassword)
 {
@@ -40,6 +35,9 @@ function saveResult($req)
 }   
 
 
+if (empty($errors)) {
+    $saveResult = saveResult($request);
+}
 
 ?>
 <ul class="<?=(!empty($errors)) ? 'error': ''?>">
