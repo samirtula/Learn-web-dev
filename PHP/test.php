@@ -1,119 +1,74 @@
 <?php
 
-/* $name = "Ivan";
-
-echo $name;
-$num = 1;
-$double = 1.2;
-$array1 = [1, 'test', 'test2'];
-print_r($array1);
-
-echo "<pre>";
-print_r($array1);
-echo "</pre>";
-
-
-$fakeNumber = "1";
-var_dump($fakeNumber);
-
-$bool = true;
-
-$sumString = "3" . "vs";
-$sumStr .= "32";
-
-var_dump((bool) $fakeNumber);
-
-
-class MyClass
+function getPasswordHash($userPassword)
 {
-};
-$obj = new MyClass();
-var_dump($obj);
- */
-
-/* if(){
-    elseif(){
-
-    } else{}
+    $sold = 'web2020';
+    $hashString = $userPassword . $sold;
+    return md5($hashString);
 }
- */
-/* $test2 = ($number > 3) ? 1 : 3;
 
-
-foreach ($array1 as $k => $val) {
-    echo $k;
-    echo "-";
-    echo $val;
-    echo "<br>";
-};
-
-for ($i; $i > 3; $i++) {
-};
-
-while ($i < 5) {
-    $i++;
-};
- */
-
-/* $first = 2;
-$second = 2;
-
-$result = $second % $first;
-
-
-if ($result === 0) {
-    echo "верно";
-}
-$y = 2019;
-$m = 3;
-$date= date('t', strtotime($y."-".$m));
-var_dump($date);
-?>
- */
-
-/* 
-for ($i = 2; $i <= 10; $i++) {
-
-    for ($j = 2; $j <= 10; $j++) {
-        $num = $i * $j;
-        echo ($i . '*' . $j . "=" . $num . "<br>");
+function saveResult($req)
+{
+    $string = '';
+    $string .= date('d.m.Y H:i') . PHP_EOL;
+    foreach ($req as $k => $val) {
+        if ($k === 'pass') {
+            $val = getPasswordHash($val);
+        }
+        $string .= $k . ': ' . $val . PHP_EOL;
     }
-};
- */
 
+    $string .= '================' . PHP_EOL;
 
-$percent = 0.2;
-$sum = 300;
-$years = 20;
-$arr = [];
-
-
-for ($i = 0; $i < $years; $i++) {
-
-    $percentSum = $sum * $percent;
-    $sumWithPercent = $sum + $percentSum;
-    $arr[] = [
-        'sum' => round($sum, 2),
-        'sumWithPercent' => round($sumWithPercent, 2),
-        'percentSum' => round($percentSum, 2)
-    ];
-    $sum = $sum + $percentSum;
+    $save = file_put_contents('form.txt', $string, FILE_APPEND);
+    return $save;
 }
 
+$request = $_REQUEST;
+$errors = [];
+foreach ($request as $k => $item) {
+    $item = trim(strip_tags($item));
+    if (empty($item)) {
+        $errors[$k] = 'Не заполнили поле ' . $k;
+    }
+}
+if (empty($errors)) {
+    $saveResult = saveResult($request);
+}
+
+$test = json_encode($errors);
+$decode = json_decode($test, 1);
+var_dump($decode);
+
 ?>
+<ul class="<?=(!empty($errors)) ? 'error' : ''?>">
+    <?if (!empty($errors)):?>
+        <?foreach ($errors as $error):?>
+            <li><?=$error?></li>
+        <?endforeach;?>
+    <?endif;?>
+</ul>
+<div>
+    <?=($saveResult === false) ? 'Ошибка на стороне сервера' : ''?>
+</div>
+<form method="post" action="handler.php">
+    <input placeholder="Имя" name="name" type="text">
+    <input placeholder="Фамилия" name="sname" type="text">
+    <input placeholder="Возраст" name="age" type="text">
+    <input placeholder="Пароль" name="pass" type="password">
+    <input type="submit" value="Отправить">
+</form>
 
-<table>
-    <tbody>
-        <?php foreach ($arr as $k => $item) : ?>
-            <tr>
-                <td><?= $k + 1 ?></td>
-                <td><?= $item['sum'] ?></td>
-                <td><?= $item['sumWithPercent'] ?></td>
-                <td><?= $item['percentSum'] ?></td>
-            </tr>
-        <?php endforeach ?>
-    </tbody>
 
+
+
+
+
+
+
+<<<<<<< HEAD
 </table>
 
 
+=======
+>>>>>>> 7b40cc319727f5a9fa7da6aa60ddd6325c5edad7
