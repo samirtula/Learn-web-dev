@@ -62,13 +62,3 @@ var_dump($decode);
 
 
 
-
-
-
-
-<<<<<<< HEAD
-</table>
-
-
-=======
->>>>>>> 7b40cc319727f5a9fa7da6aa60ddd6325c5edad7

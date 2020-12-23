@@ -1,6 +1,6 @@
 <?php
 
-/* $name = "Ivan";
+$name = "Ivan";
 
 echo $name;
 $num = 1;
@@ -29,15 +29,15 @@ class MyClass
 };
 $obj = new MyClass();
 var_dump($obj);
- */
 
-/* if(){
+
+ if () {
     elseif(){
 
     } else{}
 }
- */
-/* $test2 = ($number > 3) ? 1 : 3;
+ 
+ $test2 = ($number > 3) ? 1 : 3;
 
 
 foreach ($array1 as $k => $val) {
@@ -53,9 +53,9 @@ for ($i; $i > 3; $i++) {
 while ($i < 5) {
     $i++;
 };
- */
 
-/* $first = 2;
+
+$first = 2;
 $second = 2;
 
 $result = $second % $first;
@@ -68,10 +68,9 @@ $y = 2019;
 $m = 3;
 $date= date('t', strtotime($y."-".$m));
 var_dump($date);
-?>
- */
 
-/* 
+
+
 for ($i = 2; $i <= 10; $i++) {
 
     for ($j = 2; $j <= 10; $j++) {
@@ -79,7 +78,7 @@ for ($i = 2; $i <= 10; $i++) {
         echo ($i . '*' . $j . "=" . $num . "<br>");
     }
 };
- */
+
 
 
 $percent = 0.2;
@@ -102,6 +101,7 @@ for ($i = 0; $i < $years; $i++) {
 }
 
 ?>
+
 
 <table>
     <tbody>
@@ -133,9 +133,9 @@ function myfunc()
 }
 return $res;
 
-?> */
+?> 
 
-?>
+
 
 <form action="">
     <input type="text" name = "name">
@@ -143,7 +143,4 @@ return $res;
     <input type="text" name = "age">
     <input type="password" name = "pass">
     <input type="submit" value = "Отправить">
-
-
-
 </form>    
