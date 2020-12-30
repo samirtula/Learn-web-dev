@@ -38,7 +38,7 @@ class FormCreator
         $this->form = '<form action="' . $action . '" ' . 'method="' . $method . '">';
     }
 
-    protected function addToForm()
+    public function addToForm()
     {
 
         $this->formInner = $this->form . $this->elem . '</form>';
@@ -60,6 +60,10 @@ class FormCreator
         } elseif ($element === 'input') {
             $this->elem = $this->elem . '<' . $element . ' ' . $atribute . '>' . $content;
         }
+        elseif ($element === 'option') {
+            $this->elem = $this->elem . '<' . str_replace('<select>','<select>' . $element . ' ' . $atribute . '>' . $content , $this->elem);
+        }
+
     }
 }
 $attrForInput = [

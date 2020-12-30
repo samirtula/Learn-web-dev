@@ -6,7 +6,7 @@
     <title>Задание 13</title>
   </head>
 
-  <form>
+  <form class="center">
     <select name="inc_cons" id="in">
        <option value="INCOME">Доход</option>
        <option value="CONSUMPTION">Расход</option>
@@ -20,13 +20,31 @@
    </select>
     <input type="submit" value="Отправить" name="submit">
 </form>
-<div id="content"></div>
+
+<form  class ="months"><p class="table_footer" >Укажите месяц отчета</p>
+
+    <select name="months" id="in">
+       <option value="01">Январь</option>
+       <option value="02">Февраль</option>
+       <option value="03">Март</option>
+       <option value="04">Апрель</option>
+       <option value="05">Май</option>
+       <option value="06">Июнь</option>
+       <option value="07">Июль</option>
+       <option value="08">Август</option>
+       <option value="09">Сентябрь</option>
+       <option value="10">Октябрь</option>
+       <option value="11">Ноябрь</option>
+       <option value="12">Декабрь</option>
+    </select>
+    <input type="submit" value="Отправить" name="submit">
+<form>
 
 <style>
     .none {
         display:none;
     }
-    form {
+    form.center {
         display: flex;
         flex-direction: column;
         width:350px;
@@ -102,7 +120,34 @@
 
 <script>
 
+
 const list = document.getElementById("content");
+
+
+const months = document.querySelector('.months');
+
+const ajaxFilter = (formData) => {
+fetch('filter.php', {
+    method: 'POST',
+    headers: {
+        'Content-Type':'application/json',
+    },
+    body: JSON.stringify(formData)
+    })
+     .then(response => console.log(response))
+     .catch(error => console.error(error))
+};
+
+
+months.addEventListener('submit', function(e){
+        e.preventDefault();
+        let formData = new FormData(this);
+        formData = Object.fromEntries(formData);
+
+        ajaxFilter(formData)
+        }
+        );
+
 
 const ajaxSend = (formData) => {
 fetch('sum.php', {
@@ -141,9 +186,10 @@ const forms = document.querySelector('form');
 $decodedData = json_decode(file_get_contents('php://input'),true);
 
 $errors = [];
-
-foreach($decodedData as $k => $value) {
-    $value = trim(strip_tags($value));
+if(!empty($decodedData)){
+    foreach($decodedData as $k => $value) {
+        $value = trim(strip_tags($value));
+    }
 }
 
 function saveResult($Data)
@@ -238,9 +284,9 @@ $commonConsCounted=array_count_values($coommonCons);
 arsort($commonConsCounted);
 $max = (array_slice($commonConsCounted,0,3));
 
-
 ?>
 <br>
+<p class="table_footer">Общие данные по расходам и доходам</p>
 <table>
     <thead>
         <tr>
@@ -270,7 +316,7 @@ $max = (array_slice($commonConsCounted,0,3));
                     </td>
                 <?endforeach;?>
             </tr>
-                <?endforeach;?>
+        <?endforeach;?>
     </tbody>
 </table>
 <p class=table_footer>Общая сумма расходов в $ составляет: <?=$USA?>.</p>
