@@ -29,8 +29,6 @@ foreach ($arrEditedIncome as $k => $value) {
         $filterArr[] = $value;
     }
 }
-echo '<pre>';
-print_r($filterArr);
 ?>
 
 
@@ -98,4 +96,5 @@ print_r($filterArr);
         margin-left:280px;
         font-size: 18px;
     }
+
 </style>
