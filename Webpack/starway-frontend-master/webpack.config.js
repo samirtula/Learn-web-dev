@@ -3,7 +3,9 @@ const path = require('path');
 const fs = require('fs');
 const webpack = require('webpack');
 const Fiber = require('fibers');
-const { VueLoaderPlugin } = require('vue-loader');
+const {
+  VueLoaderPlugin
+} = require('vue-loader');
 
 const plugins = {
   progress: require('webpackbar'),
@@ -31,6 +33,7 @@ module.exports = (env = {}, argv) => {
         './styles/app.scss',
         './scripts/app.js',
       ],
+      
     },
 
     output: {
@@ -41,11 +44,9 @@ module.exports = (env = {}, argv) => {
     },
 
     module: {
-      rules: [
-        {
+      rules: [{
           test: /\.((s[ac]|c)ss)$/,
-          use: [
-            {
+          use: [{
               loader: plugins.extractCSS.loader,
               options: {
                 publicPath: '../', // use relative path for everything in CSS
@@ -114,16 +115,13 @@ module.exports = (env = {}, argv) => {
         {
           test: /\.(gif|png|jpe?g|svg)$/i,
           exclude: /fonts/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[path][name].[ext]',
-                // publicPath: '..' // use relative path
-              },
+          use: [{
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+              // publicPath: '..' // use relative path
             },
-           
-          ],
+          }, ],
         },
         {
           test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
@@ -196,26 +194,25 @@ module.exports = (env = {}, argv) => {
       ];
 
       const development = [
-        new plugins.sync(
-          {
-            host: 'localhost',
-            port: 3000,
-            proxy: 'http://localhost:8080/',
-          },
-          {
-            reload: false,
-          },
-        ),
+        new plugins.sync({
+          host: 'localhost',
+          port: 3000,
+          //proxy: 'http://localhost:8080/',
+          proxy: 'http://starway.local/',
+        }, {
+          reload: true,
+        }, ),
       ];
 
-      return isProduction
-        ? common.concat(production)
-        : common.concat(development);
+      return isProduction ?
+        common.concat(production) :
+        common.concat(development);
     })(),
 
-    devtool: (() => (isProduction
-      ? '' // 'hidden-source-map'
-      : 'source-map'))(),
+    devtool: (() => (isProduction ?
+      '' // 'hidden-source-map'
+      :
+      'source-map'))(),
 
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],

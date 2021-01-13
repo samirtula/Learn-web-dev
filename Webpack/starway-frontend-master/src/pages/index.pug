@@ -5,13 +5,7 @@ append sharedVars
     - const bodyAdditionClass = '';
     - const pageAdditionClass = 'main-page';
 block content
-  
-
-
-
-
-
-    //section.top-index
+    section.top-index
         div.top-index__wrapper
             h1.top-index__title Твой идеальный #[br] образ на каждый день
 
@@ -21,3 +15,25 @@ block content
                 img.top-image__item.top-image__item--3(src=require("../images/index/item-3.png"))
                 img.top-image__item.top-image__item--4(src=require("../images/index/item-4.png"))
                 img.top-image__item.top-image__item--5(src=require("../images/index/item-5.png"))
+
+    section.new-collection
+        div.inner.new-collection__wrapper
+            div.new-collection__content
+                h2.block-title.new-collection__block-title новая коллекция
+                img.new-collection__mobile-image(src=require("../images/index/new-collection--mobile.png"))
+                h3.title.new-collection__title Бамбуковая коллекция
+                p Задача организации, в особенности же начало повседневной работы по формированию позиции позволяет оценить значение системы обучения кадров, соответствует потребностям.
+                a.button.new-collection__button(href='/catalog/')
+                    span каталог
+            div.new-collection__images
+                img(src=require("../images/index/new-collection--2.png"))
+                img(src=require("../images/index/new-collection--1.png"))
+    div.gradient-delimiter
+    section.out-collections
+        div.inner.out-collections__wrapper
+            h2.block-title.out-collections__title наши коллекции
+            div.out-collections__items
+                div.out-collections__item.out-collections__item--bamboo
+                    div Бамбук
+                div.out-collections__item.out-collections__item--silk
+                    div Шёлк

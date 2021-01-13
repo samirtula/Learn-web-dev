@@ -1,0 +1,199 @@
+.login-and-register {
+    background: linear-gradient(90.17deg, #FFE2E2 45.42%, #FCF1F1 96.31%) !important;
+    @include mediaWidth(767) {
+        background: linear-gradient(180deg, #FFE2E2 0%, #FCF1F1 53.12%)!important;
+    }
+}
+
+#starway {
+
+    .main-page-login {
+        background-image: url(../images/login/main-img.png);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: -69px;
+
+        @include mediaWidth(1024) {
+            background-color: $colorWhite;
+            background-position-x: 25%;
+            background-position-y: 0px;
+
+        }
+        @include mediaWidth(767) {
+            background-color: inherit;
+            background-image: none;
+        }
+    }
+
+    .authorization {
+        max-width: 1168px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        @include mediaWidth(1024) {
+            padding: 0 30px;
+        }
+
+        @include mediaWidth(767) {
+            // max-width: 375px;
+            padding: 0 20px;
+        }
+
+        .title {
+            margin-bottom: 60px;
+
+           
+        }
+
+        input {
+            width: 330px;
+            height: 40px;
+            font-size: 14px;
+            line-height: 70%;
+            letter-spacing: 0.05em;
+            color: rgba(49, 49, 49, 0.6);
+            padding-left: 10px;
+            border: 1px solid rgba(49, 49, 49, 0.8);
+            box-sizing: border-box;
+            background: transparent;
+            outline: none;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: $colorPink;
+            width: 330px;
+            height: 60px;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 60%;
+            color: $colorBlack;
+            letter-spacing: 0.05em;
+            display: block;
+            border: none;
+            background-image: url(../images/icons/card-arrow-big.svg);
+            background-repeat: no-repeat;
+            background-position-y: center;
+
+            @include mediaWidth(1024) {
+                width: 250px;
+                font-size: 14px;
+            }
+
+            &--login {
+                background-position-x: calc(50% + 40px);
+            }
+
+            &--register {
+                background-position-x: calc(50% + 70px);
+
+            }
+        }
+    }
+
+    .authorization-main {
+        position: relative;
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+
+            @include mediaWidth(1024) {
+                flex-direction: column;
+            }
+            @include mediaWidth(767) {
+                text-align: center;
+                align-items: center;
+            }
+        }
+
+        &__elem {
+            max-width: 332px;
+            margin: 115px 0 202px;
+
+            @include mediaWidth(1024) {
+                margin: 0;
+                max-width: 261px;
+
+            }
+            @include mediaWidth(767) {
+                max-width: 100%;
+            }
+
+            input {
+                @include mediaWidth(1024) {
+                    width: 250px;
+
+                }
+                @include mediaWidth(767) {
+                    width: 100%;
+                }
+            }
+
+            .title {
+                white-space: nowrap;
+                font-size: 40px;
+                margin-bottom: 60px;
+
+                @include mediaWidth(1024) {
+                    font-size: 30px;
+                    margin-bottom: 40px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 170%;
+                letter-spacing: 0.05em;
+                color: $colorBlack;
+                margin-top: 0;
+                margin-bottom: 20px;
+
+                @include mediaWidth(1024) {
+                    font-size: 14px;
+                    line-height: 180%;
+                }
+                @include mediaWidth(767) {
+                    margin: 0px 35px 40px;
+                }
+            }
+
+            .button {
+                @include mediaWidth(767) {
+                    width: 100%;
+                }
+            }
+
+            form.login-form {
+                input {}
+            }
+
+            &--login {
+                @include mediaWidth(1024) {
+                    margin: 66px 0 40px;
+                    width: 246px;
+                }
+                @include mediaWidth(767) {
+                    margin: 66px 0 40px;
+                    width: 100%;
+                }
+               
+
+                .login-form {
+                    display: flex;
+                    flex-direction: column;
+
+                }
+
+            }
+
+            &--register {
+                @include mediaWidth(767) {
+                    width: 100%;
+                    margin-bottom: 100px;
+                }
+            }
+        }
+    }
+
+}

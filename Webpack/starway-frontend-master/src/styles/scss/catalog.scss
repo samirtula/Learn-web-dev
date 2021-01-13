@@ -1,0 +1,246 @@
+#starway {
+
+    .main-page-catalog {
+        background-color: $colorWhite;
+
+        @include mediaWidth(767) {
+            background-color: $colorBg;
+        }
+
+        .catalog {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1168px;
+            margin: 0 auto;
+            padding: 0 20px;
+
+            @include mediaWidth(1023) {
+                padding: 0 30px;
+                justify-content: unset;
+            }
+
+            @include mediaWidth(767) {
+                max-width: 375px;
+                padding: 0 20px;
+            }
+
+
+
+            .catalog-menu-active {
+                opacity: 1;
+                top: 0;
+                z-index: 1;
+            }
+
+            &__part {
+
+                &--menu {
+
+                    @include mediaWidth(767) {
+                        opacity: 0;
+                        position: fixed;
+                        top: -630px;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                        padding-top: 200px;
+                        background-color: $colorBg;
+                    }
+
+
+                    .catalog-menu {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 100px;
+                        width: 170px;
+
+                        @include mediaWidth(1023) {
+                            margin: 181px 10px 0 38px;
+                            width: 201px;
+
+                        }
+
+                        @include mediaWidth(767) {
+                            width: 100%;
+                            margin: 0;
+                            text-align: center;
+
+                        }
+
+                        .close {
+                            @include mediaWidth(767) {
+                                display: none;
+                                background-image: url(../images/icons/close-catalog.svg);
+                                width: 20px;
+                                height: 20px;
+                                position: fixed;
+                                top: -20px;
+                                width: 100%;
+                                background-repeat: no-repeat;
+                                left: 50%;
+                                margin-left: -10px;
+                            }
+
+                        }
+
+                        .close-active {
+                            @include mediaWidth(767) {
+                                display: block;
+                                top: 50px;
+                            }
+                        }
+
+                        .title {
+                            position: relative;
+                            font-family: Cormorant Unicase;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 25px;
+                            line-height: 70%;
+                            color: $colorBlack;
+                            margin-bottom: 24px;
+                            //right: 20px;
+                            @include mediaWidth(767) {
+                                right: 0;
+                            }
+                            &--active {
+                                color: $colorTextHover;
+                                right: 0;
+                            }
+                        }
+
+                        &__elem {
+                            position: relative;
+                            font-family: Cormorant Unicase;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 14.4px;
+                            letter-spacing: 0.02em;
+                            color: $colorBlack;
+                            margin-bottom: 20px;
+                            &:hover {
+                                color: $colorTextHover;
+
+                            }
+                        }
+
+                        .selected {
+                            &:before {
+                                content: url(../images/icons/card-arrow-big.svg);
+                                position: absolute;
+                                top: -2px;
+                                left: -17px;
+                            }
+                        }
+                    }
+                }
+
+                &--content {
+                    max-width: 840px;
+                    width: 100%;
+
+                    @include mediaWidth(1023) {
+                        max-width: 450px;
+                    }
+
+                    @include mediaWidth(767) {
+                        max-width: 100%;
+                        // z-index: 1;
+                    }
+
+                    .breadcrumbs {
+                        margin: 49px 0 0;
+                        display: flex;
+                        position: absolute;
+                        font-weight: 700;
+                        font-size: 12px;
+                        letter-spacing: 0.2em;
+
+                        @include mediaWidth(1023) {
+                            margin: 54px 0 0 0;
+                        }
+
+                        @include mediaWidth(767) {
+                            // margin: 50px 0 0 0;
+                        }
+
+                        a {
+
+                            &::after {
+                                content: url(../images/icons/card-arrow.svg);
+                                margin: 0 5px;
+                            }
+
+                            &:last-child {
+                                color: rgba(49, 49, 49, 0.6);
+
+                                &::after {
+                                    content: "";
+                                }
+                            }
+                        }
+                    }
+
+                    .breadcrumbs-fixed {
+                        @include mediaWidth(767) {
+                            position: fixed;
+                            margin: 0;
+                            width: 375px;
+                            left: 50%;
+                            margin-left: -42px;
+                            top: 135px;
+                            z-index: 10;
+                        }
+                    }
+
+
+                    h3.title {
+                        font-size: 60px;
+                        line-height: 100%;
+                        letter-spacing: -0.02em;
+                        color: $colorBlack;
+
+                        margin: 79px 0 0;
+
+                        @include mediaWidth(1023) {
+                            margin: 84px 0 0;
+                        }
+                        @include mediaWidth(767) {
+                            font-size: 30px;
+                        }
+                        
+                    }
+
+                    .title-expanded {
+                        @include mediaWidth(767) {
+                            &:after {
+                                content:url(../images/icons/card-arrow-big-down.svg);
+                                position: relative;
+                                top: -3px;
+                                left: 5px;
+                                z-index: 0;
+                            }
+                        }
+                    }
+
+                    .flex-container {
+                        display: flex;
+                        flex-direction: column;
+
+                        @include mediaWidth(767) {
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                        }
+                        @include mediaWidth(340) {
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

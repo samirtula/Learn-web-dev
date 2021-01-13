@@ -1,0 +1,26 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Корзина';
+    - const bodyAdditionClass = 'about';
+    - const pageAdditionClass = 'main-page-cart';
+block content
+    section.cart
+        h3.title Корзина для покупок
+        h2.empty-cart Ваша корзина пуста 
+        div.flex-container
+            div.cart__elem.cart__elem--products.cart-products
+                div.cart-products__item.cart-products__item--gift
+                    include include/gift-info.pug
+                div.cart-products__item
+                    include include/product-info.pug
+                div.cart-products__item
+                    include include/product-info.pug
+            div.cart__elem.cart__elem--result.cart-result
+                span.cart-result-title Итог заказа
+                div.flex-container
+                    span.cart-result-result Промежуточный итог: 
+                    span.cart-result-price 
+                form
+                    input(type="text" placeholder="Подарочная карта").discount
+                    input(type="submit" value="оформить").button.button--place-order

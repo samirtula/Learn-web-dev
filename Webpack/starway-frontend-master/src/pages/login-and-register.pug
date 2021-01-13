@@ -1,0 +1,22 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Регистрация и вход';
+    - const bodyAdditionClass = 'login-and-register';
+    - const pageAdditionClass = 'main-page-login';
+block content
+    section.authorization.authorization-main
+        div.flex-container 
+            div.authorization-main__elem.authorization-main__elem--login
+                h3.title Войти в систему
+                p Пожалуйста, введите свой адрес электронной почты и пароль ниже, чтобы получить доступ к своей учетной записи.
+                form.login-form
+                    input(type="email" placeholder="Введите адрес электронной почты")
+                    input(type="password" placeholder="Пароль")
+                    input(type="submit" value="войти").button.button--login
+            div.authorization-main__elem.authorization-main__elem--register
+                h3.title Завести аккаунт
+                P Зарегистрируйтесь, и используйте преимущество  учетной записи.
+                input(type="submit" value="регистрация").button.button--register
+
+

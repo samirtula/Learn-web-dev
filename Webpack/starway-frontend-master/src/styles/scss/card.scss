@@ -1,0 +1,873 @@
+#starway {
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    h3 {
+        font-size: 40px;
+        font-weight: normal;
+
+        @include mediaWidth(1024) {
+            font-size: 25px;
+        }
+
+        @include mediaWidth(767) {
+            font-size: 30px;
+        }
+    }
+
+    h4 {
+        font-family: Cormorant Unicase;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 70%;
+        color: $colorBlack;
+    }
+
+    .main-page-card {
+        background-color: $colorWhite;
+
+        .card {
+            display: flex;
+            max-width: 1168px;
+            margin: 0 auto;
+            padding: 0 20px;
+
+            @include mediaWidth(1024) {
+                padding: 0 30px;
+            }
+
+            @include mediaWidth(767) {
+                padding: 0 10px;
+                max-width: 375px; 
+            }
+            
+        }
+
+        .card-main {
+            @include mediaWidth(1024) {
+                justify-content: space-between;
+            }
+
+            .breadcrumbs {
+                margin: 73px 0 0 100px;
+                display: flex;
+                position: absolute;
+                font-weight: bold;
+                font-size: 12px;
+                letter-spacing: 0.2em;
+
+                @include mediaWidth(1024) {
+                    margin: 62px 0 0 0;
+                }
+
+                @include mediaWidth(767) {
+                    margin: 50px 0 0 0;
+                }
+
+                a {
+
+                    &::after {
+                        content: url(../images/icons/card-arrow.svg);
+                        margin: 0 5px;
+                    }
+
+                    &:last-child {
+                        color: rgba(49, 49, 49, 0.6);
+
+                        &::after {
+                            content: "";
+                        }
+                    }
+                }
+            }
+
+            &__element {
+                margin: 128px 0 100px;
+
+                @include mediaWidth(1024) {
+                    margin: 112px 0 150px;
+                }
+
+                @include mediaWidth(767) {
+                    margin: 101px 0 60px;
+                }
+
+                &--description {
+                    margin-left: 100px;
+                    max-width: 400px;
+                    width: 400px;
+
+                    @include mediaWidth(1024) {
+                        margin-left: 0;
+                        width: 400px;
+                    }
+                    @include mediaWidth(767) {
+                        margin-left: 0;
+                        width: 375px;
+                        max-width: 100%;
+                    }
+
+                    h3 {
+                        @include mediaWidth(1024) {
+                            font-size: 30px;
+                        }
+                    }
+
+                    .description-title {
+                        letter-spacing: -0.02em;
+                        white-space: nowrap;
+                        margin: 0;
+
+                        &::after {
+                            content: url(../images/icons/heart.svg);
+                            margin-left: 10px;
+                            position: relative;
+                            cursor: pointer;
+                        }
+
+                        @include mediaWidth(767) {
+                            margin: 0;
+                        }
+                    }
+
+                    .price {
+                        margin: 20px 0 50px;
+
+                        @include mediaWidth(1024) {
+                            margin: 10px 0 20px;
+                        }
+                        @include mediaWidth(767) {
+                            margin: 0px 0 20px;
+                        }
+                    }
+
+
+
+                    .free-delivery {
+                        display: flex;
+                        width: 370px;
+                        height: 60px;
+                        background: $colorBg;
+                        border: 2px solid $colorPink;
+                        box-sizing: border-box;
+
+                        @include mediaWidth(1024) {
+                            width: 289px;
+                            height: 40px;
+                        }
+
+                        @include mediaWidth(767) {
+                            // width: 95vw;
+                            width: 100%;
+                            height: 30px;
+                            background: $colorWhite;
+                            // margin-bottom: 586px;
+                        }
+
+                        span {
+                            margin: auto;
+                            letter-spacing: 0.2em;
+                            font-weight: bold;
+                            font-size: 12px;
+                            color: rgba(49, 49, 49, 0.8);
+
+                            @include mediaWidth(1024) {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+
+                    #product-properties {
+                        position: relative;
+
+                        a {
+                            font-size: 16px;
+                            color: rgba(49, 49, 49, 0.3);
+                            font-weight: normal;
+                        }
+
+                        .size-title {
+                            display: none;
+                            font-size: 14px;
+                            color: rgba(49, 49, 49, 0.6);
+
+                            @include mediaWidth(1024) {
+                                display: block;
+                                margin: 40px 0 20px;
+                            }
+
+                            @include mediaWidth(767) {
+                                display: block;
+                                margin: 590px 0 20px;
+                            }
+                        }
+
+                        .find-size {
+                            display: block;
+                            position: absolute;
+                            top: -4px;
+                            right: 30px;
+                            cursor: pointer;
+                            color: rgba(49, 49, 49, 0.9);
+                            &::after {
+                                content: url(../images/icons/card-arrow-big.svg);
+                                margin-left: 5px;
+                                position: relative;
+                                top: 3px;
+                            }
+
+                            @include mediaWidth(1024) {
+                                left: 0;
+                                top: 72px;
+                                font-size: 14px;
+                            }
+
+                            @include mediaWidth(767) {
+                                top: -4px;
+                                right: 0;
+                                left: unset;
+                            }
+                        }
+
+                        .hidden {
+                            overflow: hidden;
+                        }
+
+                        .size {
+                            position: relative;
+                            margin: 51px 0 40px;
+                            width: 200px;
+
+                            @include mediaWidth(1024) {
+                                margin: 20px 0 80px;
+                                display: flex;
+                                flex-wrap: wrap;
+                                width: 190px;
+                            }
+
+                            @include mediaWidth(767) {
+                                display: flex;
+                                flex-direction: column;
+                                flex-wrap: nowrap;
+                                margin: 20px 0 40px;
+                                width: 99px;
+                                height: 30px;
+                                border: 1px solid rgba(49, 49, 49, 0.6);
+                                box-sizing: border-box;
+                                background-image: url(../images/icons/card-arrow-big-down.svg);
+                                background-repeat: no-repeat;
+                                background-position: 74px 10px;
+                                // overflow: hidden;
+                            }
+
+
+
+                            a {
+                                margin-right: 25px;
+
+                                @include mediaWidth(767) {
+                                    display: block;
+                                    padding-left: 7px;
+                                    background: $colorWhite;
+                                    position: relative;
+                                    top: 30px;
+
+                                    width: 99px;
+                                    min-height: 30px;
+
+                                }
+                            }
+
+                            .size-active {
+                                color: $colorBlack;
+                            }
+
+                            .size-selected {
+                                color: rgba(49, 49, 49, 0.6);
+                                padding: 4px 0 0 5px;
+                            }
+                        }
+
+                    }
+
+                    .color {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+
+                        @include mediaWidth(1024) {
+                            width: 226px;
+                        }
+
+                        span {
+                            margin-right: 20px;
+                            color: rgba(49, 49, 49, 0.6);
+
+                            @include mediaWidth(1024) {
+                                font-size: 14px;
+                                margin-bottom: 30px;
+                            }
+
+                        }
+
+                        .wrap-colors {
+                            display: flex;
+
+                            .color-active {
+                                border: 2px solid #313131;
+                            }
+
+                            div {
+                                margin-right: 20px;
+                                display: flex;
+                                width: 34px;
+                                height: 34px;
+                                border-radius: 34px;
+                                border: 2px solid rgba(49, 49, 49, 0.2);
+                                box-sizing: border-box;
+                                cursor: pointer;
+
+                                &::after {
+                                    margin: auto;
+                                    display: block;
+                                    width: 24px;
+                                    height: 24px;
+                                    border-radius: 24px;
+                                }
+
+                                @include mediaWidth(767) {
+                                    margin-right: 40px;
+                                }
+
+                            }
+                        }
+
+
+                        .brown {
+                            &::after {
+                                content: "";
+                                background: #BC737A;
+                            }
+                        }
+
+                        .biege {
+                            &::after {
+                                content: "";
+                                background: #EBCDAA;
+                            }
+                        }
+
+                        .black {
+                            &::after {
+                                content: "";
+                                background: black;
+                            }
+                        }
+
+                        .white {
+                            &::after {
+                                content: "";
+                                background: white;
+                            }
+                        }
+
+
+
+                    }
+
+                    .buy-btn {
+                        display: flex;
+                        position: relative;
+                        margin-top: 50px;
+                        /*width: 240px;*/
+                        height: 60px;
+                        background-color: $colorPink;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+
+                        @include mediaWidth(1024) {
+                            font-size: 14px;
+                            margin-top: 40px;
+                        }
+                        @include mediaWidth(767) {
+                            font-size: 16px;
+                            // width: 95vw;
+                            width: 100%;
+                        }
+                            // background-position-x: 212px;
+                        span {
+                            font-weight: bold;
+                            font-size: 16px;
+                            letter-spacing: 0.05em;
+                            color: $colorBlack;
+                            margin: auto;
+                            &::after {
+                                content: url(../images/icons/card-arrow-big.svg);
+                                position: relative;
+                                top: 3px;
+                                margin-left: 5px;
+                            }
+                        }
+                       
+                    }
+                }
+
+
+                .accordeon {
+                    &__content {
+                        display: none;
+                    }
+                    &__element {
+                        h4 {
+                            margin: 40px 0 0 0;
+                            cursor: pointer;
+
+                            &::after {
+                                content: url(../images/icons/card-arrow-big.svg);
+                                margin-left: 5px;
+                                position: relative;
+                            }
+                        }
+
+                        p {
+
+                            font-weight: normal;
+                            font-size: 16px;
+                            line-height: 32px;
+                            letter-spacing: 0.05em;
+                            color: $colorBlack;
+                            margin-top: 20px;
+
+                            @include mediaWidth(1024) {
+                                font-size: 14px;
+                            }
+
+                            @include mediaWidth(767) {
+                                line-height: 22.4px;
+                            }
+                        }
+                    }
+                }
+
+
+                &--gallery {
+                    display: flex;
+                    flex-direction: column;
+
+                    @include mediaWidth(1023) {
+                        display: none;
+                    }
+
+                    .gallery-active {
+                        border: 2px solid $colorPink;
+                        box-sizing: border-box;
+                    }
+
+                    div {
+                        width: 100px;
+                        height: 150px;
+                        margin-bottom: 10px;
+                        margin: 0 30px 10px 45.8px;
+                        cursor: pointer;
+
+                        &:nth-child(1) {
+                            background-image: url(../images/card/gallery-one.png);
+                        }
+
+                        &:nth-child(2) {
+                            background-image: url(../images/card/gallery-two.png);
+                        }
+
+                        &:nth-child(3) {
+                            background-image: url(../images/card/gallery-three.png);
+                        }
+
+                        &:nth-child(4) {
+                            background-image: url(../images/card/gallery-four.png);
+                        }
+                    }
+                }
+
+
+                &--photo {
+                    &::-webkit-scrollbar {
+                        width: 0;
+                    }
+
+                    height: 750px;
+                    overflow: scroll;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+
+                    @include mediaWidth(1024) {
+                        height: 450px;
+                    }
+
+                    @include mediaWidth(767) {
+                        flex-direction: row;
+                        position: absolute;
+                        top: 250px;
+                        right: 50%;
+                        left: 50%;
+                        margin-left: -187.5px;
+                        overflow: hidden;
+                        height: 500px;
+                        width: 375px;
+                    }
+
+                    @include mediaWidth(374) {
+                        width: 100%;
+                        margin-left: 0;
+                        left: 0;
+                        right: 0;
+                    }
+
+                    .photo {
+                        width: 500px;
+                        min-height: 750px;
+                        margin-bottom: 100px;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+
+                        @include mediaWidth(1024) {
+                            width: 300px;
+                            min-height: 450px;
+                        }
+
+                        @include mediaWidth(767) {
+                            background-size: cover;
+                            position: relative;
+                            min-width: 375px;
+                            min-height: 500px;
+                            left: 0px;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0px;
+                        }
+
+                        &--one {
+                            background-image: url(../images/card/gallery-one-big.png);
+                        }
+
+                        &--two {
+                            background-image: url(../images/card/gallery-two-big.png);
+                        }
+
+                        &--three {
+                            background-image: url(../images/card/gallery-three-big.png);
+                        }
+
+                        &--four {
+                            background-image: url(../images/card/gallery-four-big.png);
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+
+    }
+
+
+}
+
+.add-to-cart-menu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.1);
+    top: 0;
+    z-index: 100;
+
+
+    &__window {
+        padding: 50px;
+        box-sizing: border-box;
+        position: relative;
+        width: 740px;
+        background: $colorWhite;
+        margin: auto;
+
+        @include mediaWidth(1024) {
+            width: 550px;
+            height: 469px;
+        }
+
+        @include mediaWidth(767) {
+            background: $colorBg;
+            width: 100%;
+            height: 240px;
+            padding: 35px 20px;
+        }
+
+        .close {
+            position: absolute;
+            background-image: url(../images/icons/close-card.svg);
+            background-size: contain;
+            width: 23px;
+            height: 23px;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+
+            @include mediaWidth(1024) {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        .add-to-cart-title {
+            margin: 0;
+
+
+
+            @include mediaWidth(767) {
+                text-align: center;
+                margin-bottom: 20px;
+                letter-spacing: -0.02em;
+
+            }
+        }
+// ----------------------
+        .info {
+            display: flex;
+            margin: 45px 0 50px;
+
+            @include mediaWidth(767) {
+                display: none;
+            }
+
+            &__title {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 40px;
+            }
+
+            &__elem {
+                &--image {
+                    background-image: url(../images/card/gallery-one-big.png);
+                    width: 170px;
+                    height: 170px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    margin-right: 30px;
+
+                    @include mediaWidth(1024) {
+                        width: 100px;
+                        height: 150px;
+                    }
+                }
+
+                &--params {
+                    span {
+                        font-size: 16px;
+                        font-weight: 600;
+
+                        @include mediaWidth(1024) {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .info-title {
+                       // margin-right: 226px;
+
+                        @include mediaWidth(1024) {
+                            margin-right: 154px;
+                        }
+                    }
+
+                    .params {
+                        display: flex;
+
+                        span {
+                            font-weight: normal;
+                            font-size: 16px;
+                            letter-spacing: 0.05em;
+                            color: rgba(49, 49, 49, 0.8);
+
+                            @include mediaWidth(1024) {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .info-numbers {
+                        margin: 66px 0 20px;
+
+                        @include mediaWidth(1024) {
+                            margin: 20px 0 0 0
+                        }
+
+                        .counter {
+                            margin-left: 15px;
+                            display: flex;
+
+                            span {
+                                cursor: pointer;
+                                font-size: 16px;
+
+                            }
+
+                            &__value {
+                                margin: 0 5px;
+                            }
+                        }
+                    }
+
+                    .info-size {
+                        margin: 0 0 23px;
+
+                        @include mediaWidth(1024) {
+                            margin: 0 0 2px;
+
+                        }
+
+                        &__value {
+                            margin-left: 5px;
+                        }
+                    }
+
+                    .info-color {
+                        &__value {
+                            margin-left: 10px;
+                            display: flex;
+                            width: 16px;
+                            height: 16px;
+                            border: 1px solid $colorBlack;
+                            border-radius: 16px;
+                            box-sizing: border-box;
+
+                            .info-color-value {
+                                background: #BC737A;
+                                margin: auto;
+                                display: block;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 12px;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+
+                    .delete {
+                        font-size: 14px;
+                        text-decoration: underline;
+                        letter-spacing: 0.05em;
+                        color: rgba(49, 49, 49, 0.8);
+                        margin-top: 50px;
+                        cursor: pointer;
+
+                        @include mediaWidth(1024) {
+                            font-size: 12px;
+                            margin-top: 45px;
+                        }
+                    }
+                }
+            }
+        }
+ // ------------------------
+    }
+
+    .btn-block {
+        display: flex;
+        flex-direction: row;
+        @include mediaWidth(767) {
+            margin-top: 40px;
+            flex-direction: column-reverse;
+        }
+        &__button {
+            //margin: 0 auto 10px;
+            width: 326px;
+            height: 60px;
+            display: flex;
+            box-sizing: border-box;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: $colorBlack;
+
+            @include mediaWidth(1024) {
+                width: 280px;
+                height: 50px;
+                font-size: 14px;
+
+            }
+            @include mediaWidth(767) {
+                width: 354px;
+                font-size: 16px;
+
+            }
+
+            span {
+                margin: auto;
+
+                &::after {
+                    content: url(../images/icons/card-arrow-big.svg);
+                    margin-left: 5px;
+                    position: relative;
+                    top: 4px;
+                }
+            }
+
+            &--view-cart-btn {
+                background: $colorPink;
+            }
+
+            &--continue-shopping-btn {
+                border: 0;
+                color: #9c9c9c!important;
+                span {
+                    &::after {
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}
+
+.arrow-btn-block {
+    display: none;
+
+    @include mediaWidth(767) {
+        position: absolute;
+        display: flex;
+        left: 50%;
+        right: 50%;
+        margin-left: -176px;
+        width: 100%;
+        max-width: 360px;
+        justify-content: space-between;
+        top: 582px;
+        z-index: 10;
+    }
+    
+    @include mediaWidth(374) {
+        width: 280px;
+        margin-left: -140px;
+    }
+
+    &__item {
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+
+        &--left {
+            background-image: url(../images/icons/card-arrow-big-left.svg);
+        }
+
+        &--right {
+            background-image: url(../images/icons/card-arrow-big.svg);
+        }
+    }
+}

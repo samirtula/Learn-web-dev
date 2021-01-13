@@ -1,0 +1,133 @@
+#starway {
+    .main-page-personal-account {
+
+        .offer-for-you {
+            max-width: 1168px;
+            margin: 0 auto;
+            padding: 0 20px;
+
+            @include mediaWidth(1023) {
+                padding: 0 30px;
+            }
+            @include mediaWidth(767) {
+                padding: 0 20px;
+            }
+
+            .title {
+                margin: 100px 0;
+
+                @include mediaWidth(1023) {
+                    margin: 60px 0 38px;
+                }
+            }
+
+            &__elem {
+                &--discount-on-birthday {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: auto;
+
+                    @include mediaWidth(767) {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+
+            .discount-on-birthday {
+                &__elem {
+                    &--text {
+                        width: 356px;
+                        justify-self: center;
+
+                        @include mediaWidth(1023) {
+                            max-width: 250px;
+                        }
+
+                        @include mediaWidth(767) {
+                            grid-row-start: 2;
+                            grid-row-end: 3;
+                            max-width: 500px;
+                            width: 100%;
+                        }
+
+                        .title {
+                            font-size: 40px;
+                            line-height: 100%;
+                            letter-spacing: -0.02em;
+                            text-align: left;
+                            white-space: nowrap;
+                            margin: 100px 0 80px;
+
+                            @include mediaWidth(1023) {
+                                font-size: 30px;
+                                white-space: pre-wrap;
+                                margin: 82px 0 40px;
+
+                            }
+                            @include mediaWidth(767) {
+                                margin: 40px 0 40px;
+                                
+                            }
+                        }
+
+                        p {
+                            font-weight: normal;
+                            font-size: 16px;
+                            letter-spacing: 0.05em;
+                            line-height: 200%;
+                            color: rgba(49, 49, 49, 0.8);
+                            margin-bottom: 80px;
+
+                            @include mediaWidth(1023) {
+                                margin-bottom: 40px;
+                                font-size: 14px;
+                                line-height: 180%;
+                            }
+                            @include mediaWidth(767) {
+                                line-height: 160%;
+                                margin-bottom: 36px;
+                                padding-right: 70px;
+                            }
+                        }
+
+                        .button {
+                            &--store {
+                                margin: 0;
+                                line-height: 60px;
+                                background-position-x: calc(50% + 55px);
+
+                                @include mediaWidth(1023) {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+
+                    &--image {
+                        justify-self: right;
+
+                        @include mediaWidth(767) {
+                            grid-row-start: 1;
+                            grid-row-end: 2;
+                            justify-self: center;
+
+                        }
+
+                        img {
+                            @include mediaWidth(1023) {
+                                width: 250px;
+                                height: 400px;
+                                margin-top: 22px;
+                            }
+                            @include mediaWidth(767) {
+                                width: 225px;
+                                height: 300px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

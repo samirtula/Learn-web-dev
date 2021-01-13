@@ -1,0 +1,42 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'О нас';
+    - const bodyAdditionClass = 'about';
+    - const pageAdditionClass = 'main-page-about';
+block content
+    section.about.about-main
+        div.about-main__element.about-main__element--text
+            h2 Домашняя одежда созданная для тебя
+            p Мы бренд женской домашней одежды StarWay.Мы шьём женскую домашнюю одежду (пижамки, сорочки, халатики) из шёлка армани и бамбука. Всю нашу одежду мы шьём по собственным лекалам и по вашим индивидуальным меркам (готовых изделий в наличии #[br]у нас нет, все отшивается на заказ).
+        div.about-main__element.about-main__element--photo
+            img(src="../images/about/about-main-img_2.png" alt="")
+
+    section.about.about-one 
+        div.about-one__element.about-one__element--photo
+            img(src="../images/about/about-one-brown.svg" alt="")
+            div.photo 
+                img(src="../images/about/about-one-white.svg" alt="")
+        div.about-one__element.about-one__element--text
+            h3 Удобные материалы  
+            p Задача организации, в особенности же начало повседневной работы по формированию позиции позволяет оценить значение системы обучения кадров, соответствует потребностям.
+
+    section.about.about-two 
+        div.about-two__element.about-two__element--text
+            h3 Только для тебя 
+            p Всю одежду мы шьём по собственным лекалам и по вашим индивидуальным меркам (готовых изделий в наличии у нас нет, все отшивается на заказ).
+        div.about-two__element.about-two__element--photo
+            img(src="../images/about/about-two-brown.svg" alt="")
+            div.photo 
+                img(src="../images/about/about-two-white.svg" alt="")
+
+    section.about.about-three
+        div.about-three__element.about-three__element--text 
+            img(src="../images/about/about-three-brown.svg", alt="")
+            h3 Создаем твой образ
+            p У нас в наличии 8 цветов шелка армани и 3 оттенка бамбука,которые вы можете комбинировать в комплектах на своё усмотрение. Так же можно комбинировать все элементы комплектов между собой.
+        div.about-three__element.about-three__element--photo
+            div.photo 
+                img(src="../images/about/about-three-img_2.png", alt="")
+                img(src="../images/about/about-three-img_3.png", alt="")
+                img(src="../images/about/about-three-img_4.png", alt="")

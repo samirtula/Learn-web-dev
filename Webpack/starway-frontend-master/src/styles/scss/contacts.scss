@@ -1,0 +1,153 @@
+#starway {
+
+    .main-page-contacts {
+        background-color: $colorBg;
+        font-size: 16px;
+        line-height: 32px;
+
+
+        @include mediaWidth(1024) {
+            font-size: 14px;
+            line-height: 25.2px;
+        }
+
+        .contacts {
+            position: relative;
+            width: 1000px;
+            height: 754px;
+            margin: 0 auto;
+            overflow: hidden;
+
+            @include mediaWidth(1024) {
+                width: 700px;
+                height: 612px;
+            }
+
+            @include mediaWidth(767) {
+                width: auto;
+                height: auto;
+                padding: 0 10px;
+            }
+
+            .ring {
+                background-image: url(../images/contacts/ring-text.svg);
+                background-size: cover;
+                height: 1000px;
+                width: 1000px;
+                position: absolute;
+                animation-name: rotation;
+                animation-duration: 40s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+
+                @keyframes rotation {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                @include mediaWidth(1024) {
+                    width: 700px;
+                    height: 700px;
+                }
+
+                @include mediaWidth(767) {
+                    display: none;
+                }
+            }
+
+            .text {
+                width: 344px;
+                height: 331px;
+                position: absolute;
+                top: 245px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                text-align: center;
+
+                @include mediaWidth(1024) {
+                    top: 147px;
+                }
+
+                @include mediaWidth(767) {
+                    width: auto;
+                    height: auto;
+                    position: static;
+                    text-align-last: left;
+                    margin: 50px 0 106px;
+                }
+
+                h3 {
+                    margin: 0 0 50px 0;
+                }
+
+                span {
+                    display: block;
+                    text-align: center;
+                    margin: 0;
+                    font-weight: 600;
+
+                    &:nth-child(3) {
+                        margin: 50px 0 30px;
+
+                        @include mediaWidth(1024) {
+                            margin: 50px 0 10px;
+                        }
+
+                        @include mediaWidth(767) {
+                            margin: 60px 0 30px;
+                        }
+                    }
+                }
+
+                a {
+                    margin: 10px 0;
+                    display: block;
+                    text-decoration: none;
+                    letter-spacing: 0.05em;
+                    color: $colorBlack;
+                    font-size: 16px;
+
+                    &::before {
+                        margin-right: 10px;
+                        position: relative;
+                    }
+                }
+
+                .insta {
+                    &::before {
+                        @include mediaWidth(767) {
+                            content: url(../images/icons/instagram.svg);
+                            top: 5px;
+                        }
+                    }
+                }
+
+                .vk {
+                    &::before {
+                        @include mediaWidth(767) {
+                            content: url(../images/icons/vk2.svg);
+                            top: 2px;
+
+                        }
+                    }
+                }
+
+                .tel {
+                    &::before {
+                        @include mediaWidth(767) {
+                            content: url(../images/icons/phone.svg);
+                            top: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

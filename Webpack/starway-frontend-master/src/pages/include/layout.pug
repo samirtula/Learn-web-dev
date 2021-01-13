@@ -19,13 +19,19 @@ html(lang="en")
                     div.header-control__links
                         a(href='#')
                             img(src=require("../images/icons/cart.svg"))
+                        a(href='#')
+                            img(src=require("../images/icons/personal.svg"))
                     a.header-control__logo(href='#')
                         img(src=require("../images/common/logo--mobile.svg"))
                     a.header-burger.header-control__burger.js-show-menu
                         div.header-burger__item
                         div.header-burger__item
                         div.header-burger__item
-        main
+        if pageAdditionClass == 'main-page-about'
+          div.about-head
+            a(href='/').inner.about-head__wrapper
+                img(src=require("../images/common/logo.svg"))
+        main(class=`${pageAdditionClass}`)
             block content
         // popup menu
         div.main-menu
@@ -65,8 +71,8 @@ html(lang="en")
                         a(href='vk') Вконтакте
                         a(href='inst') Instagram
 
-
-        div.footer-decoration
+        if !hideDecoration
+            div.footer-decoration
         footer.footer.footer--gradient
 
             div.footer__wrapper.inner

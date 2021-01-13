@@ -1,0 +1,19 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Предложения для вас';
+    - const bodyAdditionClass = 'offer-for-you';
+    - const pageAdditionClass = 'main-page-personal-account';
+block content
+    include include/personal-account-menu
+    section.offer-for-you
+        h2.title Предложение для вас
+
+        div.offer-for-you__elem.offer-for-you__elem--discount-on-birthday.discount-on-birthday 
+            div.discount-on-birthday__elem.discount-on-birthday__elem--text
+                h3.title Скидка в день рождения
+                p Идейные соображения высшего порядка, а также сложившаяся структура организации играет важную роль в формировании соответствующий условий активизации. 
+                a(href="/").button.button--store магазин
+            div.discount-on-birthday__elem.discount-on-birthday__elem--image
+                img(src="../images/offer-for-you/offer-for-you-image.png", alt="")
+    include include/personal-account-newsletter            
