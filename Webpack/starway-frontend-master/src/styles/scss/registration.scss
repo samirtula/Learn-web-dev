@@ -1,0 +1,59 @@
+#starway {
+
+    .main-page-registration {
+        background: $colorWhite;
+    }
+
+    .authorization-registration {
+        padding: 52px 0 82px;
+        @include mediaWidth(1024) {
+            padding: 30px 0 103px;
+        }
+        @include mediaWidth(767) {
+            padding: 87px 0 138px;
+
+        }
+        .container {
+            width: 530px;
+            height: 769px;
+            background: $colorBg;
+            padding: 100px 95px;
+            box-sizing: border-box;
+            margin: 0 auto;
+
+            @include mediaWidth(1024) {
+                width: 450px;
+                height: 525px;
+                padding: 60px;
+            }
+            @include mediaWidth(767) {
+               width: 100%;
+               height: 100%;
+               background: transparent;
+               padding: 0 20px;
+            }
+            .title {
+                @include mediaWidth(1024) {
+                    font-size: 30px;
+                    margin-bottom: 40px;
+                    text-align: center;
+                }
+            }
+            input {
+                @include mediaWidth(767) {
+                    width: 100%;
+                }
+            }
+
+            .button {
+                &--register-submit {
+                    margin-top: 60px;
+                    @include mediaWidth(1024) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+}

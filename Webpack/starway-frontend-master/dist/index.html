@@ -4,24 +4,48 @@
     <title>Главная</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
-  <link href="styles/app.css" rel="stylesheet" integrity="sha384-j3UM8nfpU+WsYWmCP5wzmgnJs3PEzTpdPgpUziklwRrLKBG2XPxt+yDn98gmjJUo" crossorigin="anonymous"></head>
+  <link href="styles/app.css" rel="stylesheet"></head>
   <body id="starway">
     <header class="header">
       <div class="inner header__wrapper"><a class="header__logo" href="/"><img src="images/common/logo.svg"></a>
         <nav class="header__menu"><a href="#">новинки</a><a href="#">коллекция</a><a href="#">о нас</a><a href="#">контакты</a></nav>
         <div class="header__control header-control">
-          <div class="header-control__links"><a href="#"><img src="images/icons/cart.svg"></a></div><a class="header-control__logo" href="#"><img src="images/common/logo--mobile.svg"></a><a class="header-burger header-control__burger js-show-menu">
+          <div class="header-control__links"><a href="#"><img src="images/icons/cart.svg"></a><a href="#"><img src="images/icons/personal.svg"></a></div><a class="header-control__logo" href="#"><img src="images/common/logo--mobile.svg"></a><a class="header-burger header-control__burger js-show-menu">
             <div class="header-burger__item"></div>
             <div class="header-burger__item"></div>
             <div class="header-burger__item"></div></a>
         </div>
       </div>
     </header>
-    <main>
+    <main class="main-page">
       <section class="top-index">
         <div class="top-index__wrapper">
           <h1 class="top-index__title">Твой идеальный <br> образ на каждый день</h1>
           <div class="top-index__images top-image"><img class="top-image__item top-image__item--1" src="images/index/item-1.png"><img class="top-image__item top-image__item--2" src="images/index/item-2.png"><img class="top-image__item top-image__item--3" src="images/index/item-3.png"><img class="top-image__item top-image__item--4" src="images/index/item-4.png"><img class="top-image__item top-image__item--5" src="images/index/item-5.png"></div>
+        </div>
+      </section>
+      <section class="new-collection">
+        <div class="inner new-collection__wrapper">
+          <div class="new-collection__content">
+            <h2 class="block-title new-collection__block-title">новая коллекция</h2><img class="new-collection__mobile-image" src="images/index/new-collection--mobile.png">
+            <h3 class="title new-collection__title">Бамбуковая коллекция</h3>
+            <p>Задача организации, в особенности же начало повседневной работы по формированию позиции позволяет оценить значение системы обучения кадров, соответствует потребностям.</p><a class="button new-collection__button" href="/catalog/"><span>каталог</span></a>
+          </div>
+          <div class="new-collection__images"><img src="images/index/new-collection--2.png"><img src="images/index/new-collection--1.png"></div>
+        </div>
+      </section>
+      <div class="gradient-delimiter"></div>
+      <section class="out-collections">
+        <div class="inner out-collections__wrapper">
+          <h2 class="block-title out-collections__title">наши коллекции</h2>
+          <div class="out-collections__items">
+            <div class="out-collections__item out-collections__item--bamboo">
+              <div>Бамбук</div>
+            </div>
+            <div class="out-collections__item out-collections__item--silk">
+              <div>Шёлк</div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -49,5 +73,5 @@
         <div class="footer__social"><a href="#"><img src="images/icons/vk.svg"></a><a href="#"><img src="images/icons/instagram.svg"></a></div>
       </div>
     </footer>
-  <script type="text/javascript" src="scripts/app.js" integrity="sha384-2+ctLz2wtvpinEao/6xwPGUlc+uIsxNzKrWPixyOfsSGIz2sct5a2Kq3gGIp/JC5" crossorigin="anonymous"></script></body>
+  <script type="text/javascript" src="scripts/app.js"></script></body>
 </html>

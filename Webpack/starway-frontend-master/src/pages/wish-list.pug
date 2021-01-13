@@ -1,0 +1,18 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Список желаний';
+    - const bodyAdditionClass = 'wish-list';
+    - const pageAdditionClass = 'main-page-personal-account';
+block content
+    include include/personal-account-menu
+    section.wish-list
+        h2.title Вам понравилось
+        div.grid
+            include include/wish-list-item
+            include include/wish-list-item
+            include include/wish-list-item
+            include include/wish-list-item
+            include include/wish-list-item
+            include include/wish-list-item
+    include include/personal-account-newsletter            

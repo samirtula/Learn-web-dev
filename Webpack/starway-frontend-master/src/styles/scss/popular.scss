@@ -1,0 +1,126 @@
+#starway {
+  
+    .popular {
+        display: flex;
+        max-width: 1168px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        position: relative;
+        justify-content: space-between;
+
+        @include mediaWidth(1024) {
+            padding: 0 30px;
+        }
+
+        @include mediaWidth(767) {
+            width: 270px;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .title {
+            letter-spacing: 0.2em;
+            font-weight: bold;
+            font-size: 12px;
+            color: rgba(49, 49, 49, 0.8);
+            position: absolute;
+            width: 270px;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+
+
+        &__buttons {
+            @include mediaWidth(767) {
+                display: flex;
+                position: absolute;
+                width: 95px;
+                justify-content: space-between;
+                top: 40px;
+                right: 0;
+            }
+
+            div {
+                @include mediaWidth(767) {
+                    width: 40px;
+                    height: 40px;
+                }
+
+            }
+
+            &--left {
+                @include mediaWidth(767) {
+                    background-image: url(../images/icons/popular-button-left.svg);
+                }
+
+            }
+
+            &--right {
+                @include mediaWidth(767) {
+                    background-image: url(../images/icons/popular-button-right.svg);
+                }
+
+
+            }
+        }
+
+        &__element {
+            margin: 100px 0 100px;
+
+            @include mediaWidth(767) {
+                position: relative;
+                left: 0px;
+            }
+
+            img {
+                width: 100%;
+                @include mediaWidth(1024) {
+                    width: 84.75%;
+                }
+                @include mediaWidth(767) {
+                    min-width: 270px;
+                    width: 100%;
+                }
+            }
+
+            p {
+                margin: 20px 0 10px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 70%;
+                color: #313131;
+                letter-spacing: 0.05em;
+
+                @include mediaWidth(1024) {
+                    margin: 15px 0 7px;
+
+                }
+
+                @include mediaWidth(767) {
+                    margin: 10px 0 5px;
+                }
+            }
+
+            .price {
+                font-size: 12px;
+                line-height: 70%;
+                letter-spacing: 0.05em;
+            }
+
+            &:last-child {
+                @include mediaWidth(1024) {
+                    display: none;
+                }
+
+                @include mediaWidth(767) {
+                    display: block;
+                }
+
+            }
+        }
+    }
+}

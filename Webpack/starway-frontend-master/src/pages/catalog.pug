@@ -1,0 +1,36 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Каталог';
+    - const bodyAdditionClass = 'catalog';
+    - const pageAdditionClass = 'main-page-catalog';
+block content
+    section.catalog
+        
+
+        div.catalog__part.catalog__part--menu
+            div.catalog-menu.js-sticky-menu
+                div.close
+                h2.title Шелк
+                h2.title.title--active Бамбук
+                a(href="").catalog-menu__elem.selected Брюки
+                a(href="").catalog-menu__elem Велосипедки
+                a(href="").catalog-menu__elem Кроп-топ
+                a(href="").catalog-menu__elem Лиф с захлестом
+                a(href="").catalog-menu__elem Лиф с треугольным #[br]вырезом 
+                a(href="").catalog-menu__elem Лонгслив
+                a(href="").catalog-menu__elem Майка
+                a(href="").catalog-menu__elem Трусики бразильяно
+                a(href="").catalog-menu__elem Трусики слипы
+                a(href="").catalog-menu__elem Трусики слипы #[br]на высокой посадке
+                a(href="").catalog-menu__elem Шорты
+        div.catalog__part.catalog__part--content
+            div.breadcrumbs 
+                a(href="").collection Коллекция
+            h3.title.title-expanded Бамбук
+            div.flex-container
+                include include/catalog-item.pug
+                include include/catalog-item.pug
+                include include/catalog-item.pug
+                include include/catalog-item.pug
+           

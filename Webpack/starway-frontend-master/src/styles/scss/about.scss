@@ -1,0 +1,481 @@
+#starway {
+    &.about {
+        .header {
+            background: $colorPink;
+
+            &__wrapper {
+                justify-content: flex-end;
+            }
+
+            &__logo {
+                display: none;
+            }
+
+            &__menu {
+                display: none;
+            }
+        }
+
+        .footer-decoration {
+            background: linear-gradient(180deg, #FFE2E2 0%, #FFB0B0 0.01%, #FCF1F1 100%);
+            transform: rotate(180deg);
+        }
+    }
+    .about-head {
+        height: 460px;
+        background:  linear-gradient(180deg, #FFB0B0 0%, #FCF1F1 100%);
+        &__wrapper {
+            display: flex;
+            height: 100%;
+            img {
+                margin: auto;
+                width: 310px;
+            }
+        }
+    }
+    .main-page-about {
+        background-color: $colorWhite;
+
+        h2 {
+            font-size: 60px;
+            font-weight: normal;
+
+        }
+
+        h3 {
+            margin: 80px 0;
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: normal;
+
+            @include mediaWidth(1023) {
+                font-size: 30px;
+                line-height: 30px;
+                margin: 60px 0 40px;
+            }
+
+            @include mediaWidth(767) {
+                margin: 50px 0 40px;
+            }
+        }
+
+        p {
+            margin: 0;
+            line-height: 32px;
+            width: 300px;
+
+            @include mediaWidth(1023) {
+                font-size: 14px;
+                line-height: 25.2px;
+                width: 265px;
+            }
+
+            @include mediaWidth(767) {
+                font-size: 14px;
+                line-height: 22.4px;
+            }
+        }
+
+        .about {
+            display: flex;
+            max-width: 1168px;
+            margin: 0 auto;
+            padding: 0 20px;
+
+            @include mediaWidth(1023) {
+                padding: 0 30px;
+            }
+
+            @include mediaWidth(767) {
+                padding: 0 10px;
+                flex-direction: column;
+                max-width: 375px;
+            }
+        }
+
+        .about-main {
+            margin-bottom: 401px;
+            justify-content: space-around;
+
+            @include mediaWidth(1023) {
+                margin-bottom: 240px;
+            }
+
+           
+
+            &__element {
+                &--text {
+                    margin-left: 79px;
+                    display: flex;
+                    flex-direction: column;
+                    @include mediaWidth(767) {
+                        margin-left: 0;
+                    }
+                    h2 {
+                        margin: 77px 20px 80px 0;
+                        width: 541px;
+
+                        @include mediaWidth(1023) {
+                            font-size: 30px;
+                            margin: 56px 0 40px;
+                            width: 375px;
+                        }
+
+                        @include mediaWidth(767) {
+                            width: 271px;
+                            align-self: center;
+                        }
+                    }
+
+
+                    @include mediaWidth(1023) {
+                        // margin-left: 0;
+                    }
+
+                    @include mediaWidth(767) {
+                        order: 2;
+                    }
+                }
+
+                &--photo {
+                    background-image: url(../images/about/about-main-img_1.png);
+                    background-size: cover;
+                    width: 400px;
+                    height: 600px;
+                    bottom: 26px;
+                    position: relative;
+
+                    @include mediaWidth(1023) {
+                        width: 250px;
+                        height: 375px;
+                        bottom: 0;
+                    }
+
+                    @include mediaWidth(767) {
+                        order: 1;
+                        align-self: flex-end;
+                    }
+
+                    img {
+                        position: relative;
+                        left: -134px;
+                        top: 362px;
+
+                        @include mediaWidth(1023) {
+                            width: 140px;
+                            height: 210px;
+                            top: 204px;
+                            left: -75px;
+                        }
+
+                        @include mediaWidth(767) {
+                            width: 100px;
+                            height: 150px;
+                            left: -85px;
+                            top: 112px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .about-one {
+            margin-bottom: 425px;
+            justify-content: center;
+
+            @include mediaWidth(1023) {
+                justify-content: space-around;
+                margin-bottom: 200px;
+            }
+
+            @include mediaWidth(767) {
+                margin-bottom: 190px;
+            }
+
+            &__element {
+                position: relative;
+
+                &--photo {
+                    margin-right: 15px;
+
+                    @include mediaWidth(767) {
+                        align-self: flex-end;
+                    }
+
+                    img {
+                        position: absolute;
+                        top: -84px;
+                        left: -86px;
+
+                        @include mediaWidth(1023) {
+                            width: 153px;
+                            height: 97px;
+                            top: -57px;
+                            left: 0;
+                        }
+
+                        @include mediaWidth(767) {
+                            top: -53px;
+                            left: -85px;
+                        }
+
+                        @include mediaWidth(374) {
+                            top: -53px;
+                            left: -25px;
+                        }
+                    }
+
+                    .photo {
+                        background: url(../images/about/about-one-img_1.png);
+                        position: relative;
+                        width: 400px;
+                        height: 600px;
+                        overflow: hidden;
+
+                        @include mediaWidth(1023) {
+                            width: 250px;
+                            height: 375px;
+                        }
+                    }
+                }
+
+                &--text {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 15px;
+
+                    @include mediaWidth(1023) {
+                        // margin: 0 auto;
+                    }
+
+                    @include mediaWidth(767) {
+                        margin: unset;
+                    }
+
+                }
+            }
+        }
+
+        .about-two {
+            margin-bottom: 384px;
+
+            @include mediaWidth(1023) {
+                justify-content: space-around;
+                margin-bottom: 340px;
+            }
+
+            @include mediaWidth(767) {
+                justify-content: space-between;
+                margin-bottom: 304px;
+            }
+
+            &__element {
+                position: relative;
+
+                &--text {
+                    margin-left: 79px;
+
+                    @include mediaWidth(1023) {
+                        align-self: flex-end;
+                        margin-left: unset;
+                    }
+
+                    @include mediaWidth(767) {
+                        align-self: flex-start;
+                        order: 2;
+                    }
+                }
+
+                &--photo {
+                    margin: 0 auto;
+
+                    @include mediaWidth(1023) {
+                        margin: unset;
+                    }
+
+                    @include mediaWidth(767) {
+                        align-self: flex-start;
+                        order: 1;
+                    }
+
+                    img {
+                        position: absolute;
+                        top: -84px;
+                        right: -86px;
+
+                        @include mediaWidth(1023) {
+                            width: 153px;
+                            height: 97px;
+                            top: -57px;
+                            right: 0;
+                        }
+
+                        @include mediaWidth(767) {
+                            top: -53px;
+                            right: -73px;
+                        }
+                        @include mediaWidth(374) {
+                            top: -53px;
+                            right: -40px;
+                        }
+                    }
+
+
+                    .photo {
+                        background: url(../images/about/about-two-img_1.png);
+                        background-size: contain;
+                        position: relative;
+                        width: 400px;
+                        height: 600px;
+                        overflow: hidden;
+
+                        @include mediaWidth(1023) {
+                            width: 250px;
+                            height: 375px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .about-three {
+            justify-content: space-between;
+            position: relative;
+            padding-bottom: 340px;
+
+            @include mediaWidth(1023) {
+                padding-bottom: 290px;
+            }
+
+            @include mediaWidth(767) {
+                padding-bottom: 80px;
+            }
+
+            &__element {
+                &--text {
+                    margin-left: 79px;
+                    z-index: 10;
+                    @include mediaWidth(1023) {
+                        margin-left: 0px;
+                    }
+
+                    @include mediaWidth(767) {
+                        order: 2;
+                    }
+
+                    img {
+                        position: relative;
+                        display: block;
+                        top: -46px;
+
+                        @include mediaWidth(1023) {
+                            width: 132px;
+                            height: 97px;
+                        }
+
+                        @include mediaWidth(767) {
+                            top: -435px;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    h3 {
+                        margin-top: -6px;
+
+                        @include mediaWidth(767) {
+                            margin: 110px 0 40px;
+                        }
+                    }
+                }
+
+                &--photo {
+                    z-index: 0;
+                    @include mediaWidth(767) {
+                        order: 1;
+                        align-self: flex-end;
+                    }
+
+                    .photo {
+                        position: relative;
+                        background-image: url(../images/about/about-three-img_1.png);
+                        background-size: contain;
+                        width: 400px;
+                        height: 600px;
+
+                        @include mediaWidth(1023) {
+                            width: 250px;
+                            height: 375px;
+                        }
+
+                        @include mediaWidth(767) {
+                            width: 200px;
+                            height: 300px;
+                        }
+
+                        img {
+                            display: block;
+                            position: absolute;
+
+                            &:nth-child(1) {
+                                left: -220px;
+                                top: 218px;
+
+                                @include mediaWidth(1023) {
+                                    width: 100px;
+                                    height: 150px;
+                                    top: 189px;
+                                    left: -120px;
+                                }
+
+                                @include mediaWidth(767) {
+                                    width: 100px;
+                                    height: 150px;
+                                    top: 200px;
+                                    left: -110px;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                left: -420px;
+                                top: 538px;
+
+                                @include mediaWidth(1023) {
+                                    width: 160px;
+                                    height: 120px;
+                                    top: 349px;
+                                    left: -181px;
+                                }
+
+                                @include mediaWidth(767) {
+                                    width: 200px;
+                                    height: 150px;
+                                    top: 310px;
+                                    left: 0;
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                top: 620px;
+
+                                @include mediaWidth(1023) {
+                                    width: 150px;
+                                    height: 150px;
+                                    top: 394px;
+                                }
+
+                                @include mediaWidth(767) {
+                                    top: 360px;
+                                    left: -110px;
+                                    width: 100px;
+                                    height: 100px;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

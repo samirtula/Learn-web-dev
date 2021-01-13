@@ -1,0 +1,92 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Карточка';
+    - const bodyAdditionClass = '';
+    - const pageAdditionClass = 'main-page-card';
+    - const hideDecoration = true;
+block content
+    section.card.card-main
+        div.breadcrumbs 
+            a(href="") коллекция
+            a(href="") бамбук
+            a(href="") брюки
+        div.card-main__element.card-main__element--description 
+            h3.description-title Бамбуковые брюки
+            h3.price 2000₽
+            div.free-delivery 
+                span Бесплатная доставка от 5000 рублей
+            form#product-properties
+                span.size-title Размер
+                a(href="").find-size узнать размер
+                div.size.hidden
+                    a(href="") xs
+                    a(href="").size-active s
+                    a(href="") m
+                    a(href="") l
+                    a(href="") xl
+                div.color 
+                    span Цвет
+                    div.wrap-colors
+                        div.brown.color-active
+                        div.biege 
+                        div.black
+                        div.white
+                a(href="").buy-btn
+                    span купить
+            div.accordeon 
+                div.accordeon__element
+                    h4 Описание
+                    p Задача организации, в особенности же начало повседневной работы по формированию позиции позволяет оценить значение системы обучения кадров, соответствует потребностям.
+                div.accordeon__element
+                    h4 Таблица размеров
+                    p Задача организации, в особенности же начало повседневной работы по формированию позиции позволяет оценить значение системы обучения кадров, соответствует потребностям.
+                div.accordeon__element
+                    h4 Параметры модели
+                    p Задача организации, в особенности же начало повседневной работы по формированию позиции позволяет оценить значение системы обучения кадров, соответствует потребностям.
+                div.accordeon__element
+                    h4 Уход за изделием
+                    p Задача организации, в особенности же начало повседневной работы по формированию позиции позволяет оценить значение системы обучения кадров, соответствует потребностям.
+        div.card-main__element.card-main__element--gallery 
+            div.gallery-active
+            div
+            div
+            div
+        div.arrow-btn-block
+            div.arrow-btn-block__item.arrow-btn-block__item--left
+            div.arrow-btn-block__item.arrow-btn-block__item--right
+        div.card-main__element.card-main__element--photo
+            div.photo.photo--one
+            div.photo.photo--two
+            div.photo.photo--three
+            div.photo.photo--four
+    //- popup-menu-card
+    div.add-to-cart-menu
+        div.add-to-cart-menu__window
+            div.close
+            h3.add-to-cart-title Добавлено в корзину
+            div.info
+                div.info__elem.info__elem--image
+                div.info__elem.info__elem--params
+                    span.info-title Шёлковая пижама
+                    span.info-price 
+                    div.params.info-numbers
+                        span Количество:
+                        div.counter 
+                            span -
+                            div.counter__value 1  
+                            span +
+                    div.params.info-size 
+                        span Размер:
+                        div.info-size__value s
+                    div.params.info-color
+                        span Цвет:
+                        div.info-color__value 
+                            span.info-color-value
+                    div.delete удалить
+            div.btn-block
+                a(href="/").btn-block__button.btn-block__button--view-cart-btn 
+                    span Посмотреть корзину
+                a(href="").btn-block__button.btn-block__button--continue-shopping-btn
+                    span Продолжить покупку
+    include include/_popular.pug

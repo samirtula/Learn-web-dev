@@ -1,7 +1,14 @@
 import Vue from 'vue'
+import Sticky from 'sticky-js';
 //import 'owl.carousel';
 //import '@fancyapps/fancybox'
-
+import './order-history';
+import './personal-info';
+import './popular';
+import './login-and-register';
+import './catalog';
+import './cart';
+import './card';
 
 
 $(document).ready(function () {
@@ -39,6 +46,9 @@ $(document).ready(function () {
         }
     );
 
+    let sticky = new Sticky('.js-sticky-menu');
+    
+
     /*let deg = 0;
     function rotate() {
         deg++;
@@ -68,3 +78,4 @@ $(document).ready(function () {
 
 
 });
+

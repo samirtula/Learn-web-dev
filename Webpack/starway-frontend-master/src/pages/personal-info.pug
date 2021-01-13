@@ -1,0 +1,34 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Личные данные';
+    - const bodyAdditionClass = 'personal-info';
+    - const pageAdditionClass = 'main-page-personal-account';
+block content
+    include include/personal-account-menu
+    section.your-information
+        h2.title Ваша информация
+        form(action="").pers-info-form#pers-info-for
+            div.pers-info-form__elem.pers-info-form__elem--data 
+                p Данные 
+                input(type="text" placeholder="Имя").input.input--name
+                input(type="text" placeholder="Фамилия").input.input--sername
+                input(type="tel" placeholder="Телефон").input.input--phone
+                input(type="email" placeholder="Email").input.input--email
+            div.pers-info-form__elem.pers-info-form__elem--birthday 
+                p День рождения 
+                div.flex-container
+                    select(name="day" form="pers-info-form")
+                        option(selected disabled) День
+                    select(name="month" form="pers-info-form")
+                        option(selected disabled) Месяц
+                    select(name="year" form="pers-info-form")
+                        option(selected disabled) Год
+            input(type="submit" value="сохранить").button.button--save
+        form(action="").change-pass-form
+            div.pers-info-form__elem.pers-info-form__elem--change-pass 
+                p Сменить пароль 
+                input(type="password" placeholder="Новый пароль").input.input--password
+                input(type="password" placeholder="Подтвердите пароль").input.input--password
+            input(type="submit" value="сохранить пароль").button.button--save-pass
+    include include/personal-account-newsletter    

@@ -1,0 +1,18 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Регистрация';
+    - const bodyAdditionClass = 'registration';
+    - const pageAdditionClass = 'main-page-registration';
+block content
+    section.authorization.authorization-registration
+        div.container
+            h2.title Регистрация
+            form.reg-form
+                input(type="text" placeholder="Имя")
+                input(type="text" placeholder="Фамилия")
+                input(type="email" placeholder="Введите адрес электронной почты")
+                input(type="tel" placeholder="Номер телефона")
+                input(type="password" placeholder="Пароль")
+                input(type="password" placeholder="Подтвердите пароль")
+                input(type="submit" value="регистрация").button.button--register.button--register-submit

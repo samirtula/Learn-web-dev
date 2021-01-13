@@ -1,0 +1,21 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'История заказов';
+    - const bodyAdditionClass = 'order-history';
+    - const pageAdditionClass = 'main-page-personal-account';
+block content
+    include include/personal-account-menu
+    section.order-history
+        h2.title Ваши заказы
+        div.orders 
+            div.orders__elem.orders__elem--header
+                p статус
+                p номер заказа
+                p.track-num трек номер
+                p дата заказа
+            include include/order-history-element.pug
+            include include/order-history-element.pug
+            include include/order-history-element.pug
+            include include/order-history-element.pug
+    include include/personal-account-newsletter            

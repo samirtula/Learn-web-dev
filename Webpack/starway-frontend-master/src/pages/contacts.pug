@@ -1,0 +1,18 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Контакты';
+    - const bodyAdditionClass = '';
+    - const pageAdditionClass = 'main-page-contacts';
+    - const hideDecoration = true;
+block content
+    section.contacts
+        div.ring
+        div.text
+            h3 Свяжитесь с нами
+            span Наше производство находится #[br] в городе Тула
+            span Контактная информация
+            a(href="").insta @starway.shop
+            a(href="").vk vk.com/starway.shop
+            a(href="tel:+9999999999").tel 8(999) 999 99 99
+
