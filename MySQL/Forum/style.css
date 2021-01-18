@@ -1,0 +1,133 @@
+body {
+    background-color: #000000;
+    font: 400 13.3333px Arial;
+    color: #43D76D;
+}
+.authorization {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 40%;
+    top: 28%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    width: 300px;
+    height: 150px;
+    background-color: #000000;
+    font: 400 13.3333px Arial;
+    text-transform: uppercase;
+    color: #43D76D;
+    line-height: 2em;
+}
+.checkIn, .registration {
+    display: block;
+    margin-top: 30px;
+    height:30px;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    font: 400 13.3333px Arial;
+    text-transform: uppercase;
+    color: #43D76D;
+}
+.authorization__registration, .authorization__checkIn {
+    display: none;
+}
+.forum-body {
+    padding-left:50px ;
+    padding-top: 30px;
+    background-color: #000000;
+
+}
+span.message {
+    font-size: 15px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    color: #43D76D;
+}
+.message-title {
+    margin-left: 50px;
+}
+.user-title{
+    color: #4fb297;
+}
+.publish {
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    height:30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    font: 400 13.3333px Arial;
+    color: #43D76D;
+    margin-left: 30px;
+}
+textarea {
+    width: 530px;
+    height: 80px;
+    background: #000000;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-left: 30px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    color: #43D76D;
+    resize: none;
+}
+.main_block {
+    width: 500px;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #000000;
+    border: none;
+    outline: none;
+    padding: 30px;
+    font: 400 13.3333px Arial;
+    color: #4fb297;
+    text-transform: uppercase;
+    line-height: 2em;
+
+}
+.alert {
+    position: absolute;
+    left: 40%;
+    top: 28%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    width: 255px;
+    height: 69px;
+    border-radius: 5px;
+    color: #43D76D;
+    background-color: #000000;
+    font: 400 13.3333px Arial;
+    line-height: 2em;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+}
+.user {
+    width: 270px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #000000;
+    border: none;
+    outline: none;
+    font: 400 13.3333px Arial;
+    color: #43D76D;
+    line-height: 2em;
+}
+
+.userIn{
+    height:30px;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    font: 400 13.3333px Arial;
+    text-transform: uppercase;
+    color: #43D76D;}

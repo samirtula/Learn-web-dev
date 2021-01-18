@@ -1,0 +1,11 @@
+{
+  "name": "admin/pro",
+  "autoload": {
+    "psr-4": {
+      "classes\\": "classes"
+    }
+  },
+  "require": {
+
+  }
+}
