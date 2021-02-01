@@ -1,0 +1,50 @@
+doctype html
+html(lang="en")
+    block sharedVars
+    head
+        title #{pageTitle}
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        meta(charset='utf-8')
+    body#snt(class=`${bodyAdditionClass}`)
+        header.header
+            .header__wrapper
+                .header__ad
+                    .header__ad-clock-image
+                    span.header__ad-text Следующее собрание состоится 24.11.2021 в 17:30
+                .header__tel
+                    .header__tel-phone-image
+                    span.header__tel-num +7-920-955-77-88
+                .header__mail
+                    .header__mail-image
+                    span.header__mail-text snt_Tula@mail.ru
+        nav.nav
+            .nav__wrapper
+                .nav__logo-image
+                a(href='http://localhost:8080/') главная
+                a(href='news.html') новости
+                a(href='authorization.html') личный кабинет
+                a(href='#') передача показаний
+                a(href='#') написать в правление
+                a(href='#') форум
+                a(href='#') объявления
+                a(href='#') погода
+                .footer__social-links
+                    a(href='#').footer__social-links-vk
+                    a(href='#').footer__social-links-ok
+        block content
+        footer.footer
+            .footer__wrapper
+                .nav__logo-image
+                a(href='http://localhost:8080/') главная
+                a(href='news.html') новости
+                a(href='authorization.html') личный кабинет
+                a(href='#') передача показаний
+                a(href='#') написать в правление
+                a(href='#') форум
+                a(href='#') объявления
+                a(href='#') погода
+                .footer__social-links
+                    a(href='#').footer__social-links-vk
+                    a(href='#').footer__social-links-ok
+
+

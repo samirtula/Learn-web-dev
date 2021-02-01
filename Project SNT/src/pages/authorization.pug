@@ -1,0 +1,15 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Автроризация';
+    - const bodyAdditionClass = '';
+    - const pageAdditionClass = 'main-page';
+block content
+    section.private-image
+        .private-image__title
+            .private-image__title-headers
+                h1 личный кабинет
+    section.private-forms
+        .private-forms__wrapper
+            .private-forms__login
+            .private-forms__registration
