@@ -1,0 +1,18 @@
+#snt {
+  .gallery-image {
+    width: 100%;
+    min-height: 650px;
+    background-image: url("../images/letter/letter.jpg");
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+    @extend %background-image;
+
+    &__title {
+      max-width: 1224px;
+      margin: 240px auto 0;
+
+      &-headers {
+        margin-left: 80px;
+      }
+    }
+  }
+}

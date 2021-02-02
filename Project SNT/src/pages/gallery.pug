@@ -1,0 +1,13 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Галерея';
+    - const bodyAdditionClass = '';
+    - const pageAdditionClass = 'main-page';
+block content
+    section.gallery-image
+        .gallery-image__title
+            .gallery-image__title-headers
+                h1 фотогалерея
+    section.gallery
+        .gallery__wrapper

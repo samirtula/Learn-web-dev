@@ -16,7 +16,23 @@
     }
   }
 
-  .news {
+  .ads {
+    &__nav {
+      max-width:300px;
+      height: inherit;
+      display: flex;
+      text-align: left;
+      flex-direction: column;
+      box-sizing: border-box;
+      border-radius: 5px;
+      padding: 10px 30px;
+      font-family: Roboto Condensed;
+      &-header{
+        &:first-child h6 {
+          margin-top: 0;
+        }
+      }
+    }
     &__wrapper {
       max-width: 1224px;
       height: 100%;
@@ -24,6 +40,7 @@
       text-align: center;
       display: flex;
       justify-content: space-between;
+
     }
 
     &__block {
@@ -47,4 +64,8 @@
         color: #000000;
       }
     }
-  }}
+  }
+  .ad__text>h5 {
+ margin: 15px 0 15px 0;
+  }
+}

@@ -45,11 +45,9 @@
 
   }
   h6 {
-    font-family: Roboto;
+    font-weight: bold;
+    font-size: 18px;
     font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
     color: #000000;
     text-transform: uppercase;
     margin: 15px 0;
@@ -198,6 +196,7 @@
 
     &__wrapper {
       max-width: 1224px;
+      width: 95%;
       height: 100%;
       margin: 0 auto;
       display: flex;
@@ -281,22 +280,24 @@
       max-width: 1224px;
       height: 100%;
       margin: 0 auto;
+      text-align: center;
+      & h2 {
+      }
     }
     &__menu-block {
-      margin-left: 80px;
-      margin-top: 40px;
-      margin-bottom: 40px;
+      margin: 0 auto 140px;
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      width: 950px;
       &-link-wrapper {
+        margin: 20px;
         width: 276px;
-        height: 79px;
+        height: 89px;
         background: linear-gradient(270deg, #A75C5C 0%, rgba(183, 151, 151, 0.431808) 56.82%, rgba(196, 196, 196, 0) 100%);;
         border: 1px solid #998E8E;
         box-sizing: border-box;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 5px;
-        margin-bottom: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -305,9 +306,6 @@
         }
         &:hover{
           transition-duration: 0.2s;
-          position: relative;
-          left: 20px;
-
         }
       }
       &-link-inner {
@@ -326,6 +324,12 @@
         font-size: 18px;
         line-height: 21px;
         color: #000000;
+        transition-duration: 0.2s;
+        &:hover{
+          transition-duration: 0.2s;
+          width: 240px;
+          height: 55px;
+        }
       }
     }
   }
@@ -453,9 +457,11 @@
     margin-bottom: 80px;
     &__wrapper {
       max-width: 1224px;
+      width: 95%;
       height: 100%;
       margin: 0 auto;
       text-align: center;
+
     }
     &__block {
       text-align: left;

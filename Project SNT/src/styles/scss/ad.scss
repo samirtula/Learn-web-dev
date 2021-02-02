@@ -1,0 +1,42 @@
+#snt {
+  .advertisement-image {
+    width: 100%;
+    min-height: 650px;
+    background-image: url("../images/ads/ads.jpg");
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+    @extend %background-image;
+
+    &__title {
+      max-width: 1224px;
+      margin: 240px auto 0;
+
+      &-headers {
+        margin-left: 80px;
+      }
+    }
+  }
+  .advertisement {
+    &__wrapper {
+      max-width: 1224px;
+      height: 100%;
+      margin: 80px auto;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__block {
+      max-width: 950px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  .advert {
+    padding: 30px;
+    &:first-child{
+      padding-top: 10px;
+    }
+    &__image {
+      width: 100%;
+    }
+  }
+}
