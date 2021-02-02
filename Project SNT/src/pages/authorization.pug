@@ -1,15 +1,30 @@
 extends include/layout
 append sharedVars
     - const pageUrl = '/';
-    - const pageTitle = 'Автроризация';
+    - const pageTitle = 'Авторизация';
     - const bodyAdditionClass = '';
     - const pageAdditionClass = 'main-page';
 block content
     section.private-image
         .private-image__title
             .private-image__title-headers
-                h1 личный кабинет
+                h1 авторизация
     section.private-forms
         .private-forms__wrapper
-            .private-forms__login
-            .private-forms__registration
+            .private-forms__login.login
+                h3.title Войти в систему
+                form.login__form
+                    input(type="email" placeholder="Адрес электронной почты")
+                    input(type="password" placeholder="Пароль")
+                    input(type="submit" value="войти").login__form-button
+            .private-forms__registration.registration
+                h3.title Регистрация нового пользователя
+                form.registration__form
+                    input(type="text" placeholder="Имя")
+                    input(type="text" placeholder="Фамилия")
+                    input(type="email" placeholder="Адрес электронной почты")
+                    input(type="tel" placeholder="Номер телефона")
+                    input(type="text" placeholder="Номер участка")
+                    input(type="password" placeholder="Пароль")
+                    input(type="password" placeholder="Подтвердите пароль")
+                    input(type="submit" value="Зарегистрироваться").login__form-button

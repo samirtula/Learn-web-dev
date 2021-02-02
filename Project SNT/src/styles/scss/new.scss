@@ -1,8 +1,8 @@
 #snt {
-  .private-image {
+  .new-image {
     width: 100%;
     min-height: 650px;
-    background-image: url("../images/authorization/authorization.jpg");
+    background-image: url("../images/new/new.jpg");
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
     @extend %background-image;
 
@@ -15,27 +15,28 @@
       }
     }
   }
-  .private-forms {
+  .new {
     &__wrapper {
-      max-width: 950px;
+      max-width: 1224px;
       height: 100%;
       margin: 80px auto;
       text-align: center;
       display: flex;
       justify-content: space-between;
     }
+    &__block {
+      max-width: 950px;
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
-  .title{
-    font-family: Roboto Condensed;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-    color: #000000;
-    text-transform: uppercase;
-  }
-  .login,.registration {
-    display: flex;
-    flex-direction: column;
+  .event {
+    padding: 30px;
+    &:first-child{
+      padding-top: 10px;
+    }
+    &__image {
+      width: 100%;
+    }
   }
 }

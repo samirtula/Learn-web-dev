@@ -1,37 +1,41 @@
 extends include/layout
 append sharedVars
     - const pageUrl = '/';
-    - const pageTitle = 'Новости СНТ';
+    - const pageTitle = 'Событие';
     - const bodyAdditionClass = '';
     - const pageAdditionClass = 'main-page';
 block content
-    section.news-image
-        .news-image__title
-            .news-image__title-headers
+    section.new-image
+        .new-image__title
+            .new-image__title-headers
                 h1 новости
-    section.news
-        .news__wrapper
-            .news__block
-                a(href='new.html').news__article.article
-                    img(src="../images/news/news.jpg", alt="").article__image
-                    .article__text
+    section.new
+        .new__wrapper
+            .new__block
+                .new__article.event
+                    img(src="../images/news/news.jpg", alt="").event__image
+                    .event__text
                         h5 заголовок новости
                         p Товарищи! новая модель организационной деятельности требуют от нас анализа новых предложений. Повседневная практика показывает, что консультация с широким активом влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.
-                a(href='new.html').news__article.article
-                    img(src="../images/news/news.jpg", alt="").article__image
-                    .article__text
+                        hr
+                .new__article.event
+                    img(src="../images/news/news.jpg", alt="").event__image
+                    .event__text
                         h5 заголовок новости
                         p Товарищи! новая модель организационной деятельности требуют от нас анализа новых предложений. Повседневная практика показывает, что консультация с широким активом влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.
-                a(href='new.html').news__article.article
-                    img(src="../images/news/news.jpg", alt="").article__image
-                    .article__text
+                        hr
+                .new__article.event
+                    img(src="../images/news/news.jpg", alt="").event__image
+                    .event__text
                         h5 заголовок новости
                         p Товарищи! новая модель организационной деятельности требуют от нас анализа новых предложений. Повседневная практика показывает, что консультация с широким активом влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.
-                a(href='new.html').news__article.article
-                    img(src="../images/news/news.jpg", alt="").article__image
-                    .article__text
+                        hr
+                .new__article.event
+                    img(src="../images/news/news.jpg", alt="").event__image
+                    .event__text
                         h5 заголовок новости
                         p Товарищи! новая модель организационной деятельности требуют от нас анализа новых предложений. Повседневная практика показывает, что консультация с широким активом влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.
+                        hr
             .news__nav
                 .news__nav-header
                     h6 заголовок новости
@@ -40,28 +44,28 @@ block content
                 .news__nav-header
                     h6 заголовок новости
                     span.news__nav-keys когда добавили/ключевое слово
-                     hr
+                        hr
                 .news__nav-header
                     h6 заголовок новости
                     span.news__nav-keys когда добавили/ключевое слово
-                     hr
+                        hr
                 .news__nav-header
                     h6 заголовок новости
                     span.news__nav-keys когда добавили/ключевое слово
-                     hr
+                        hr
                 .news__nav-header
                     h6 заголовок новости
                     span.news__nav-keys когда добавили/ключевое слово
-                     hr
+                        hr
                 .news__nav-header
                     h6 заголовок новости
                     span.news__nav-keys когда добавили/ключевое слово
-                     hr
+                        hr
                 .news__nav-header
                     h6 заголовок новости
                     span.news__nav-keys когда добавили/ключевое слово
-                     hr
+                        hr
                 .news__nav-header
                     h6 заголовок новости
                     span.news__nav-keys когда добавили/ключевое слово
-                     hr
+                        hr
