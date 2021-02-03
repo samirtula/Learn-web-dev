@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import "../../node_modules/normalize.css/normalize.css";
+@import '../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css';
+@import '../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css';
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css';
 @import "scss/vars";
 @import "scss/index";
 @import "scss/news";
@@ -11,8 +15,3 @@
 @import "scss/ad";
 @import "scss/weather";
 @import "scss/gallery";
-@import "../../node_modules/normalize.css/normalize.css";
-
-//@import '../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css';
-//@import '../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css';
-//@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css';
