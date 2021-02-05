@@ -1,1 +1,0 @@
-let loginSave = $('#save-cookie');

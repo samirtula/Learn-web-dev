@@ -1,0 +1,33 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Документы';
+    - const bodyAdditionClass = '';
+    - const pageAdditionClass = 'main-page';
+block content
+    section.docs-image
+        .docs-image__title
+            .docs-image__title-headers
+                h1 Документы
+    section.docs
+        .docs__wrapper
+            table.docs__table
+                thead
+                    tr
+                        th Наименование документа
+                        th Дата размещения
+                        th Скачать
+                tbody
+                    tr
+                        td Устав СНТ
+                        td 21.10.2020  17:30
+                        td
+                            a(href='#')
+                                img(src='../images/documents/download.svg')
+                    tr
+                        td Порядок приема в СНТ
+                        td 21.10.2020  17:30
+                        td
+                            a(href='#')
+                                img(src='../images/documents/download.svg')
+

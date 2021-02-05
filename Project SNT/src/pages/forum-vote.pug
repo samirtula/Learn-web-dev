@@ -1,0 +1,50 @@
+extends include/layout
+append sharedVars
+    - const pageUrl = '/';
+    - const pageTitle = 'Форум';
+    - const bodyAdditionClass = '';
+    - const pageAdditionClass = 'main-page';
+block content
+    section.forum-discuss-image
+        .forum-discuss-image__title
+            .forum-discuss-image__title-headers
+                h1 форум
+    section.forum-discuss
+        .forum-discuss__wrapper
+            h3 Голосование по вопросу укладки асфальта на центральной дороге
+            p Товарищи! новая модель организационной деятельности в значительной степени обуславливает создание дальнейших направлений развития. Идейные соображения высшего порядка, а также начало повседневной работы.
+            .forum-discuss__vote
+                form.vote
+                    label.radio-other
+                        input(type="radio" value="yes" id ='yes')
+                        span.radio-other__text Согласен
+                    label.radio-other
+                        input(type="radio" value="no" id='no')
+                        span.radio-other__text Не согласен
+                    label.radio-other
+                        input(type="radio" value="doubt" id='doubt')
+                        span.radio-other__text Затрудняюсь ответить
+                    input(type="submit" value="Проголосовать")
+                    input(type="submit" value="Показать результаты")
+                .forum-discuss__results
+                    span 75% Cогласен
+                    span 75% Не согласен
+                    span 75% Затрудняюсь ответить
+            .forum-discuss__table-block
+                .forum-discuss__table
+                    table
+                        thead
+                            tr
+                                td Светлана Иванова 21.10.2021 в 17:30
+                        tbody
+                            tr
+                                td Товарищи! новая модель организационной деятельности в значительной степени обуславливает создание дальнейших направлений развития. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют от нас анализа соответствующий условий активизации.Равным образом сложившаяся структура организации в значительной степени обуславливает создание дальнейших направлений развития.
+                    table.forum-discuss__table
+                        thead
+                            tr
+                                td Светлана Иванова 21.10.2021 в 17:30
+                        tbody
+                            tr
+                                td Товарищи! новая модель организационной деятельности в значительной степени обуславливает создание дальнейших направлений развития. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют от нас анализа соответствующий условий активизации.Равным образом сложившаяся структура организации в значительной степени обуславливает создание дальнейших направлений развития.
+                textarea(placeholder="Сообщение")
+                input(type="submit" value="Отправить")
