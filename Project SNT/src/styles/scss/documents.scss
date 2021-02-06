@@ -22,6 +22,28 @@
       margin: 80px auto;
       text-align: center;
     }
+    &__nav-table {
+      width: 90%;
+      font-family: Roboto Condensed;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #000000;
+      border-collapse: collapse;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      td, th {
+        border: 1px solid #A89B9B;
+        padding: 10px;
+        background: #f1f1f1;
+        font-weight: bold;
+        a:hover {
+          color: #49A010;
+          transition-duration: 0.3s;
+        }
+
+      }
+    }
     &__table {
       width: 90%;
       font-family: Roboto Condensed;

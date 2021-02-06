@@ -1,0 +1,78 @@
+#snt {
+  .indications-image {
+    width: 100%;
+    min-height: 650px;
+    background-image: url("../images/indications/indications.jpg");
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+    @extend %background-image;
+
+    &__title {
+      max-width: 1224px;
+      margin: 240px auto 0;
+
+      &-headers {
+        margin-left: 80px;
+      }
+    }
+  }
+  .indications {
+
+    &__wrapper {
+      max-width: 950px;
+      height: 100%;
+      margin: 80px auto;
+      text-align: right;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__form {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      background-color: #F2FBFF;
+      padding: 20px 20px 30px;
+      width: 575px;
+      box-sizing: border-box;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+
+      form {
+        background: #ffffff;
+        align-items: inherit;
+        border-radius: 5px;
+        padding: 20px 20px 30px;
+        input {
+          margin-top: 30px;
+          margin-bottom: 0;
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            /* display: none; <- Crashes Chrome on hover */
+            -webkit-appearance: none;
+            margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+          }
+        }
+      }
+      span {
+        margin-bottom:30px;
+      }
+    }
+    &__user-name, &__type {
+      font-family: Roboto Condensed;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+
+    }
+    &__previous-date, &__previous-information {
+      font-family: Roboto Condensed;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 21px;
+      color: #000000;
+    }
+    &__type {
+      padding: 20px;
+    }
+  }
+}
