@@ -13,8 +13,291 @@ DELET FROM users WHERE
 
 TRUNCATE FROM users - очистить таблицу
 
-
 https://oracleplsql.ru/mysql-manual.html
 
-
 SELECT * FROM users WHERE position_id IN (SELECT id FROM positions WHERE salary > 50000);
+
+
+Joins
+
+объединение 3 таблиц
+
+SELECT products.id AS prod_id, products.name AS prod_name, shops.name AS shop_name, products_quantity.quantity
+ FROM products
+ INNER JOIN products_quantity
+ ON products.id = products_quantity.product_id
+ INNER JOIN shops
+ ON products_quantity.store_id = shops.id
+ WHERE products_quantity.quantity > 0;
+
+объединение 2 таблиц и сумма количества с группировкой товаров: MySQL SUM() function with group by
+
+SELECT products.id, products.name, SUM(products_quantity.quantity) AS total_quantity
+FROM products
+INNER JOIN products_quantity
+ON products.id = products_quantity.product_id
+GROUP BY products.id;
+
+по id магазина, вернуть весь ассортимент
+
+SELECT products.id AS prod_id, products.name AS prod_name, products_quantity.quantity
+FROM products
+LEFT JOIN products_quantity
+ON products.id = products_quantity.product_id
+WHERE products_quantity.store_id = 1
+
+
+1 Блок заданий
+
+добавление внешних ключей -зависимостей cart (productId) зависимость product(id)
+ALTER TABLE cart ADD FOREIGN KEY (productId) REFERENCES product(id)
+ALTER TABLE cart ADD FOREIGN KEY (userId) REFERENCES user(id)
+ALTER TABLE product ADD FOREIGN KEY (idCategory) REFERENCES category(id)
+
+
+INSERT INTO user (name) VALUES ('Mellissa');
+INSERT INTO user (name) VALUES ('Turan');
+INSERT INTO user (name) VALUES ('Javid');
+INSERT INTO user (name) VALUES ('Kamil');
+INSERT INTO user (name) VALUES ('Seymur');
+INSERT INTO user (name) VALUES ('Murad');
+INSERT INTO user (name) VALUES ('Samir');
+INSERT INTO user (name) VALUES ('Madina');
+INSERT INTO user (name) VALUES ('Kamilla');
+INSERT INTO user (name) VALUES ('Banu');
+
+
+INSERT INTO category (name) VALUES ('plates');
+INSERT INTO category (name) VALUES ('spoons');
+INSERT INTO category (name) VALUES ('forks');
+INSERT INTO category (name) VALUES ('napkins');
+
+
+
+INSERT INTO product (name,price,idCategory) VALUES ('teaspoon',5,2);
+INSERT INTO product (name,price,idCategory) VALUES ('salad fork',5,3);
+INSERT INTO product (name,price,idCategory) VALUES ('soup plate',5,1);
+INSERT INTO product (name,price,idCategory) VALUES ('napkin rings',5,4);
+INSERT INTO product (name,price,idCategory) VALUES ('soup spoons',2,2);
+
+
+
+
+
+INSERT INTO cart (userId,productId) VALUES (1,3);
+INSERT INTO cart (userId,productId) VALUES (3,1);
+INSERT INTO cart (userId,productId) VALUES (2,3);
+INSERT INTO cart (userId,productId) VALUES (5,4);
+INSERT INTO cart (userId,productId) VALUES (6,1);
+INSERT INTO cart (userId,productId) VALUES (8,3);
+INSERT INTO cart (userId,productId) VALUES (7,3);
+INSERT INTO cart (userId,productId) VALUES (9,4);
+INSERT INTO cart (userId,productId) VALUES (10,4);
+INSERT INTO cart (userId,productId) VALUES (4,2);
+
+Всех пользователей;
+SELECT * FROM user
+
+Всех записей в корзине (выводить всю информацию
+о пользователе, всю информацию о продукте, всю
+информацию о категории);
+
+SELECT cart.*,user.name 
+AS username, product.name 
+AS product,product.price AS price,category.name 
+AS category 
+FROM cart 
+INNER JOIN user ON user.id = cart.userId 
+INNER JOIN product ON product.id = cart.productId 
+INNER JOIN category ON category.id = product.idCategory
+
+
+
+Все записи в корзине (вывести имя пользователя,
+название категории и название продукта);
+
+SELECT cart.*, user.name AS user_name, product.name AS product_name, category.name AS category_name
+FROM
+cart
+INNER JOIN user ON user.id=cart.userId
+INNER JOIN product ON product.id = cart.productId 
+INNER JOIN category ON category.id = product.idCategory
+
+
+Всех продуктов, выбранных в корзине одним поль-
+зователем (выводить всю информацию о пользо-
+вателе, продукт и категорию);
+
+SELECT cart.*,user.name AS user_name, product.name AS product_name, category.name AS category_name
+FROM cart
+INNER JOIN user ON user.id=cart.userId 
+INNER JOIN product ON product.id = cart.productId 
+INNER JOIN category ON category.id = product.idCategory
+WHERE userId = 1
+
+Названий категорий, продукты которых добавлены
+в корзину одним пользователем;
+
+SELECT DISTINCT category.name AS category_name 
+FROM cart INNER JOIN user ON user.id=cart.userId 
+INNER JOIN product ON product.id = cart.productId 
+INNER JOIN category ON category.id = product.idCategory 
+WHERE userId = 1
+
+
+Информацию о всех пользователях, которые купили
+один продукт;
+
+SELECT userId, user.name 
+AS user_name 
+FROM cart 
+INNER JOIN user 
+ON user.id=cart.userId 
+GROUP BY userId HAVING COUNT(1) = 1
+
+
+
+Информацию о категории, продуктов которой нет
+у пользователя в корзине
+
+SELECT DISTINCT userId, user.name
+AS user_name, 
+category.id
+AS in_cart_categ
+FROM cart 
+INNER JOIN user 
+ON user.id=cart.userId 
+INNER JOIN product ON product.id = cart.productId 
+INNER JOIN category ON category.id != product.idCategory
+WHERE userId = 1
+
+черновик 
+
+
+SELECT category.id 
+AS in_cart_categ
+FROM cart 
+INNER JOIN product 
+ON product.id = cart.productId 
+INNER JOIN user 
+ON user.id=cart.userId 
+INNER JOIN category ON category.id = product.idCategory
+WHERE cart.userId = 1
+
+
+
+
+SELECT DISTINCT userId, user.name
+AS user_name, 
+category.id
+AS in_cart_categ
+FROM cart 
+INNER JOIN user 
+ON user.id=cart.userId 
+INNER JOIN product ON product.id = cart.productId 
+INNER JOIN category
+WHERE userId = 1 AND category.id NOT EXISTS (SELECT category.id 
+AS in_cart_catege
+FROM cart 
+INNER JOIN product 
+ON product.id = cart.productId 
+INNER JOIN user 
+ON user.id=cart.userId 
+INNER JOIN category ON category.id = product.idCategory
+WHERE cart.userId = 1)
+
+2 Блок заданий
+
+Создать запрос, который выведет количество пользователей.
+SELECT COUNT(id) FROM user
+
+Создать запрос, который вернет количество продуктов
+в корзине для одного пользователя.
+
+
+SELECT COUNT(productId) FROM cart
+WHERE  userId = 3
+
+Создать запрос, который посчитает общую стоимость
+продуктов в корзине
+
+SELECT SUM(product.price) 
+FROM cart
+INNER JOIN product ON product.id= cart.productId; 
+
+Создать запрос, который посчитает среднее значение
+стоимости продуктов в корзине.
+
+SELECT SUM(product.price)/ COUNT(product.price) 
+FROM cart 
+INNER JOIN product ON product.id= cart.productId
+
+
+Создать запрос, который посчитает количество каждого продукта в корзине
+ для одного пользователя.
+
+
+SELECT COUNT(cart.productId),product.name 
+FROM cart
+INNER JOIN product ON product.id= cart.productId
+GROUP BY (product.id)
+
+
+Создать запрос, который выберет 3 самых дорогих
+продукта, которые все пользователи наибольшее количество раз клали в корзину.
+
+
+SELECT product.price, (cart.productId),product.name
+FROM product
+INNER JOIN cart ON product.id= cart.productId
+GROUP BY (product.id)
+ORDER BY product.price DESC
+LIMIT 3
+
+
+
+Создать запрос, который отсортирует все продукты
+в корзине по количеству записей в корзине для всех
+пользователей.
+
+
+SELECT COUNT(cart.productId),product.name 
+FROM cart
+INNER JOIN product ON product.id= cart.productId
+GROUP BY (product.id)
+ORDER BY COUNT(cart.productId)
+
+
+Создать запрос, который выведет пользователей, которые ничего не купили.
+
+SELECT user.id 
+FROM user 
+WHERE user.id 
+NOT IN ( SELECT userId FROM cart )
+
+
+Создать запрос, который выведет пользователя, 
+который купил наибольшее количество одинаковых
+продуктов. 
+
+
+
+SELECT product.name,user.name 
+FROM cart
+INNER JOIN product ON product.id=cart.productId
+INNER JOIN user on user.id = cart.userId
+GROUP BY (product.id)
+ORDER BY COUNT(cart.productId) DESC
+LIMIT 1
+
+
+Создать запрос, который найдет самый дешевый продукт, 
+найдет всех пользователей, которые покупали
+этот продукт, посчитает количество продуктов и выведет общую 
+цену всех продуктов.
+
+SELECT product.name, cart.userId AS CartUserID, user.name AS userName, MIN(product.price), SUM(product.price),COUNT(product.id)
+FROM product
+INNER JOIN cart ON cart.productId = product.id
+INNER JOIN user ON user.id = cart.userId
+
