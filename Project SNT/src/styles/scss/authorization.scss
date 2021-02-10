@@ -23,6 +23,9 @@
       text-align: center;
       display: flex;
       justify-content: space-between;
+      @include mediaWidth(1024) {
+        flex-direction: column;
+      }
     }
   }
   .title{
@@ -47,7 +50,6 @@
        & input {
          width: 20px;
          margin: 0;
-
        }
       & span {
         font-family: Roboto Condensed;
@@ -59,6 +61,11 @@
         box-sizing: border-box;
         color: #000000;
       }
+    }
+  }
+  .login__form {
+    @include mediaWidth(1024) {
+      margin-bottom: 30px;
     }
   }
 }

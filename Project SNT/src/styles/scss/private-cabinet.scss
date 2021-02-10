@@ -6,11 +6,17 @@
       margin: 80px auto;
       display: flex;
       justify-content: space-between;
+      @include mediaWidth(1024) {
+        justify-content: space-evenly;
+      }
     }
     &__menu-block {
       margin-left: 80px;
       display: flex;
       flex-direction: column;
+      @include mediaWidth(1024) {
+        margin-left: 0;
+      }
       &-link-wrapper {
         width: 276px;
         height: 79px;

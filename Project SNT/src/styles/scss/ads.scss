@@ -18,7 +18,7 @@
 
   .ads {
     &__nav {
-      max-width:300px;
+      min-width: 250px;
       height: inherit;
       display: flex;
       text-align: left;
@@ -47,6 +47,9 @@
       max-width: 950px;
       display: flex;
       flex-wrap: wrap;
+      @include mediaWidth(1210) {
+        justify-content: space-evenly;
+      }
     }
 
     &__article {
@@ -64,6 +67,11 @@
         color: #000000;
       }
     }
+  }
+  .ad__image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
   }
   .ad__text>h5 {
  margin: 15px 0 15px 0;

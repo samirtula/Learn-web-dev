@@ -18,3 +18,5 @@ auto.on('click', function () {
     let publicTransInfoButton = $('#public-trans');
     publicTransInfoButton.css('color','#333333')
 });
+
+$

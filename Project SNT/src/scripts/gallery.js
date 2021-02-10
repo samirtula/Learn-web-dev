@@ -4,13 +4,13 @@ $('.owl-carousel').owlCarousel({
     autoHeight: true,
     autoplay: true,
     loop: true,
-    autoplayTimeout: 6000,
+    autoplayTimeout: 5000,
     pagination: true,
     responsive:{
         0:{
             items:1
         },
-        600:{
+        768:{
             items:3
         },
         1000:{

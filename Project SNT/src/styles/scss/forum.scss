@@ -5,6 +5,7 @@
     background-image: url("../images/forum/forum.jpg");
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
     @extend %background-image;
+    margin-top: 106px;
     &__title {
       max-width: 1224px;
       margin: 240px auto 0;
@@ -19,9 +20,10 @@
       height: 100%;
       margin: 80px auto;
       text-align: center;
+      width: 95%;
     }
     &__table {
-      width: 90%;
+      width: 100%;
       font-family: Roboto Condensed;
       font-style: normal;
       font-size: 16px;

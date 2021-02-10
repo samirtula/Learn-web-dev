@@ -4,6 +4,7 @@
     min-height: 650px;
     background-image: url("../images/forum/forum.jpg");
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+    margin-top: 106px;
     @extend %background-image;
     &__title {
       max-width: 1224px;
@@ -19,8 +20,8 @@
         height: 100%;
         margin: 80px auto;
         text-align: center;
+        width: 95%;
         & h3, p {
-          width: 90%;
           margin: 27px auto;
         }
       }
@@ -50,7 +51,7 @@
         }
         & textarea {
           font-family: Roboto;
-          width: 90%;
+          width: 100%;
           min-height: 150px;
           font-size: 16px;
           line-height: 22px;
@@ -68,7 +69,6 @@
         }
       }
       &__table table  {
-        width: 90%;
         font-family: Roboto Condensed;
         font-style: normal;
         font-size: 16px;
@@ -87,7 +87,6 @@
         }
       }
     &__vote {
-      width: 90%;
       margin: 0 auto;
       & .vote {
         display: block;

@@ -18,12 +18,13 @@
       max-width: 1224px;
       height: 100%;
       margin: 0 auto;
+      width: 95%;
     }
     &__form {
       margin: 80px auto;
       flex-direction: row;
       flex-wrap: wrap;
-      width: 700px;
+      max-width: 700px;
       justify-content: space-between;
       & input:nth-child(odd){
         margin-right: 30px;

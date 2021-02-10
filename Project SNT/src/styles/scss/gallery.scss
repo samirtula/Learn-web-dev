@@ -25,6 +25,10 @@
         display: block;
         @extend %background-image;
         margin: 0 auto;
+        @include mediaWidth(1024){
+          width: 220px;
+          height: 220px;
+        }
       }
     }
     &__images {
@@ -32,6 +36,7 @@
       display: flex;
       flex-wrap: wrap;
       width: 100%;
+      justify-content: space-evenly;
       & h2 {
         width: 100%;
         text-align: center;
@@ -51,6 +56,10 @@
   .owl-carousel {
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);padding: 50px 0px 20px;
     width: 100%;
+    @include mediaWidth(1024) {
+      z-index: -1;
+    }
+
   }
   .owl-item {
     margin: 0;

@@ -23,7 +23,8 @@
       margin: 80px auto;
       text-align: center;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
+      width: 95%;
     }
 
     &__inner-image {
@@ -36,7 +37,6 @@
       flex-direction: column;
       margin-left: 10px;
       font-family: Roboto;
-      font-weight: bold;
       margin-top: 15px;
       &:nth-child(3){
         margin-left: 5px;
@@ -67,6 +67,7 @@
       font-weight: bold;
       line-height: 100%;
       margin-bottom: 20px;
+      color: #82b23f;
     }
     &__today {
       max-width: 600px;
@@ -75,7 +76,7 @@
       flex-direction: column;
       box-sizing: border-box;
       border-radius: 5px;
-      padding: 10px 30px;
+      padding: 10px 0;
 
     }
 
@@ -94,10 +95,14 @@
         font-size: 18px;
         text-transform: uppercase;
         margin: 12px 0;
+        color: #82b23f;
       }
     }
     &__next-day-info {
-      font-family: Roboto Condensed;
+      font-family: 'Roboto';
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 17px;
       margin-top: 10px;
     }
   }
