@@ -1,16 +1,13 @@
 #snt{
   .forum-discuss-image {
-    width: 100%;
-    min-height: 650px;
     background-image: url("../images/forum/forum.jpg");
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
-    margin-top: 106px;
     @extend %background-image;
     &__title {
       max-width: 1224px;
       margin: 240px auto 0;
       &-headers {
-        margin-left: 80px;
+        margin: 0 auto;
+        text-align: center;
       }
     }
   }
@@ -21,6 +18,9 @@
         margin: 80px auto;
         text-align: center;
         width: 95%;
+        @include mediaWidth(767){
+          margin: 40px auto;
+        }
         & h3, p {
           margin: 27px auto;
         }
@@ -42,7 +42,10 @@
             height: 40px;
             letter-spacing: 0.05em;
             outline: none;
-          border: none;
+            border: none;
+          @include mediaWidth(767) {
+            width: 100%
+          }
           &:hover {
             background: #66AB36;
             transition-duration: 0.3s;

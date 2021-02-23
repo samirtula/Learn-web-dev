@@ -1,4 +1,20 @@
 #snt {
+  .private-cabinet {
+    &__image {
+      background-image: url("../images/authorization/authorization.jpg");
+      @extend %background-image;
+    }
+
+    &__title {
+      max-width: 1224px;
+      margin: 240px auto 0;
+
+      &-headers {
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+  }
   .private-cabinet{
     &__wrapper {
       max-width: 950px;
@@ -9,6 +25,9 @@
       @include mediaWidth(1024) {
         justify-content: space-evenly;
       }
+      @include mediaWidth(767) {
+        flex-direction: column;
+      }
     }
     &__menu-block {
       margin-left: 80px;
@@ -16,6 +35,14 @@
       flex-direction: column;
       @include mediaWidth(1024) {
         margin-left: 0;
+      }
+      @include mediaWidth(767) {
+       align-items: center;
+      }
+      &:first-child {
+        @include mediaWidth(767) {
+          margin-bottom: 40px;
+        }
       }
       &-link-wrapper {
         width: 276px;
@@ -36,6 +63,9 @@
           transition-duration: 0.2s;
           position: relative;
           left: 20px;
+          @include mediaWidth(767) {
+            position: initial;
+          }
         }
       }
       &-link-inner {

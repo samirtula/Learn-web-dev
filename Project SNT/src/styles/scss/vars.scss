@@ -21,6 +21,12 @@ $widthXs: 500;
   }
 }
 
+@mixin media-min($media-width) {
+  @media screen and (min-width: #{$media-width}px) {
+    @content;
+  }
+}
+
 @mixin mediaHeight($media-height) {
   @media screen and (max-height: #{$media-height}px) {
     @content;
@@ -29,12 +35,6 @@ $widthXs: 500;
 
 @mixin mediaIE() {
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    @content;
-  }
-}
-
-@mixin media-min($media-width) {
-  @media screen and (min-width: #{$media-width}px) {
     @content;
   }
 }

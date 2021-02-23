@@ -1,9 +1,6 @@
 #snt {
   .advertisement-image {
-    width: 100%;
-    min-height: 650px;
     background-image: url("../images/ads/ads.jpg");
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
     @extend %background-image;
 
     &__title {
@@ -11,7 +8,8 @@
       margin: 240px auto 0;
 
       &-headers {
-        margin-left: 80px;
+        margin: 0 auto;
+        text-align: center;
       }
     }
   }

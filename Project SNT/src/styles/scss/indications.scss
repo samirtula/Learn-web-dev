@@ -1,9 +1,6 @@
 #snt {
   .indications-image {
-    width: 100%;
-    min-height: 650px;
     background-image: url("../images/indications/indications.jpg");
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
     @extend %background-image;
 
     &__title {
@@ -11,7 +8,8 @@
       margin: 240px auto 0;
 
       &-headers {
-        margin-left: 80px;
+        margin: 0 auto;
+        text-align: center;
       }
     }
   }
@@ -25,6 +23,9 @@
       display: flex;
       justify-content: space-between;
       width: 95%;
+      @include mediaWidth(767) {
+        flex-direction: column-reverse;
+      }
     }
     &__form {
       text-align: right;
@@ -32,15 +33,25 @@
       flex-direction: column;
       background-color: #F2FBFF;
       padding: 20px 20px 30px;
-      width: 575px;
       box-sizing: border-box;
+      width: 575px;
       box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+      @include mediaWidth(767) {
+        width: 100%;
+        max-width: 575px;
+        padding: 0;
+
+      }
 
       form {
         background: #ffffff;
         align-items: inherit;
         border-radius: 5px;
         padding: 20px 20px 30px;
+        @include mediaWidth(767) {
+          padding: 0;
+          align-items: center;
+        }
         input {
           margin-top: 30px;
           margin-bottom: 0;
@@ -54,6 +65,10 @@
       }
       span {
         margin-bottom:30px;
+        @include mediaWidth(767) {
+          width: 290px;
+          margin-bottom: 20px;
+        }
       }
     }
     &__user-name, &__type {
@@ -74,6 +89,11 @@
     }
     &__type {
       padding: 20px;
+      @include mediaWidth(767) {
+        padding: 0;
+        width: 290px;
+        margin-bottom: 20px;
+      }
     }
   }
 }

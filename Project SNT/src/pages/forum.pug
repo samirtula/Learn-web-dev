@@ -5,7 +5,7 @@ append sharedVars
     - const bodyAdditionClass = '';
     - const pageAdditionClass = 'main-page';
 block content
-    section.forum-image
+    section.forum-image.images
         .forum-image__title
             .forum-image__title-headers
                 h1 форум
@@ -23,10 +23,10 @@ block content
                         td Светлана Иванова 21.10.2020  17:30
                         td
                             a(href='forum-discuss.html')
-                                img(src='../images/forum/arrow.png')
+                                img(src='../images/forum/arrow.svg').forum__arrow-image
                     tr
                         td Голосование по вопросу укладки асфальта на центральной дороге
                         td Светлана Иванова 21.10.2020  17:30
                         td
                             a(href='forum-vote.html')
-                                img(src='../images/forum/arrow.png')
+                                img(src='../images/forum/arrow.svg').forum__arrow-image

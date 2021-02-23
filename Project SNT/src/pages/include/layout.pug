@@ -10,7 +10,7 @@ html(lang="en")
             .header__wrapper
                 .header__ad
                     .header__ad-clock-image
-                    span.header__ad-text Следующее собрание состоится 24.11.2021 в 17:30
+                    span.header__ad-text Общее собрание состоится 24.11.2021 в 17:30
                 .header__tel
                     .header__tel-phone-image
                     span.header__tel-num +7-920-955-77-88
@@ -20,7 +20,7 @@ html(lang="en")
         nav.nav
             .nav__wrapper
                 .nav__logo-image
-                a(href='http://localhost:8080/') главная
+                a(href='index.html') главная
                 a(href='news.html') новости
                 a(href='authorization.html') личный кабинет
                 a(href='letter.html') написать в правление
@@ -31,11 +31,13 @@ html(lang="en")
                 .nav__burger-menu
                     span
                 .footer__social-links
+
+                    a(href='authorization.html').footer__social-links-login
                     a(href='#').footer__social-links-vk
                     a(href='#').footer__social-links-ok
             .nav__burger-wrapper.clicked
                 .nav__burger-block
-                    a(href='http://localhost:8080/') главная
+                    a(href='index.html') главная
                     a(href='news.html') новости
                     a(href='authorization.html') личный кабинет
                     a(href='letter.html') написать в правление
@@ -47,7 +49,7 @@ html(lang="en")
         footer.footer
             .footer__wrapper
                 .nav__logo-image
-                a(href='http://localhost:8080/') главная
+                a(href='index.html') главная
                 a(href='news.html') новости
                 a(href='authorization.html') личный кабинет
                 a(href='letter.html') написать в правление
@@ -56,6 +58,8 @@ html(lang="en")
                 a(href='gallery.html') фотогалерея
                 a(href='weather.html') погода
                 .footer__social-links
+
+                    a(href='authorization.html').footer__social-links-login
                     a(href='#').footer__social-links-vk
                     a(href='#').footer__social-links-ok
 

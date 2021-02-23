@@ -1,9 +1,6 @@
 #snt {
   .private-image {
-    width: 100%;
-    min-height: 650px;
     background-image: url("../images/authorization/authorization.jpg");
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
     @extend %background-image;
 
     &__title {
@@ -11,7 +8,8 @@
       margin: 240px auto 0;
 
       &-headers {
-        margin-left: 80px;
+        margin: 0 auto;
+        text-align: center;
       }
     }
   }
@@ -25,6 +23,9 @@
       justify-content: space-between;
       @include mediaWidth(1024) {
         flex-direction: column;
+      }
+      @include mediaWidth(767){
+        margin: 40px auto;
       }
     }
   }
@@ -42,7 +43,7 @@
     display: flex;
     flex-direction: column;
     & label {
-      width: 330px;
+      width: 290px;
       height: 40px;
       display: flex;
       justify-content: space-between;
@@ -55,9 +56,8 @@
         font-family: Roboto Condensed;
         font-style: normal;
         width: 330px;
-        font-size: 16px;
+        font-size: 15px;
         line-height: 70%;
-        letter-spacing: 0.05em;
         box-sizing: border-box;
         color: #000000;
       }

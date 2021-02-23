@@ -1,9 +1,6 @@
 #snt {
   .docs-image {
-    width: 100%;
-    min-height: 650px;
     background-image: url("../images/documents/documents.jpg");
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
     @extend %background-image;
 
     &__title {
@@ -11,10 +8,12 @@
       margin: 240px auto 0;
 
       &-headers {
-        margin-left: 80px;
+        margin: 0 auto;
+        text-align: center;
       }
     }
   }
+
   .docs {
     &__wrapper {
       max-width: 1224px;
@@ -23,6 +22,7 @@
       text-align: center;
       width: 95%;
     }
+
     &__nav-table {
       width: 100%;
       font-family: Roboto Condensed;
@@ -33,11 +33,16 @@
       border-collapse: collapse;
       margin: 0 auto;
       margin-bottom: 30px;
+      @include mediaWidth(767) {
+        display: none;
+      }
+
       td, th {
         border: 1px solid #A89B9B;
         padding: 10px;
         background: #f1f1f1;
         font-weight: bold;
+
         a:hover {
           color: #49A010;
           transition-duration: 0.3s;
@@ -45,6 +50,7 @@
 
       }
     }
+
     &__table {
       width: 100%;
       font-family: Roboto Condensed;
@@ -54,16 +60,22 @@
       color: #000000;
       border-collapse: collapse;
       margin: 0 auto;
+
       & thead {
         font-weight: bold;
 
       }
+
       td, th {
         border: 1px solid #A89B9B;
         padding: 10px;
         background: #f1f1f1;
 
       }
+    }
+    &__download-image {
+      width: 35px;
+      height: 35px;
     }
   }
 }

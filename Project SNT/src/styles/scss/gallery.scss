@@ -1,7 +1,5 @@
 #snt {
   .gallery-image {
-    width: 100%;
-    min-height: 650px;
     background-image: url("../images/gallery/gallery.jpg");
     @extend %background-image;
     &__title {
@@ -9,7 +7,8 @@
       margin: 240px auto 0;
 
       &-headers {
-        margin-left: 80px;
+        margin: 0 auto;
+        text-align: center;
       }
     }
   }
@@ -58,6 +57,7 @@
     width: 100%;
     @include mediaWidth(1024) {
       z-index: -1;
+      display: none;
     }
 
   }
@@ -105,6 +105,9 @@
       top: 8%;
       right: 2%;
       cursor: pointer;
+      &:hover {
+        background-image: url("../images/gallery/close-hover.png");
+      }
     }
     & img {
       display: block;

@@ -1,9 +1,6 @@
 #snt {
   .news-image {
-    width: 100%;
-    min-height: 650px;
     background-image: url("../images/news/news.jpg");
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
     @extend %background-image;
 
     &__title {
@@ -11,7 +8,8 @@
       margin: 240px auto 0;
 
       &-headers {
-        margin-left: 80px;
+        margin: 0 auto;
+        text-align: center;
       }
     }
   }
@@ -19,7 +17,6 @@
   .news {
     &__nav {
       min-width: 250px;
-
       height: inherit;
       display: flex;
       text-align: left;
@@ -33,6 +30,9 @@
           margin-top: 0;
         }
       }
+      @include mediaWidth(767) {
+        display: none;
+      }
     }
     &__wrapper {
       max-width: 1224px;
@@ -40,7 +40,9 @@
       margin: 80px auto;
       text-align: center;
       display: flex;
-
+      @include mediaWidth(767) {
+        margin: 40px auto;
+      }
     }
 
     &__block {
