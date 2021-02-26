@@ -3,70 +3,16 @@ header("Access-Control-Allow-Origin: *");
 setlocale(LC_ALL, "ru_RU");
 date_default_timezone_set("Europe/Moscow");
 
+require ('vendor/autoload.php');
+use classes\WeatherInfo;
+
+
 $filename = 'weather-data.cache';
 $expiry = 1800;
 
-function readCache($filename, $expiry)
-{
-    if (file_exists($_SERVER['DOCUMENT_ROOT'] .'/cache/'. $filename) && time() < (filemtime($_SERVER['DOCUMENT_ROOT'] . '/cache/' . $filename) + $expiry)) {
-            $cache = file($_SERVER['DOCUMENT_ROOT'] . '/cache/' . $filename);
-            $cache = implode('', $cache);
-            return json_decode($cache);
-    }
-    else
-    {
-        writeWeatherCache($filename);
-        $cache = file($_SERVER['DOCUMENT_ROOT'] . '/cache/' . $filename);
-        $cache = implode('', $cache);
-        return json_decode($cache);
-    }
-}
-
-
-function writeWeatherCache ($filename)
-{
-    $url = "https://api.weather.yandex.ru/v2/informers?lat=54.1961&lon=37.6182";
-
-    $opts = array(
-        'http' => array(
-            'method' => "GET",
-            'header' => "X-Yandex-API-Key: 04640705-85d4-4828-86c5-41cecbc7776f"
-        )
-    );
-
-    $context = stream_context_create($opts);
-    $contents = file_get_contents($url, false, $context);
-
-
-    $fp = fopen($_SERVER['DOCUMENT_ROOT'] .'/cache/'. $filename, 'w+');
-    fwrite($fp, $contents);
-    fclose($fp);
-
-
-    chmod($fp, 0777);
-}
-
-
-$clima = readCache($filename,$expiry);
-
-
-$temp = $clima->fact->temp;
-$humidity = $clima->fact->humidity;
-$speed = $clima->fact->wind_speed;
-$pressure = $clima->fact->pressure_mm;
-$icon = $clima->fact->icon . ".svg";
-$precProb = $clima->forecast->parts[0]->prec_prob;
-$windDir = $clima->forecast->parts[0]->wind_dir;
-
-
-if ($windDir === 's') $windDir = " Ю.";
-if ($windDir === 'n') $windDir = " С.";
-if ($windDir === 'e') $windDir = " В.";
-if ($windDir === 'w') $windDir = " З.";
-if ($windDir === 'ne') $windDir = " СВ.";
-if ($windDir === 'nw') $windDir = " СЗ.";
-if ($windDir === 'se') $windDir = " ЮВ.";
-if ($windDir === 'sw') $windDir = " ЮЗ.";
+$weather = new WeatherInfo($filename,$expiry);
+$weather->readCache();
+$weather->setWeatherValues();
 
 
 $today = date("d.m.Y");
@@ -95,7 +41,7 @@ $today = date("d.m.Y");
       </div>
     </header>
     <nav class="nav">
-      <div class="nav__wrapper">
+      <div class="nav__wrapper" >
         <div class="nav__logo-image"></div><a href="index.php">главная</a><a href="news.php">новости</a><a href="authorization.php">личный кабинет</a><a href="letter.php">написать в правление</a><a href="forum.php">форум</a><a href="boards.php">объявления</a><a href="gallery.php">фотогалерея</a><a href="weather.php">погода</a>
         <div class="nav__burger-menu"><span></span></div>
         <div class="footer__social-links"><a class="footer__social-links-login" href="authorization.php"></a><a class="footer__social-links-vk" href="#"></a><a class="footer__social-links-ok" href="#"></a></div>
@@ -115,14 +61,14 @@ $today = date("d.m.Y");
       <div class="weather__wrapper">
         <div class="weather__today">
           <div class="weather__inner-image">
-            <img src="<?='https://yastatic.net/weather/i/icons/blueye/color/svg/' . $icon?>" class="weather__image">
+            <img src="<?='https://yastatic.net/weather/i/icons/blueye/color/svg/' . $weather->icon?>" class="weather__image">
             <div class="weather__info">
-                <span class="weather__temperature"><?= $temp .  '&deg;C<br>'?></span>
-                <span class="weather__info-text"> <img src="images/weather/pressure.svg"> Давление: <?= $pressure .  ' мм рт. ст.<br>'?></span>
-                <span class="weather__info-text"> <img src="images/weather/wind.svg"> Скорость ветра:  <?= $speed .  ' м/с.<br>'?></span>
-                <span class="weather__info-text"> <img src="images/weather/arrow.svg" class="wind"> Направление ветра: <?=$windDir . '<br>'?></span>
-                <span class="weather__info-text"> <img src="images/weather/prob.svg"> Вероятность осадков: <?=$precProb . '%.'?></span>
-                <span class="weather__info-text"> <img src="images/weather/humidity.svg"> Влажность: <?= $humidity .  '%.<br>'?></span></div>
+                <span class="weather__temperature"><?= $weather->temp .  '&deg;C<br>'?></span>
+                <span class="weather__info-text"> <img src="images/weather/pressure.svg"> Давление: <?= $weather->pressure .  ' мм рт. ст.<br>'?></span>
+                <span class="weather__info-text"> <img src="images/weather/wind.svg"> Скорость ветра:  <?= $weather->speed .  ' м/с.<br>'?></span>
+                <span class="weather__info-text"> <img src="images/weather/arrow.svg" class="wind"> Направление ветра: <?=$weather->windDir . '<br>'?></span>
+                <span class="weather__info-text"> <img src="images/weather/prob.svg"> Вероятность осадков: <?=$weather->precProb . '%.'?></span>
+                <span class="weather__info-text"> <img src="images/weather/humidity.svg"> Влажность: <?= $weather->humidity .  '%.<br>'?></span></div>
             </div>
           </div>
       </div>
@@ -136,7 +82,7 @@ $today = date("d.m.Y");
   <script type="text/javascript" src="scripts/app.js"></script>
 
   <script>
-      let windDirection = "<?= $windDir?>";
+      let windDirection = "<?= $weather->windDir?>";
       let windImg = document.querySelector('.wind');
       switch (windDirection) {
           case " С.":
