@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7d8189fe-942a-42a3-b4fa-4d7390c5ba2a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Learning_JS/Занятие 7/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Learning_JS/Занятие 7/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PHP/Shop/ecom" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/images/forum/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/images/gallery/gallery.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/images/gallery/gallery.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/images/index/Group 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/images/index/Group 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/images/layout/login-hover.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/images/layout/login-hover.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/images/layout/login.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/images/layout/login.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/images/letter/letter.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/images/letter/letter.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/images/new/new.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/ad.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/ad.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/ads.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/ads.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/authorization.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/authorization.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/documents.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/documents.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/forum-discuss.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/forum-discuss.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/forum-vote.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/forum-vote.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/forum.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/forum.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/gallery.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/gallery.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/include/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/include/layout.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/indications.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/indications.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/letter.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/letter.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/new.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/new.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/news.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/news.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/private-cabinet.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/private-cabinet.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/pages/weather.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/pages/weather.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/ad.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/ad.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/ads.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/ads.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/authorization.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/authorization.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/documents.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/documents.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/forum-discuss.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/forum-discuss.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/forum.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/forum.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/gallery.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/gallery.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/indications.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/indications.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/letter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/letter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/new.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/new.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/news.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/news.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/private-cabinet.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/private-cabinet.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/vars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/weather.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project SNT/src/styles/scss/weather.scss" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1lL3AYuqSRQDbJ9tKiDFld1VoJa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Project SNT" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d8189fe-942a-42a3-b4fa-4d7390c5ba2a" name="Default Changelist" comment="" />
+      <created>1607362408801</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607362408801</updated>
+      <workItem from="1607362411246" duration="3426000" />
+      <workItem from="1607528449048" duration="6004000" />
+      <workItem from="1608134272126" duration="6050000" />
+      <workItem from="1608824388921" duration="7937000" />
+      <workItem from="1609170099020" duration="6336000" />
+      <workItem from="1609343307750" duration="8325000" />
+      <workItem from="1610558715284" duration="3463000" />
+      <workItem from="1610984215321" duration="9625000" />
+      <workItem from="1611157452888" duration="9121000" />
+      <workItem from="1611588583998" duration="3787000" />
+      <workItem from="1612194782710" duration="4082000" />
+      <workItem from="1612367629522" duration="7123000" />
+      <workItem from="1612798081374" duration="591000" />
+      <workItem from="1612972472410" duration="8033000" />
+      <workItem from="1613403954284" duration="2000" />
+      <workItem from="1613666705910" duration="723000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
