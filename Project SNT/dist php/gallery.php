@@ -9,13 +9,13 @@
     <header class="header">
       <div class="header__wrapper">
         <div class="header__meet">
-          <div class="header__meet-clock-image"></div><span class="header__meet-text">Общее собрание состоится 24.11.2021 в 17:30</span>
+          <div class="header__meet-clock-image"></div><span class="header__meet-text">Общее собрание состоится 15.05.2021 г.</span>
         </div>
         <div class="header__tel">
-          <div class="header__tel-phone-image"></div><span class="header__tel-num">+7-920-955-77-88</span>
+          <div class="header__tel-phone-image"></div><span class="header__tel-num">8-910-165-29-07</span>
         </div>
         <div class="header__mail">
-          <div class="header__mail-image"></div><span class="header__mail-text">snt_Tula@mail.ru</span>
+          <div class="header__mail-image"></div><span class="header__mail-text">snt.solnechnyi-92@mail.ru</span>
         </div>
       </div>
     </header>
@@ -32,32 +32,32 @@
     <section class="gallery-image images">
       <div class="gallery-image__title">
         <div class="gallery-image__title-headers">
-          <h1>галерея</h1>
+          <h1>фотогалерея</h1>
         </div>
       </div>
     </section>
     <section class="gallery">
       <div class="gallery__wrapper">
         <div class="gallery__carousel owl-carousel owl-theme">
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
+          <div class="item1 item"></div>
+          <div class="item2 item"></div>
+          <div class="item3 item"></div>
+          <div class="item4 item"></div>
+          <div class="item5 item"></div>
+          <div class="item6 item"></div>
+          <div class="item7 item"></div>
+          <div class="item8 item"></div>
         </div>
         <div class="gallery__images">
           <h2>наше товарищество</h2>
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
+          <div class="item1 item"></div>
+          <div class="item2 item"></div>
+          <div class="item3 item"></div>
+          <div class="item4 item"></div>
+          <div class="item5 item"></div>
+          <div class="item6 item"></div>
+          <div class="item7 item"></div>
+          <div class="item8 item"></div>
         </div>
       </div>
     </section>

@@ -30,13 +30,13 @@ $today = date("d.m.Y");
     <header class="header">
       <div class="header__wrapper">
         <div class="header__meet">
-          <div class="header__meet-clock-image"></div><span class="header__meet-text">Общее собрание состоится 24.11.2021 в 17:30</span>
+          <div class="header__meet-clock-image"></div><span class="header__meet-text">Общее собрание состоится 15.05.2021 г.</span>
         </div>
         <div class="header__tel">
-          <div class="header__tel-phone-image"></div><span class="header__tel-num">+7-920-955-77-88</span>
+          <div class="header__tel-phone-image"></div><span class="header__tel-num">8-910-165-29-07</span>
         </div>
         <div class="header__mail">
-          <div class="header__mail-image"></div><span class="header__mail-text">snt_Tula@mail.ru</span>
+          <div class="header__mail-image"></div><span class="header__mail-text">snt.solnechnyi-92@mail.ru</span>
         </div>
       </div>
     </header>
@@ -63,7 +63,7 @@ $today = date("d.m.Y");
           <div class="weather__inner-image">
             <img src="<?='https://yastatic.net/weather/i/icons/blueye/color/svg/' . $weather->icon?>" class="weather__image">
             <div class="weather__info">
-                <span class="weather__temperature"><?= $weather->temp .  '&deg;C<br>'?></span>
+                <span class="weather__temperature"> <?= $weather->temp .  '&deg;C<br>'?></span>
                 <span class="weather__info-text"> <img src="images/weather/pressure.svg"> Давление: <?= $weather->pressure .  ' мм рт. ст.<br>'?></span>
                 <span class="weather__info-text"> <img src="images/weather/wind.svg"> Скорость ветра:  <?= $weather->speed .  ' м/с.<br>'?></span>
                 <span class="weather__info-text"> <img src="images/weather/arrow.svg" class="wind"> Направление ветра: <?=$weather->windDir . '<br>'?></span>
