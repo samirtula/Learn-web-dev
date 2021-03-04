@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c8ffcb8-c18e-4e12-ae8a-3bd84498ef75" name="Default Changelist" comment="" />
+    <list default="true" id="1e1849fd-01e6-4f7f-89c3-ffe01e2ee1ca" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,34 +9,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/Project SNT Bitrix/composer.json</pharConfigPath>
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/Project SNT Bitrix/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1pDha6jBK5FPiTNz06mc2K4PXeC" />
+  <component name="ProjectId" id="1ohqe1LUOHO544PN5Qvsi95ECZb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/indication" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Гахраманов Самир\Downloads\OpenServer\domains\snt\indication" />
-      <recent name="C:\Users\Гахраманов Самир\Downloads\OpenServer\domains\snt\vote" />
-      <recent name="C:\Users\Гахраманов Самир\Downloads\OpenServer\domains\snt\discuss" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -55,19 +53,38 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0c8ffcb8-c18e-4e12-ae8a-3bd84498ef75" name="Default Changelist" comment="" />
-      <created>1614723628337</created>
+      <changelist id="1e1849fd-01e6-4f7f-89c3-ffe01e2ee1ca" name="Default Changelist" comment="" />
+      <created>1613749261304</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1614723628337</updated>
-      <workItem from="1614723629988" duration="703000" />
-      <workItem from="1614773152144" duration="14996000" />
-      <workItem from="1614860895139" duration="10718000" />
-      <workItem from="1614878028581" duration="720000" />
+      <updated>1613749261304</updated>
+      <workItem from="1613749262472" duration="421000" />
+      <workItem from="1613749795052" duration="37000" />
+      <workItem from="1613749851447" duration="3837000" />
+      <workItem from="1613759962573" duration="2137000" />
+      <workItem from="1613836902044" duration="7819000" />
+      <workItem from="1613851515587" duration="261000" />
+      <workItem from="1614094045604" duration="18092000" />
+      <workItem from="1614690810980" duration="7618000" />
+      <workItem from="1614699365573" duration="3522000" />
+      <workItem from="1614769959722" duration="2423000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
