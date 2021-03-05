@@ -17,13 +17,43 @@
 <header class="header">
     <div class="header__wrapper">
         <div class="header__meet">
-            <div class="header__meet-clock-image"></div><span class="header__meet-text">Общее собрание состоится 15.05.2021 г.</span>
+            <div class="header__meet-clock-image"></div>
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:main.include",
+                "",
+                Array(
+                    "AREA_FILE_SHOW" => "file",
+                    "AREA_FILE_SUFFIX" => "inc",
+                    "EDIT_TEMPLATE" => "",
+                    "PATH" => "/include/meeting_date.php"
+                )
+            );?>
         </div>
         <div class="header__tel">
-            <div class="header__tel-phone-image"></div><span class="header__tel-num">8-910-165-29-07</span>
+            <div class="header__tel-phone-image"></div>
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:main.include",
+                "",
+                Array(
+                    "AREA_FILE_SHOW" => "file",
+                    "AREA_FILE_SUFFIX" => "inc",
+                    "EDIT_TEMPLATE" => "",
+                    "PATH" => "/include/header_tel_num.php"
+                )
+            );?>
         </div>
         <div class="header__mail">
-            <div class="header__mail-image"></div><span class="header__mail-text">snt.solnechnyi-92@mail.ru</span>
+            <div class="header__mail-image"></div>
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:main.include",
+                "",
+                Array(
+                    "AREA_FILE_SHOW" => "file",
+                    "AREA_FILE_SUFFIX" => "inc",
+                    "EDIT_TEMPLATE" => "",
+                    "PATH" => "/include/email.php"
+                )
+            );?>
         </div>
     </div>
 </header>

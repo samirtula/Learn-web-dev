@@ -11,7 +11,17 @@
     <section class="main">
         <div class="main__wrapper">
             <h2>объявление</h2>
-            <p class="main__header">2 декабря с 9-00 до 17-00 в связи с ремонтными работами по ул.Дубравная будет отключена подача электроэнергии. Движение автотранспорта будет закрыто. C уважением, правление СНТ 'Солнечный'.</p>
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:main.include",
+                "",
+                Array(
+                    "AREA_FILE_SHOW" => "file",
+                    "AREA_FILE_SUFFIX" => "inc",
+                    "EDIT_TEMPLATE" => "",
+                    "PATH" => "/include/main_header.php"
+                )
+            );?>
+            <br>
         </div>
     </section>
     <section class="documents">
@@ -32,15 +42,48 @@
             <div class="payment__block">
                 <div class="payment__block-info payment-info">
                     <div class="payment-info__image payment-info__image_1"></div>
-                    <div class="payment-info__text"><span class="payment-info__title">членские взносы</span><span class="payment-info__subtitle">Регулярные платежи, которые должны вносить все члены СНТ для оплаты общих расходов товарищества.</span></div>
+                    <div class="payment-info__text"><span class="payment-info__title">членские взносы</span>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            Array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "",
+                                "PATH" => "/include/member_payment.php"
+                            )
+                        );?>
+                    </div>
                 </div>
                 <div class="payment__block-info payment-info">
                     <div class="payment-info__image payment-info__image_2"></div>
-                    <div class="payment-info__text"><span class="payment-info__title">целевые взносы</span><span class="payment-info__subtitle">Собираются по мере возникающих нужд товарищества. Например, для оплаты разовых кадастровых работ.</span></div>
+                    <div class="payment-info__text"><span class="payment-info__title">целевые взносы</span>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            Array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "",
+                                "PATH" => "/include/objective_payment.php"
+                            )
+                        );?>
+                    </div>
                 </div>
                 <div class="payment__block-info payment-info">
                     <div class="payment-info__image payment-info__image_3"></div>
-                    <div class="payment-info__text"><span class="payment-info__title">электроэнергия</span><span class="payment-info__subtitle">Платежи, которые должны вносить члены СНТ для оплаты потребленной электроэнергии.</span></div>
+                    <div class="payment-info__text"><span class="payment-info__title">электроэнергия</span>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            Array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "",
+                                "PATH" => "/include/electricity_payment.php"
+                            )
+                        );?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,11 +98,44 @@
                     <div class="address__time">
                         <div class="address__time-block">
                             <div class="address__text"><span class="address__text-title">адрес:<br></span><span class="address__text-subtitle">Тульская область, Ленинский район, деревня Дементеево.</span></div>
-                            <div class="address__text"><span class="address__text-title">часы приема:<br></span><span class="address__text-subtitle">Каждая 1-ая и 3-ья суббота месяца с 10.00 до 12.00.</span></div>
+                            <div class="address__text"><span class="address__text-title">часы приема:<br></span>
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    "",
+                                    Array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "AREA_FILE_SUFFIX" => "inc",
+                                        "EDIT_TEMPLATE" => "",
+                                        "PATH" => "/include/business_hours.php"
+                                    )
+                                );?>
+                            </div>
                         </div>
                         <div class="address__time-block">
-                            <div class="address__text"><span class="address__text-title">тел:<br></span><span class="address__text-subtitle">8-910-165-29-07</span></div>
-                            <div class="address__text"><span class="address__text-title">работа правления:<br></span><span class="address__text-subtitle">Каждая 1-ая и 3-ья суббота месяца с 10.00 до 12.00.</span></div>
+                            <div class="address__text"><span class="address__text-title">тел:<br></span>
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    "",
+                                    Array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "AREA_FILE_SUFFIX" => "inc",
+                                        "EDIT_TEMPLATE" => "",
+                                        "PATH" => "/include/tel_num.php"
+                                    )
+                                );?>
+                            </div>
+                            <div class="address__text"><span class="address__text-title">работа правления:<br></span>
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    "",
+                                    Array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "AREA_FILE_SUFFIX" => "inc",
+                                        "EDIT_TEMPLATE" => "",
+                                        "PATH" => "/include/working_hours.php"
+                                    )
+                                );?>
+                            </div>
                         </div>
                     </div>
                 </div>

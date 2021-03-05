@@ -8,6 +8,15 @@
 <?php
 use \Bitrix\Main\Page\Asset;
 $APPLICATION->ShowHead();
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/scripts/app.js");?>
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/scripts/app.js");?><?$APPLICATION->IncludeComponent(
+    "bitrix:main.include",
+    "",
+    Array(
+        "AREA_FILE_SHOW" => "file",
+        "AREA_FILE_SUFFIX" => "inc",
+        "EDIT_TEMPLATE" => "",
+        "PATH" => "/include/working_hours.php"
+    )
+);?>
 </body>
 </html>
