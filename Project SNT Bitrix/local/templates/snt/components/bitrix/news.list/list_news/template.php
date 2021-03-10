@@ -14,8 +14,10 @@ $this->setFrameMode(true);
 /*echo '<pre>';
 print_r($arResult);echo '</pre>';
 */?>
-<?php foreach ($arResult['ITEMS'] as $resItem): ?>
-    <a href="<?= $resItem['DETAIL_PAGE_URL'] ?>" class="news__nav-header">
-        <h6><?= $resItem['NAME'] ?></h6><span class="news__nav-keys"><?= $resItem['PROPERTIES']['DATE']['VALUE'] ?> / <?= $resItem['PROPERTIES']['AUTHOR']['VALUE'] ?></span>
-    </a>
-<?php endforeach; ?>
+<div class="news__nav">
+    <?php foreach ($arResult['ITEMS'] as $resItem): ?>
+        <a href="<?= $resItem['DETAIL_PAGE_URL'] ?>" class="news__nav-header">
+            <h6><?= $resItem['NAME'] ?></h6><span class="news__nav-keys"><?= $resItem['PROPERTIES']['DATE']['VALUE'] ?> / <?= $resItem['PROPERTIES']['AUTHOR']['VALUE'] ?></span>
+        </a>
+    <?php endforeach; ?>
+</div>

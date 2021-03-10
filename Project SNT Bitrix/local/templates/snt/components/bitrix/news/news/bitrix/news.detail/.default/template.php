@@ -25,7 +25,5 @@ $APPLICATION->SetTitle($arResult['NAME']);
         </div>
     </div>
 </div>
-<style>
 
-</style>
 
