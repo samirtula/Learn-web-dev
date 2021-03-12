@@ -106,7 +106,6 @@ $APPLICATION->SetTitle("Объявления");
 	false
 );?>
         </div>
-        <div class="news__nav">
             <?$APPLICATION->IncludeComponent("bitrix:news.list", "list_news", Array(
                 "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
                 "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
@@ -169,7 +168,6 @@ $APPLICATION->SetTitle("Объявления");
             ),
                 false
             );?>
-        </div>
     </div>
 </section>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

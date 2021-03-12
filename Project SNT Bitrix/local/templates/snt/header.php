@@ -4,9 +4,13 @@
 <head>
     <?php
     use \Bitrix\Main\Page\Asset;
-    $APPLICATION->ShowHead();
     $APPLICATION->SetTitle("Главная");?>
     <title><?php $APPLICATION->ShowTitle(); ?></title>
+    <?$APPLICATION->ShowCSS();?>
+    <?$APPLICATION->ShowHeadStrings()?>
+    <?$APPLICATION->ShowMeta("keywords")?>
+    <?$APPLICATION->ShowMeta("description")?>
+
     <?php
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/styles/app.css");
     Asset::getInstance()->addString('<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">');

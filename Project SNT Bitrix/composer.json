@@ -2,7 +2,8 @@
   "name": "admin/pro",
   "autoload": {
     "psr-4": {
-      "classes\\": "classes"
+      "classes\\": "local/templates/snt/classes",
+      "PHPMailer\\PHPMailer\\": "local/templates/snt/phpMailer/src/"
     }
   },
   "require": {

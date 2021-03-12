@@ -14,6 +14,13 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/Project SNT Bitrix/vendor/composer" />
@@ -22,7 +29,7 @@
   <component name="ProjectId" id="1pDha6jBK5FPiTNz06mc2K4PXeC" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/gallery" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -32,6 +39,9 @@
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Гахраманов Самир\Downloads\OpenServer\domains\snt\letter" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Гахраманов Самир\Downloads\OpenServer\domains\snt\gallery" />
       <recent name="C:\Users\Гахраманов Самир\Downloads\OpenServer\domains\snt\indication" />
@@ -72,7 +82,14 @@
       <workItem from="1615303519311" duration="19841000" />
       <workItem from="1615375636677" duration="10720000" />
       <workItem from="1615403616533" duration="2305000" />
-      <workItem from="1615405966377" duration="13469000" />
+      <workItem from="1615405966377" duration="13543000" />
+      <workItem from="1615420036756" duration="47000" />
+      <workItem from="1615473732389" duration="783000" />
+      <workItem from="1615478041318" duration="17561000" />
+      <workItem from="1615506249546" duration="130000" />
+      <workItem from="1615506405815" duration="6762000" />
+      <workItem from="1615545171514" duration="4107000" />
+      <workItem from="1615549416990" duration="88000" />
     </task>
     <servers />
   </component>

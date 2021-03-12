@@ -7,7 +7,12 @@
 </footer>
 <?php
 use \Bitrix\Main\Page\Asset;
-$APPLICATION->ShowHead();
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/scripts/app.js");?>
+
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/scripts/mailer.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/scripts/app.js");
+$APPLICATION->ShowHeadScripts()?>
+
+
+
 </body>
 </html>

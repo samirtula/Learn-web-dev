@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'classes\\' => array($baseDir . '/classes'),
+    'classes\\' => array($baseDir . '/local/templates/snt/classes'),
+    'PHPMailer\\PHPMailer\\' => array($baseDir . '/local/templates/snt/phpMailer/src'),
 );
