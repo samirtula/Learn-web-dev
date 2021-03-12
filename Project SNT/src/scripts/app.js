@@ -4,3 +4,4 @@ import './gallery';
 import './authorization';
 import './forum-vote';
 import  './layout';
+import './letter'
