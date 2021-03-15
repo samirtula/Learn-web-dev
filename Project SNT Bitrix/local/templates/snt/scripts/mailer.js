@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function ()
         }
         else
         {
-           alert('Корректно заполните выделенные поля')
+           console.error('Корректно заполните выделенные поля')
         }
 
     }
@@ -91,10 +91,12 @@ document.addEventListener('DOMContentLoaded', function ()
         input.classList.remove('error');
     }
 
-    function emailTest(input) {
+    function emailTest(input)
+    {
         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
     }
-    function numTest(input) {
+    function numTest(input)
+    {
         return !/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(input.value);
     }
 

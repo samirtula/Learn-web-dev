@@ -67,11 +67,11 @@
 </header>
 <nav class="nav">
     <div class="nav__wrapper">
-        <div class="nav__logo-image"></div><a href="../">главная</a><a href="/news/">новости</a><a href="/authorization/">личный кабинет</a><a href="/letter/">написать в правление</a><a href="/forum/">форум</a><a href="/boards/">объявления</a><a href="/gallery/">фотогалерея</a><a href="/weather/">погода</a>
+        <div class="nav__logo-image"></div><a href="/./">главная</a><a href="/news/">новости</a><a href=" <? if ($USER->IsAuthorized()): ?>/private/ <?else:?> /authorization <?endif;?>">личный кабинет</a><a href="/letter/">написать в правление</a><a href="/forum/">форум</a><a href="/boards/">объявления</a><a href="/gallery/">фотогалерея</a><a href="/weather/">погода</a>
         <div class="nav__burger-menu"><span></span></div>
-        <div class="footer__social-links"><a class="footer__social-links-login" href="/authorization/"></a></div>
+        <div class="footer__social-links"><a class="footer__social-links-login" href="<? if ($USER->IsAuthorized()): ?>/private/ <?else:?> /authorization <?endif;?>"></a></div> <!-- Делаем проверки авторизации меняем ссылки -->
     </div>
     <div class="nav__burger-wrapper clicked">
-        <div class="nav__burger-block"><a href="../">главная</a><a href="/news/">новости</a><a href="/authorization/">личный кабинет</a><a href="/letter/">написать в правление</a><a href="/forum/">форум</a><a href="/boards/">объявления</a><a href="/gallery/">фотогалерея</a><a href="/weather/">погода</a></div>
+        <div class="nav__burger-block"><a href="/./">главная</a><a href="/news/">новости</a><a href="<? if ($USER->IsAuthorized()): ?>/private/ <?else:?> /authorization <?endif;?>">личный кабинет</a><a href="/letter/">написать в правление</a><a href="/forum/">форум</a><a href="/boards/">объявления</a><a href="/gallery/">фотогалерея</a><a href="/weather/">погода</a></div><!-- Делаем проверки авторизации меняем ссылки -->
     </div>
 </nav>

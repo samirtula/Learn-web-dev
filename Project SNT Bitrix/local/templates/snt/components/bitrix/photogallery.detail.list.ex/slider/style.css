@@ -1,6 +1,6 @@
 /* PHOTO SLIDER */
-.photo-fixed-overlay{position: fixed; min-height:100%; min-width: 100%; top: 0px; left: 0px; z-index: 3000; overflow: auto!important; overflow-x: hidden!important;overflow-y: auto!important;}
-.photo-body-overlay{overflow-x:hidden!important; overflow-y: hidden!important; overflow: hidden!important; position:relative;}
+.photo-fixed-overlay{position: fixed; min-height:100%; min-width: 100%; top: 0px; left: 0px; z-index: 3000;/* overflow: auto!important; overflow-x: hidden!important;overflow-y: auto!important*/;}
+.photo-body-overlay{/*overflow-x:hidden!important; overflow-y: hidden!important; overflow: hidden!important;*/ position:relative;}
 
 .photo-main-table {width:100%; position: absolute; top: 28px; left: 0px; z-index: 3000;}
 .photo-main-table td {border:none; vertical-align:top; padding:0; }
