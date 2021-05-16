@@ -78,7 +78,7 @@ class Vacancies
         usort($this->vacancies, 'publishedTime');
 
         foreach ($this->vacancies as $vacancy) {
-            if ($vacancy['archived'] == false) {
+            if ($vacancy['archived'] == false && $vacancy['type']['id'] == 'open') {
                 $this->activeVacancies[] = $vacancy;
             }
         }
