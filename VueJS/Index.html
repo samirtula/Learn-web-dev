@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <title>Learning VueJS</title>
+</head>
+<body>
+
+<div id="app">
+    {{ message }}
+    <br>
+    <span v-bind:title="message">Наведи на меня мышь</span>
+    <br>
+</div>
+
+<div id="app2">
+    <span v-if="conditionSeen">Show me if condition value is true</span>
+</div>
+
+<div id="app3">
+    <ol>
+        <li v-for='make in todoList'>
+            {{ make.make }}
+        </li>
+    </ol>
+</div>
+
+<div id="demo">
+    <button v-on:click="show = !show">
+        Переключить
+    </button>
+    <transition name="fade">
+        <p v-if="show">привет</p>
+    </transition>
+</div>
+
+<div id="app4">
+    <p> {{ message }}</p>
+    <button v-on:click="reverseMessage">Перевернуть сообщение</button>
+</div>
+
+<br>
+
+<div id="app5">
+    <input v-model="message">
+    <p> {{ message }} </p>
+</div>
+
+<!--СОЗДАЕМ И РАБОТАЕМ С КОМПОНЕНТОМ VUE-->
+<div id="appX">
+    <ol>
+        <componen v-for="make in todoList"
+                  v-bind:make="make"
+                  v-bind:key="make.id">
+        </componen>
+    </ol>
+</div>
+
+<div id="appInterpolation">
+    <span v-once> Это сообщение никогда не изменится потому что v-once: {{ msg }}</span>
+    <br>
+    <span v-html="HTML"></span>
+    <br>
+    <span v-bind:id="bind">v-bind для атрибутов тегов</span>
+    <br>
+    <button v-bind:disabled="isButtonDisabled">Кнопка v-bind:disabled (работа с булвыми атрибутами завязана на свойстве
+        data с булевым значением)
+    </button>
+    <br>
+    <span> Возможно использование выражений JS number + 1 {{ number + 1 }}</span>
+    <br>
+    <span> Возможно использование тернарных операторов ok ? 'Yes' : 'No'- {{ ok ? 'Yes' : 'No' }}</span>
+    <br>
+    <span> Возможно использование методов JS  message.split('').reverse().join('') {{ message.split('').reverse().join('')
+        }}</span>
+</div>
+<div id="directives">
+    <span v-if="seen">Сейчас меня видно потому что  v-if="seen" true</span>
+    <br>
+    <a v-bind:href="url"> href забираем из data url v-bind:href="url"</a>
+    <a v-on:[event]="doSomething">hover me</a>
+    <form v-on:submit.prevent="ajax">
+        <input name="name" type="text" v-model="name"> Имя
+        <input name="second_name" type="text" v-model='secondName'> Фамилия
+        <input name="tel" type="tel" v-bind:pattern="tel" v-model="telNum"> телефон в формате 8 950 923 7744
+        <input type="submit">
+        <p>{{ telNum }}</p>
+    </form>
+</div>
+<div id="computed">
+    <p>Изначальное сообщение: "{{message}}"</p>
+    <p>Сообщение задом наперед: "{{ reversedMessage }}"</p>
+</div>
+
+<div id="watch">
+
+</div>
+
+
+
+
+
+
+
+
+<style>
+    span {
+        margin-top: 30px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form input {
+        margin-top: 30px;
+        width: 300px;
+        height: 2em;
+    }
+</style>
+<script src=script.js></script>
+</body>
+</html>
