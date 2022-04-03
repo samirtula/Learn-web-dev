@@ -1,0 +1,20 @@
+{
+  "name": "samir/localhost",
+  "authors": [
+    {
+      "name": "Samir Gakhramanov",
+      "email": "gsamirtula@gmail.com"
+    }
+  ],
+  "autoload":{
+    "files": [
+      "vendor/simplehtmldom/simplehtmldom/simple_html_dom.php"
+    ],
+    "psr-4": {
+      "classes\\": "classes/Parser"
+    }
+  },
+  "require": {
+    "simplehtmldom/simplehtmldom": "2.0-RC2"
+  }
+}
